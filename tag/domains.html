@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Jon Doblados - Domains</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Jon Doblados </a></h1>
+                <nav><ul>
+                    <li><a href="/category/misc.html">misc</a></li>
+                    <li><a href="/category/python.html">Python</a></li>
+                    <li><a href="/category/systems-administration.html">Systems Administration</a></li>
+                    <li><a href="/category/uncategorized.html">Uncategorized</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/ip-hijacking-and-then-some.html">IP-hijacking and then some</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2007-02-25T11:51:00+01:00">
+                Published: Sun 25 February 2007
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/jon.html">jon</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+<p>tags: <a href="/tag/domains.html">Domains</a> <a href="/tag/hosting.html">Hosting</a> </p>
+</footer><!-- /.post-info --><p>Almost a month of downtime. The servers were fine, but our IP addresses
+were not. Somehow, a system bug from one of the hosting companies caused
+our plan to include 14 other IP addresses, and we only maintained 6 as
+far as I am concerned.</p>
+<p>So the hosting company eventually understood what was happening and
+started asking the right questions. The bug is that the system allowed
+network administrators to assign to new clients, the IP addresses that
+have already been assigned to a current client.</p>
+<p>We spent crazy hours figuring out what happened. Since the domains were
+not loading our sites, and instead were redirecting to some domains we
+don’t own (real bad sites btw), we checked if .htaccess was modified and
+tested if it was working at all. I also did double checks on virtual
+host configurations and they all looked clean.</p>
+<p>I started thinking that it was a routing issue. We were not using the
+publicly routable IPs for the virtual hosts; instead, we used internal
+IPs as mapped to the firewall hardware. A lookup on the domain/s that we
+were being redirected to reported different IP addresses, which didn’t
+readily confirm my suspicions, but stressed the possibility of
+IP-hijacking.</p>
+<p>It’s not supposed to be taken in the context of BGP (border gateway
+protocol), as this is beyond me. Instead, think of your assumption over
+IP addresses that we’re using, to serve your websites. Sounds clear? I
+hope it does. I got pretty lost myself and it isn’t after deep digging
+at the hosting company’s end that their errors became apparent.</p>
+<p>So in the light of this realization, I’ve already moved the domains to
+some other hosting. Way too much work and way uncool.</p>
+</p>                </article>
+<p class="paginator">
+    Page 1 / 1
+</p>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
