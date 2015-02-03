@@ -1,48 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
-        <title>Untitled</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jon Doblados, ">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+
+        <title>Untitled // Jon Doblados // </title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/theme/css/pure.css">
+    <link rel="stylesheet" href="/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
 </head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Jon Doblados </a></h1>
-                <nav><ul>
-                    <li><a href="/pages/about.html">About</a></li>
-                    <li><a href="/pages/contact.html">Contact</a></li>
-                    <li><a href="/category/aside.html">Aside</a></li>
-                    <li><a href="/category/gbg.html">GBG</a></li>
-                    <li class="active"><a href="/category/misc.html">Misc</a></li>
-                    <li><a href="/category/python.html">Python</a></li>
-                    <li><a href="/category/tech.html">Tech</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/untitled-6.html" rel="bookmark"
-           title="Permalink to Untitled">Untitled</a></h1>
-    </header>
-
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2010-01-06T14:46:00+08:00">
-                Published: Wed 06 January 2010
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/jon.html">jon</a>
-        </address>
-<p>In <a href="/category/misc.html">Misc</a>. </p>
-
-</footer><!-- /.post-info -->      <div>
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background-image: url('')">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <h1 class="brand-main"><a href="">Jon Doblados</a></h1>
+                            <p class="tagline"></p>
+                                <p class="social">
+                                    <a href="#">
+                                        <i class="fa fa-You can add links in your config file fa-3x"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-Another social link fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Untitled</h1>
+                        <p class="post-meta">
+                            // under                         </p>
+                </header>
+            </section>
+            <div>
 
 [![Tumblr\_kvspxbj7ib1qzdv7ao1\_1280](http://jon.doblados.net/wp-content/uploads/2010/01/tumblr_kvspxbJ7Ib1qzdv7ao1_1280.jpg.scaled1000-300x225.jpg)](http://jon.doblados.net/wp-content/uploads/2010/01/tumblr_kvspxbJ7Ib1qzdv7ao1_1280.jpg.scaled1000.jpg)  
 
@@ -50,37 +62,39 @@
 
 <p>Miguel is 9months old today. Thought I’d move his photo sets here. Added
 some more today, 2/12/2010.</p>
-    </div><!-- /.entry-content -->
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Jon &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
 
 </body>
 </html>
