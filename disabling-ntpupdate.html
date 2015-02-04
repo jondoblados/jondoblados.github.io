@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Disabling ntpupdate</title>
+        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://jon.doblados.net/">Jon Doblados </a></h1>
+                <nav><ul>
+                    <li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
+                    <li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
+                    <li><a href="http://jon.doblados.net/category/aside.html">Aside</a></li>
+                    <li><a href="http://jon.doblados.net/category/gbg.html">GBG</a></li>
+                    <li class="active"><a href="http://jon.doblados.net/category/misc.html">Misc</a></li>
+                    <li><a href="http://jon.doblados.net/category/python.html">Python</a></li>
+                    <li><a href="http://jon.doblados.net/category/tech.html">Tech</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="http://jon.doblados.net/disabling-ntpupdate.html" rel="bookmark"
+           title="Permalink to Disabling ntpupdate">Disabling ntpupdate</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2006-03-12T19:24:00+08:00">
+                Published: Sun 12 March 2006
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
+        </address>
+<p>In <a href="http://jon.doblados.net/category/misc.html">Misc</a>. </p>
+
+</footer><!-- /.post-info -->      <p>This has been quite overdue, as I have been wanting to disable
+<code>ntpupdate</code> since the Hoary release. What is <code>ntpupdate</code> anyway? It's
+the program that synchronizes your system time to an ntp server.
+<abbr title="Network Time Protocol">NTP</abbr> is a protocol for
+synchronising the clocks of computer systems over packet-switched,
+variable-latency data networks. Since Ubuntu defaults to an ntp server
+somewhere in the www, and that it will attempt to sync on boot, it
+causes your machine to go through a much much longer startup process if
+an internet connection is not available at boot time.  </p>
+<p>As I am lugging my lappy around a lot and I have not much of a need for
+the program, I knew I had to take it out and save me minutes of boot
+time. <a href="http://blog.ealden.net/">Ealden</a> taught me how to remove
+<code>ntpupdate</code>, and I suppose we can change the arguments to remove other
+programs as well.  </p>
+<p><code>$ sudo update-rc.d -f ntpdate remove</code>  </p>
+<p><code>update-rc.d</code> will remove any system startup links for
+<code>/etc/init.d/ntpdate</code>, or any instances of such in the different run
+levels. Usage is as follows:  </p>
+<div>
+
+<div>
+
+    usage: update-rc.d [-n] [-f] <basename> remove       update-rc.d [-n] <basename> defaults [NN | sNN kNN]       update-rc.d [-n] <basename> start|stop NN runlvl [runlvl] [...] .                -n: not really                -f: force
+
+</div>
+
+<p>
+
+</div>
+    </div><!-- /.entry-content -->
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'jondoblados';
+        var disqus_identifier = 'disabling-ntpupdate.html';
+        var disqus_url = 'http://jon.doblados.net/disabling-ntpupdate.html';
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//jondoblados.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the comments.</noscript>
+    </div>
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'jondoblados';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
