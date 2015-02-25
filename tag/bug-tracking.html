@@ -1,43 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+    <head>
+        <title> Articles in Bug Tracking tag - Jon Doblados</title>
         <meta charset="utf-8" />
-        <title>Jon Doblados - Bug Tracking</title>
-        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/main.css" />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="http://jon.doblados.net/theme/static/css/style.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    </head>
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
-
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://jon.doblados.net/">Jon Doblados </a></h1>
-                <nav><ul>
+    <body id="index" class="archive">
+        <div class="container">
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li class=""><a href="http://jon.doblados.net">Home</a></li>
                     <li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
                     <li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
-                    <li><a href="http://jon.doblados.net/category/aside.html">Aside</a></li>
-                    <li><a href="http://jon.doblados.net/category/gbg.html">GBG</a></li>
-                    <li><a href="http://jon.doblados.net/category/misc.html">Misc</a></li>
-                    <li><a href="http://jon.doblados.net/category/python.html">Python</a></li>
-                    <li><a href="http://jon.doblados.net/category/tech.html">Tech</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+                    <li class="active"active><a href="http://jon.doblados.net/archives.html">Archives</a></li>
+                </ul>
+                <h3 class="text-muted"><a href="http://jon.doblados.net">Jon Doblados</a></h3>
+				<h2 class="text-muted"></h2>
+             </div>
+<section id="content" class="content">
+<h2>Articles with the Bug Tracking tag</h2>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="http://jon.doblados.net/svn-mantisbt-integration.html">SVN-MantisBT Integration</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2010-11-08T18:14:00+08:00">
-                Published: Mon 08 November 2010
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
-        </address>
-<p>In <a href="http://jon.doblados.net/category/misc.html">misc</a>. </p>
-<p>tags: <a href="http://jon.doblados.net/tag/bug-tracking.html">Bug Tracking</a> <a href="http://jon.doblados.net/tag/gnulinux.html">GNU/Linux</a> <a href="http://jon.doblados.net/tag/revision-control.html">Revision Control</a> <a href="http://jon.doblados.net/tag/systems-administration.html">Systems Administration</a> </p>
-</footer><!-- /.post-info --><div>
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/svn-mantisbt-integration.html" rel="bookmark" title="Permalink to SVN-MantisBT Integration">SVN-MantisBT Integration</a></h2> </header>
+                <div class="entry-content"> <div>
 
 ![04](http://jon.doblados.net/wp-content/uploads/2010/11/04.png.scaled500-300x196.png)  
 
@@ -46,55 +34,23 @@
 <p>I've downloaded and installed MantisBT 1.2.3stable on linode2, and after
 fixing permissions issues, proceeded with the installation. I stopped
 when I realized I didn't have the same MantisBT version on the old
-server. It's always better to set up MantisBT on the target server "as
-is", and let the install scripts handle the upgrade.</p>
-<p>I'm roughly 28% in with a server-to-server SCP of a 79Mb MySQL dump of
-our bugtracker. I haven't had time to check with the backups since I
-felt that a fresh dump is always best; but no, I remembered that several
-developers preferred working odd hours and they would definitely need
-the bug tracker up.</p>
-<p>Next up, install the different source and meta plugins needed to make
-this mashup work. Excellent guide
-<a href="http://leetcode.net/blog/2009/01/integrating-git-svn-with-mantisbt/">here</a>.</p><p>There are <a href="http://jon.doblados.net/svn-mantisbt-integration.html#disqus_thread">comments</a>.</p>                </article>
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </aside><!-- /#featured -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-
-                            <li><a href="http://twitter.com/JonDoblados">Twitter</a></li>
-                            <li><a href="http://plus.google.com/+JonDoblados">Google+</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
-<script type="text/javascript">
-    var disqus_shortname = 'jondoblados';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-</body>
+server ...</p> </div><!-- entry-content -->
+        </article>
+<div class="pager">
+      <ul>
+                        <li class="previous disabled"><a>← Previous</a></li>
+                        <li class="next disabled"><a>Next →</a></li>
+      </ul>
+    </div>
+</section><!-- content -->
+            <footer id="contentinfo" class="footer">
+                    <nav class="pull-right bottom-nav">
+                        <a href="http://jon.doblados.net/None">RSS</a>
+                    </nav>
+                    <address id="about" class="vcard body">
+                    &copy; <a href="http://jon.doblados.net">Jon Doblados</a> Proudly powered by <a href="http://getpelican.com/">Pelican</a>
+                    </address><!-- /#about -->
+            </footer><!-- /#contentinfo -->
+        </div><!-- container -->
+    </body>
 </html>
