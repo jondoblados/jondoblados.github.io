@@ -1,185 +1,712 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Jon Doblados</title>
-	<meta name="description" content="">
-	<meta name="author" content="Jon">
+  <head>
+    <meta charset="utf-8">
+    <title>Jon Doblados - jon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Jon">
 
-	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
-	<!--[if lt IE 9]>
-		<script src="http://jon.doblados.net/theme/html5.js"></script>
-	<![endif]-->
+    <!-- Le styles -->
+    <link rel="stylesheet" href="http://jon.doblados.net/theme/css/bootstrap.min.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+    </style>
+    <link href="http://jon.doblados.net/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="http://jon.doblados.net/theme/css/font-awesome.css" rel="stylesheet">
 
-	<!-- Styles -->
-	<link href="http://jon.doblados.net/theme/bootstrap.min.css" rel="stylesheet">
-	<link href="http://jon.doblados.net/theme/local.css" rel="stylesheet">
-	<link href="http://jon.doblados.net/theme/pygments.css" rel="stylesheet">
+    <link href="http://jon.doblados.net/theme/css/pygments.css" rel="stylesheet">
 
-	<!-- Feeds -->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="http://jon.doblados.net/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="http://jon.doblados.net/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://jon.doblados.net/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://jon.doblados.net/theme/images/apple-touch-icon-114x114.png">
+
+    <link href="http://jon.doblados.net/" type="application/atom+xml" rel="alternate" title="Jon Doblados ATOM Feed" />
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://jon.doblados.net/index.html">Jon Doblados </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                <li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
+                <li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
+                          <li class="divider-vertical"></li>
+                  <li >
+                    <a href="http://jon.doblados.net/category/aside.html">
+						<i class="icon-folder-open icon-large"></i>Aside
+					</a>
+                  </li>
+                  <li >
+                    <a href="http://jon.doblados.net/category/gbg.html">
+						<i class="icon-folder-open icon-large"></i>GBG
+					</a>
+                  </li>
+                  <li >
+                    <a href="http://jon.doblados.net/category/misc.html">
+						<i class="icon-folder-open icon-large"></i>Misc
+					</a>
+                  </li>
+                  <li >
+                    <a href="http://jon.doblados.net/category/python.html">
+						<i class="icon-folder-open icon-large"></i>Python
+					</a>
+                  </li>
+                  <li >
+                    <a href="http://jon.doblados.net/category/tech.html">
+						<i class="icon-folder-open icon-large"></i>Tech
+					</a>
+                  </li>
+
+                          <ul class="nav pull-right">
+                                <li><a href="http://jon.doblados.net/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
+            </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="span9" id="content">
+        <div class="article">
+                <h1><a href="http://jon.doblados.net/removing-adobe-air-apps-on-ubuntu.html">Removing Adobe Air apps on Ubuntu</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2008-08-21T15:52:00+08:00">
+        <i class="icon-calendar"></i>Thu 21 August 2008
+</abbr>
+<span class="label">By</span>
+<a href="http://jon.doblados.net/author/jon.html"><i class="icon-user"></i>jon</a>
+<span class="label">Category</span>
+<a href="http://jon.doblados.net/category/misc.html"><i class="icon-folder-open"></i>misc</a>.
 
 
-
-
-</head>
-<body>
-	<div class="topbar">
-	  <div class="topbar-inner">
-		<div class="container-fluid">
-		  <a class="brand" href="http://jon.doblados.net/">Jon Doblados</a>
-			<ul class="nav">
-						<li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
-						<li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
-					<li ><a href="http://jon.doblados.net/category/aside.html">Aside</a></li>
-					<li ><a href="http://jon.doblados.net/category/gbg.html">GBG</a></li>
-					<li ><a href="http://jon.doblados.net/category/misc.html">Misc</a></li>
-					<li ><a href="http://jon.doblados.net/category/python.html">Python</a></li>
-					<li ><a href="http://jon.doblados.net/category/tech.html">Tech</a></li>
-			</ul>
-			<p class="pull-right"><a href="http://jon.doblados.net/archives.html">[archives]</a> <a href="http://jon.doblados.net/tags.html">[tags]</a></p>
-		</div>
-	  </div>
-	</div>
-
-	<div class="container-fluid">
-	  <div class="sidebar">
-		<div class="well">
-			<h3>Blogroll</h3>
-			<ul>
-				<li><a href="http://getpelican.com/">Pelican</a></li>
-				<li><a href="http://python.org/">Python.org</a></li>
-				<li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-			</ul>
-			<div class="social">
-			<h3>Social</h3>
-			<ul>
-				<li><a href="http://twitter.com/JonDoblados">Twitter</a></li>
-				<li><a href="http://plus.google.com/+JonDoblados">Google+</a></li>
-			</ul>
-			</div>
-		</div>
-	  </div>
-	  <div class="content">
-<div class="page-header"><h1>Jon Doblados <small>jon</small></h1></div>
-<div class='article'>
-	<h2>Removing Adobe Air apps on Ubuntu</h2>
-	<div class="well small">Permalink: <a class="more" href="http://jon.doblados.net/removing-adobe-air-apps-on-ubuntu.html">2008-08-21 15:52:00+08:00</a>
-by <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon </a>
- in <a href="http://jon.doblados.net/category/misc.html">misc</a>
-tags: <a href="http://jon.doblados.net/tag/technology.html">Technology</a> </div>
-	<div class="summary"><p>I was trying to remove AgileAgenda after fiddling with it for a week and
+<span class="label">Tags</span>
+	<a href="http://jon.doblados.net/tag/technology.html"><i class="icon-tag"></i>Technology</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>I was trying to remove AgileAgenda after fiddling with it for a week and
 deciding it wasn't going to cut it. There's no Adobe Air Application
 "uninstaller" in the menu, and search engine results usually point to
-Mac lurv, or not.  Seems like uninstalling Air apps on OSX ...</p> <a class="btn primary xsmall" href="http://jon.doblados.net/removing-adobe-air-apps-on-ubuntu.html">more…</a>
-	</div>
-</div>	
-<div class='article'>
-	<h2>More Plesk Blues</h2>
-	<div class="well small">Permalink: <a class="more" href="http://jon.doblados.net/more-plesk-blues.html">2008-08-20 16:42:00+08:00</a>
-by <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon </a>
- in <a href="http://jon.doblados.net/category/misc.html">misc</a>
-tags: <a href="http://jon.doblados.net/tag/systems-administration.html">Systems Administration</a> </div>
-	<div class="summary"><p>
+Mac lurv, or not.  Seems like uninstalling Air apps on OSX ...</p>
+                        <a class="btn primary xsmall" href="http://jon.doblados.net/removing-adobe-air-apps-on-ubuntu.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://jon.doblados.net/more-plesk-blues.html">More Plesk Blues</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2008-08-20T16:42:00+08:00">
+        <i class="icon-calendar"></i>Wed 20 August 2008
+</abbr>
+<span class="label">By</span>
+<a href="http://jon.doblados.net/author/jon.html"><i class="icon-user"></i>jon</a>
+<span class="label">Category</span>
+<a href="http://jon.doblados.net/category/misc.html"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://jon.doblados.net/tag/systems-administration.html"><i class="icon-tag"></i>Systems Administration</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>
 I've had this problem with Plesk since I started relying heavily on it
 in 2006.  For some reason, after you've added your client, allocated IP
 address to client's pool, added a domain, and selecting physical
 hosting, you get the message:
 
-> Unable to update hosting preferences: hosting update ...</p> <a class="btn primary xsmall" href="http://jon.doblados.net/more-plesk-blues.html">more…</a>
-	</div>
-</div>	
-<div class='article'>
-	<h2>on statuses(?) and micro-blogging</h2>
-	<div class="well small">Permalink: <a class="more" href="http://jon.doblados.net/on-statuses-and-micro-blogging.html">2008-07-28 02:14:00+08:00</a>
-by <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon </a>
- in <a href="http://jon.doblados.net/category/misc.html">misc</a>
-tags: <a href="http://jon.doblados.net/tag/technology.html">Technology</a> </div>
-	<div class="summary"><p>hi. i'm testing out this feature in ping.fm. charo and jerome have been
-talking about this and thought i'd check it out.</p> <a class="btn primary xsmall" href="http://jon.doblados.net/on-statuses-and-micro-blogging.html">more…</a>
-	</div>
-</div>	
-<div class='article'>
-	<h2>Now Plurking</h2>
-	<div class="well small">Permalink: <a class="more" href="http://jon.doblados.net/now-plurking.html">2008-07-03 16:24:00+08:00</a>
-by <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon </a>
- in <a href="http://jon.doblados.net/category/misc.html">misc</a>
-tags: <a href="http://jon.doblados.net/tag/technology.html">Technology</a> </div>
-	<div class="summary"><p>Also playing in twitter, pownce, and soon identi.ca, but plurk wins for
+> Unable to update hosting preferences: hosting update ...</p>
+                        <a class="btn primary xsmall" href="http://jon.doblados.net/more-plesk-blues.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://jon.doblados.net/on-statuses-and-micro-blogging.html">on statuses(?) and micro-blogging</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2008-07-28T02:14:00+08:00">
+        <i class="icon-calendar"></i>Mon 28 July 2008
+</abbr>
+<span class="label">By</span>
+<a href="http://jon.doblados.net/author/jon.html"><i class="icon-user"></i>jon</a>
+<span class="label">Category</span>
+<a href="http://jon.doblados.net/category/misc.html"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://jon.doblados.net/tag/technology.html"><i class="icon-tag"></i>Technology</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>hi. i'm testing out this feature in ping.fm. charo and jerome have been
+talking about this and thought i'd check it out.</p>
+                        <a class="btn primary xsmall" href="http://jon.doblados.net/on-statuses-and-micro-blogging.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://jon.doblados.net/now-plurking.html">Now Plurking</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2008-07-03T16:24:00+08:00">
+        <i class="icon-calendar"></i>Thu 03 July 2008
+</abbr>
+<span class="label">By</span>
+<a href="http://jon.doblados.net/author/jon.html"><i class="icon-user"></i>jon</a>
+<span class="label">Category</span>
+<a href="http://jon.doblados.net/category/misc.html"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://jon.doblados.net/tag/technology.html"><i class="icon-tag"></i>Technology</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>Also playing in twitter, pownce, and soon identi.ca, but plurk wins for
 me, hands down. Check it out
-<a href="http://plurk.com/redeemByURL?from_uid=19593&amp;check=-884040077&amp;s=1">here</a></p> <a class="btn primary xsmall" href="http://jon.doblados.net/now-plurking.html">more…</a>
-	</div>
-</div>	
+<a href="http://plurk.com/redeemByURL?from_uid=19593&amp;check=-884040077&amp;s=1">here</a></p>
+                        <a class="btn primary xsmall" href="http://jon.doblados.net/now-plurking.html">more ...</a>
+                </div>
+        </div>
+        <hr />
 
-<div class="pagination">
-<ul>
-		<li class="prev"><a href="http://jon.doblados.net/author/jon33.html">&larr; Previous</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon.html">1</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon2.html">2</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon3.html">3</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon4.html">4</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon5.html">5</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon6.html">6</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon7.html">7</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon8.html">8</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon9.html">9</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon10.html">10</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon11.html">11</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon12.html">12</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon13.html">13</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon14.html">14</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon15.html">15</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon16.html">16</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon17.html">17</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon18.html">18</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon19.html">19</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon20.html">20</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon21.html">21</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon22.html">22</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon23.html">23</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon24.html">24</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon25.html">25</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon26.html">26</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon27.html">27</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon28.html">28</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon29.html">29</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon30.html">30</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon31.html">31</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon32.html">32</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon33.html">33</a></li>
-		<li class="active"><a href="http://jon.doblados.net/author/jon34.html">34</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon35.html">35</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon36.html">36</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon37.html">37</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon38.html">38</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon39.html">39</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon40.html">40</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon41.html">41</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon42.html">42</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon43.html">43</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon44.html">44</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon45.html">45</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon46.html">46</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon47.html">47</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon48.html">48</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon49.html">49</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon50.html">50</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon51.html">51</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon52.html">52</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon53.html">53</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon54.html">54</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon55.html">55</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon56.html">56</a></li>
-		<li class=""><a href="http://jon.doblados.net/author/jon57.html">57</a></li>
-		<li class="next"><a href="http://jon.doblados.net/author/jon35.html">Next &rarr;</a></li>
-</ul>
-</div>
+        <div class="pagination">
+        <ul>
+                        <li class="prev"><a href="http://jon.doblados.net/author/jon33.html">&larr; Previous</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon.html">1</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon2.html">2</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon3.html">3</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon4.html">4</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon5.html">5</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon6.html">6</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon7.html">7</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon8.html">8</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon9.html">9</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon10.html">10</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon11.html">11</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon12.html">12</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon13.html">13</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon14.html">14</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon15.html">15</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon16.html">16</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon17.html">17</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon18.html">18</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon19.html">19</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon20.html">20</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon21.html">21</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon22.html">22</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon23.html">23</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon24.html">24</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon25.html">25</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon26.html">26</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon27.html">27</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon28.html">28</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon29.html">29</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon30.html">30</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon31.html">31</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon32.html">32</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon33.html">33</a></li>
+                        <li class="active"><a href="http://jon.doblados.net/author/jon34.html">34</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon35.html">35</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon36.html">36</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon37.html">37</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon38.html">38</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon39.html">39</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon40.html">40</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon41.html">41</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon42.html">42</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon43.html">43</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon44.html">44</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon45.html">45</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon46.html">46</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon47.html">47</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon48.html">48</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon49.html">49</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon50.html">50</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon51.html">51</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon52.html">52</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon53.html">53</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon54.html">54</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon55.html">55</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon56.html">56</a></li>
+                        <li class=""><a href="http://jon.doblados.net/author/jon57.html">57</a></li>
+                        <li class="next"><a href="http://jon.doblados.net/author/jon35.html">Next &rarr;</a></li>
+        </ul>
+        </div>
 
-		<footer>
-		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
-		  <p>&copy; Jon</p>
-		</footer>
-	  </div>
+        </div><!--/span-->
 
-	</div>
-</body>
+                <div class="span3 well sidebar-nav" id="sidebar">
+<ul class="nav nav-list">
+<li class="nav-header"><h4><i class="icon-external-link"></i>blogroll</h4></li>
+    <li><a href="http://getpelican.com/"><i class="icon-external-link"></i>Pelican</a></li>
+    <li><a href="http://python.org/"><i class="icon-external-link"></i>Python.org</a></li>
+    <li><a href="http://jinja.pocoo.org/"><i class="icon-external-link"></i>Jinja2</a></li>
+<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
+<li><a href="http://jon.doblados.net/" rel="alternate"><i class="icon-bookmark icon-large"></i>atom feed</a></li>
+    <li><a href="http://twitter.com/JonDoblados"><i class="icon-Twitter-sign icon-large"></i>Twitter</a></li>
+    <li><a href="http://plus.google.com/+JonDoblados"><i class="icon-Google+-sign icon-large"></i>Google+</a></li>
+
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+<li>
+<a href="http://jon.doblados.net/category/aside.html">
+    <i class="icon-folder-open icon-large"></i>Aside
+</a>
+</li>
+<li>
+<a href="http://jon.doblados.net/category/gbg.html">
+    <i class="icon-folder-open icon-large"></i>GBG
+</a>
+</li>
+<li>
+<a href="http://jon.doblados.net/category/misc.html">
+    <i class="icon-folder-open icon-large"></i>Misc
+</a>
+</li>
+<li>
+<a href="http://jon.doblados.net/category/python.html">
+    <i class="icon-folder-open icon-large"></i>Python
+</a>
+</li>
+<li>
+<a href="http://jon.doblados.net/category/tech.html">
+    <i class="icon-folder-open icon-large"></i>Tech
+</a>
+</li>
+
+<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/nix.html">
+        <i class="icon-tag icon-large"></i>*nix
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/katrina.html">
+        <i class="icon-tag icon-large"></i>Katrina
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/data-center.html">
+        <i class="icon-tag icon-large"></i>Data Center
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://jon.doblados.net/tag/galleries.html">
+        <i class="icon-tag icon-large"></i>Galleries
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/victory.html">
+        <i class="icon-tag icon-large"></i>Victory
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/isabel.html">
+        <i class="icon-tag icon-large"></i>Isabel
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://jon.doblados.net/tag/gnulinux.html">
+        <i class="icon-tag icon-large"></i>GNU/Linux
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://jon.doblados.net/tag/google.html">
+        <i class="icon-tag icon-large"></i>Google
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/xavier-u.html">
+        <i class="icon-tag icon-large"></i>Xavier U
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/writing.html">
+        <i class="icon-tag icon-large"></i>Writing
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/jesus-christ.html">
+        <i class="icon-tag icon-large"></i>Jesus Christ
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/parenting.html">
+        <i class="icon-tag icon-large"></i>Parenting
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/office.html">
+        <i class="icon-tag icon-large"></i>Office
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/parenthood.html">
+        <i class="icon-tag icon-large"></i>Parenthood
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/gwf.html">
+        <i class="icon-tag icon-large"></i>GWF
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/aside.html">
+        <i class="icon-tag icon-large"></i>Aside
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/bug-tracking.html">
+        <i class="icon-tag icon-large"></i>Bug Tracking
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/virtualization.html">
+        <i class="icon-tag icon-large"></i>Virtualization
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/tech.html">
+        <i class="icon-tag icon-large"></i>Tech
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/sysads.html">
+        <i class="icon-tag icon-large"></i>Sysads
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/ec2.html">
+        <i class="icon-tag icon-large"></i>EC2
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://jon.doblados.net/tag/vacation.html">
+        <i class="icon-tag icon-large"></i>Vacation
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/pelican.html">
+        <i class="icon-tag icon-large"></i>Pelican
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/christmas.html">
+        <i class="icon-tag icon-large"></i>Christmas
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/image.html">
+        <i class="icon-tag icon-large"></i>Image
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/oracle-bi.html">
+        <i class="icon-tag icon-large"></i>Oracle BI
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://jon.doblados.net/tag/gbg-cagayan-de-oro.html">
+        <i class="icon-tag icon-large"></i>GBG Cagayan de Oro
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://jon.doblados.net/tag/miguel.html">
+        <i class="icon-tag icon-large"></i>Miguel
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://jon.doblados.net/tag/personal.html">
+        <i class="icon-tag icon-large"></i>Personal
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/revision-control.html">
+        <i class="icon-tag icon-large"></i>Revision Control
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/cloud-computing.html">
+        <i class="icon-tag icon-large"></i>Cloud Computing
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/preschool.html">
+        <i class="icon-tag icon-large"></i>Preschool
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/valentines-day.html">
+        <i class="icon-tag icon-large"></i>Valentines Day
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/crystal-reports.html">
+        <i class="icon-tag icon-large"></i>Crystal Reports
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/rds.html">
+        <i class="icon-tag icon-large"></i>RDS
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/god.html">
+        <i class="icon-tag icon-large"></i>God
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/openstack.html">
+        <i class="icon-tag icon-large"></i>OpenStack
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/rs6000-b50.html">
+        <i class="icon-tag icon-large"></i>RS6000 B50
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://jon.doblados.net/tag/christianity-amp-parenthood.html">
+        <i class="icon-tag icon-large"></i>Christianity amp; Parenthood
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/blogging.html">
+        <i class="icon-tag icon-large"></i>Blogging
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/civic.html">
+        <i class="icon-tag icon-large"></i>Civic
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/python.html">
+        <i class="icon-tag icon-large"></i>Python
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://jon.doblados.net/tag/technology.html">
+        <i class="icon-tag icon-large"></i>Technology
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/victorycdo.html">
+        <i class="icon-tag icon-large"></i>VictoryCDO
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/honda.html">
+        <i class="icon-tag icon-large"></i>Honda
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/hong-kong.html">
+        <i class="icon-tag icon-large"></i>Hong Kong
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://jon.doblados.net/tag/photos.html">
+        <i class="icon-tag icon-large"></i>Photos
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/map-maker.html">
+        <i class="icon-tag icon-large"></i>Map Maker
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://jon.doblados.net/tag/family.html">
+        <i class="icon-tag icon-large"></i>Family
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/christianity.html">
+        <i class="icon-tag icon-large"></i>Christianity
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/hci.html">
+        <i class="icon-tag icon-large"></i>HCI
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/cloud.html">
+        <i class="icon-tag icon-large"></i>Cloud
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://jon.doblados.net/tag/systems-administration.html">
+        <i class="icon-tag icon-large"></i>Systems Administration
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://jon.doblados.net/tag/kysa.html">
+        <i class="icon-tag icon-large"></i>Kysa
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/community.html">
+        <i class="icon-tag icon-large"></i>Community
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/cdo.html">
+        <i class="icon-tag icon-large"></i>CDO
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/relationships.html">
+        <i class="icon-tag icon-large"></i>Relationships
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/mysql.html">
+        <i class="icon-tag icon-large"></i>MySQL
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://jon.doblados.net/tag/gbg.html">
+        <i class="icon-tag icon-large"></i>GBG
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/marriage.html">
+        <i class="icon-tag icon-large"></i>Marriage
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/gallery.html">
+        <i class="icon-tag icon-large"></i>Gallery
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/cebu.html">
+        <i class="icon-tag icon-large"></i>Cebu
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://jon.doblados.net/tag/community-work.html">
+        <i class="icon-tag icon-large"></i>Community Work
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/oracle.html">
+        <i class="icon-tag icon-large"></i>Oracle
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/ibm.html">
+        <i class="icon-tag icon-large"></i>IBM
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://jon.doblados.net/tag/hosting.html">
+        <i class="icon-tag icon-large"></i>Hosting
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/hp.html">
+        <i class="icon-tag icon-large"></i>HP
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/github.html">
+        <i class="icon-tag icon-large"></i>GitHub
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/selfie.html">
+        <i class="icon-tag icon-large"></i>Selfie
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/domains.html">
+        <i class="icon-tag icon-large"></i>Domains
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jon.doblados.net/tag/risc.html">
+        <i class="icon-tag icon-large"></i>RISC
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://jon.doblados.net/tag/ubuntu.html">
+        <i class="icon-tag icon-large"></i>Ubuntu
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://jon.doblados.net/tag/todo.html">
+        <i class="icon-tag icon-large"></i>TODO
+    </a>
+</li>
+
+
+</ul>        </div><!--/.well -->
+
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <address id="about">
+                Proudly powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
+                                which takes great advantage of <a href="http://python.org">Python <i class="icon-external-link"></i></a>.
+        </address><!-- /#about -->
+
+        <p>The theme is from <a href="http://twitter.github.com/bootstrap/">Bootstrap from Twitter <i class="icon-external-link"></i></a>,
+                   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome <i class="icon-external-link"></i></a>, thanks!</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'jondoblados';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://jon.doblados.net/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="http://jon.doblados.net/theme/js/bootstrap.min.js"></script>
+  </body>
 </html>
