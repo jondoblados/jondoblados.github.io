@@ -1,173 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
-        <title>Jon Doblados - Tech</title>
-        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/main.css" />
+	<meta charset="utf-8">
+	<title>Jon Doblados</title>
+	<meta name="description" content="">
+	<meta name="author" content="Jon">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="http://jon.doblados.net/theme/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	<link href="http://jon.doblados.net/theme/bootstrap.min.css" rel="stylesheet">
+	<link href="http://jon.doblados.net/theme/local.css" rel="stylesheet">
+	<link href="http://jon.doblados.net/theme/pygments.css" rel="stylesheet">
+
+	<!-- Feeds -->
+
+
+
+
 </head>
+<body>
+	<div class="topbar">
+	  <div class="topbar-inner">
+		<div class="container-fluid">
+		  <a class="brand" href="http://jon.doblados.net/">Jon Doblados</a>
+			<ul class="nav">
+						<li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
+						<li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
+					<li ><a href="http://jon.doblados.net/category/aside.html">Aside</a></li>
+					<li ><a href="http://jon.doblados.net/category/gbg.html">GBG</a></li>
+					<li ><a href="http://jon.doblados.net/category/misc.html">Misc</a></li>
+					<li ><a href="http://jon.doblados.net/category/python.html">Python</a></li>
+					<li class="active"><a href="http://jon.doblados.net/category/tech.html">Tech</a></li>
+			</ul>
+			<p class="pull-right"><a href="http://jon.doblados.net/archives.html">[archives]</a> <a href="http://jon.doblados.net/tags.html">[tags]</a></p>
+		</div>
+	  </div>
+	</div>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://jon.doblados.net/">Jon Doblados </a></h1>
-                <nav><ul>
-                    <li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
-                    <li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
-                    <li><a href="http://jon.doblados.net/category/aside.html">Aside</a></li>
-                    <li><a href="http://jon.doblados.net/category/gbg.html">GBG</a></li>
-                    <li><a href="http://jon.doblados.net/category/misc.html">Misc</a></li>
-                    <li><a href="http://jon.doblados.net/category/python.html">Python</a></li>
-                    <li class="active"><a href="http://jon.doblados.net/category/tech.html">Tech</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="http://jon.doblados.net/racking-legacy-servers-part-1.html">Racking Legacy Servers - Part 1</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2015-01-23T22:03:00+08:00">
-                Published: Fri 23 January 2015
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
-        </address>
-<p>In <a href="http://jon.doblados.net/category/tech.html">Tech</a>. </p>
-<p>tags: <a href="http://jon.doblados.net/tag/data-center.html">Data Center</a> <a href="http://jon.doblados.net/tag/hp.html">HP</a> <a href="http://jon.doblados.net/tag/ibm.html">IBM</a> <a href="http://jon.doblados.net/tag/systems-administration.html">Systems Administration</a> </p>
-</footer><!-- /.post-info --><p>Earlier today we scheduled the racking of our old C-Class HP
+	<div class="container-fluid">
+	  <div class="sidebar">
+		<div class="well">
+			<h3>Blogroll</h3>
+			<ul>
+				<li><a href="http://getpelican.com/">Pelican</a></li>
+				<li><a href="http://python.org/">Python.org</a></li>
+				<li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+			</ul>
+			<div class="social">
+			<h3>Social</h3>
+			<ul>
+				<li><a href="http://twitter.com/JonDoblados">Twitter</a></li>
+				<li><a href="http://plus.google.com/+JonDoblados">Google+</a></li>
+			</ul>
+			</div>
+		</div>
+	  </div>
+	  <div class="content">
+<div class="page-header"><h1>Jon Doblados <small>Tech</small></h1></div>
+<div class='article'>
+	<h2>Racking Legacy Servers - Part 1</h2>
+	<div class="well small">Permalink: <a class="more" href="http://jon.doblados.net/racking-legacy-servers-part-1.html">2015-01-23 22:03:00+08:00</a>
+by <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon </a>
+ in <a href="http://jon.doblados.net/category/tech.html">Tech</a>
+tags: <a href="http://jon.doblados.net/tag/data-center.html">Data Center</a> <a href="http://jon.doblados.net/tag/hp.html">HP</a> <a href="http://jon.doblados.net/tag/ibm.html">IBM</a> <a href="http://jon.doblados.net/tag/systems-administration.html">Systems Administration</a> </div>
+	<div class="summary"><p>Earlier today we scheduled the racking of our old C-Class HP
 BladeSystem. It used to be wrapped in its own enclosure with wheels to
 boot, but it didn't make sense to have it stand outside the cabinets. So
-we gave heads up and asked some guys to stay behind after office hours.
-Thanks to Mona, Eric, Jing, Tim, and Mark(?) for the assist!</p>
-<p>Next up, the classic IBM BladeCenter!</p>
-<!-- Place this tag in your head or just before your close body tag. -->
-
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-
-<!-- Place this tag where you want the widget to render. -->
-
-<div class="g-post" data-href="https://plus.google.com/114642277785568765419/posts/7FNAGmLStBM"></div><p>There are <a href="http://jon.doblados.net/racking-legacy-servers-part-1.html#disqus_thread">comments</a>.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jon.doblados.net/work-over-christmas-break-2014.html" rel="bookmark"
-                           title="Permalink to Work over Christmas Break 2014">Work over Christmas Break 2014</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2014-12-30T15:18:00+08:00">
-                Published: Tue 30 December 2014
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
-        </address>
-<p>In <a href="http://jon.doblados.net/category/tech.html">Tech</a>. </p>
-<p>tags: <a href="http://jon.doblados.net/tag/systems-administration.html">Systems Administration</a> <a href="http://jon.doblados.net/tag/data-center.html">Data Center</a> </p>
-</footer><!-- /.post-info -->                <p>10 years ago, I wouldn't be complaining at all. I could live in a
+we gave heads up and asked some guys to stay behind ...</p> <a class="btn primary xsmall" href="http://jon.doblados.net/racking-legacy-servers-part-1.html">more…</a>
+	</div>
+</div>	
+<div class='article'>
+	<h2>Work over Christmas Break 2014</h2>
+	<div class="well small">Permalink: <a class="more" href="http://jon.doblados.net/work-over-christmas-break-2014.html">2014-12-30 15:18:00+08:00</a>
+by <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon </a>
+ in <a href="http://jon.doblados.net/category/tech.html">Tech</a>
+tags: <a href="http://jon.doblados.net/tag/systems-administration.html">Systems Administration</a> <a href="http://jon.doblados.net/tag/data-center.html">Data Center</a> </div>
+	<div class="summary"><p>10 years ago, I wouldn't be complaining at all. I could live in a
 datacenter for days until the job's done. But these days, my back aches
 are more pronounced, and fatigue sets in more easily. This is why it's
-always great to have others helping out ...</p>
-                <a class="readmore" href="http://jon.doblados.net/work-over-christmas-break-2014.html">read more</a>
-<p>There are <a href="http://jon.doblados.net/work-over-christmas-break-2014.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jon.doblados.net/its-no-longer-about-the-number-of-monitors-you-have.html" rel="bookmark"
-                           title="Permalink to It's no longer about the number of monitors you have">It's no longer about the number of monitors you have</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2014-12-16T04:08:00+08:00">
-                Published: Tue 16 December 2014
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
-        </address>
-<p>In <a href="http://jon.doblados.net/category/tech.html">Tech</a>. </p>
-<p>tags: <a href="http://jon.doblados.net/tag/systems-administration.html">Systems Administration</a> <a href="http://jon.doblados.net/tag/virtualization.html">Virtualization</a> </p>
-</footer><!-- /.post-info -->                <p>Unlike in the late 90s to mid 2000s, desktop real estate is no longer
+always great to have others helping out ...</p> <a class="btn primary xsmall" href="http://jon.doblados.net/work-over-christmas-break-2014.html">more…</a>
+	</div>
+</div>	
+<div class='article'>
+	<h2>It's no longer about the number of monitors you have</h2>
+	<div class="well small">Permalink: <a class="more" href="http://jon.doblados.net/its-no-longer-about-the-number-of-monitors-you-have.html">2014-12-16 04:08:00+08:00</a>
+by <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon </a>
+ in <a href="http://jon.doblados.net/category/tech.html">Tech</a>
+tags: <a href="http://jon.doblados.net/tag/systems-administration.html">Systems Administration</a> <a href="http://jon.doblados.net/tag/virtualization.html">Virtualization</a> </div>
+	<div class="summary"><p>Unlike in the late 90s to mid 2000s, desktop real estate is no longer
 constrained by the number of monitors you use. We now tout the number of
 virtual machines we have access to. In fact, my ailing MBP has managed
-to remain useful because remote access still enables me ...</p>
-                <a class="readmore" href="http://jon.doblados.net/its-no-longer-about-the-number-of-monitors-you-have.html">read more</a>
-<p>There are <a href="http://jon.doblados.net/its-no-longer-about-the-number-of-monitors-you-have.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
-            </article></li>
+to remain useful because remote access still enables me ...</p> <a class="btn primary xsmall" href="http://jon.doblados.net/its-no-longer-about-the-number-of-monitors-you-have.html">more…</a>
+	</div>
+</div>	
+<div class='article'>
+	<h2>Crystal Reports Redux</h2>
+	<div class="well small">Permalink: <a class="more" href="http://jon.doblados.net/crystal-reports-redux.html">2014-06-22 12:13:00+08:00</a>
+by <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon </a>
+ in <a href="http://jon.doblados.net/category/tech.html">Tech</a>
+tags: <a href="http://jon.doblados.net/tag/crystal-reports.html">Crystal Reports</a> <a href="http://jon.doblados.net/tag/oracle.html">Oracle</a> <a href="http://jon.doblados.net/tag/oracle-bi.html">Oracle BI</a> </div>
+	<div class="summary"><p>I didn't think I'd be saying this many years down the road, but here goes anyway. Crystal Reports is my friend. Yep. Apparently, I've forgotten my disdain for this piece of software. It's amusing (well, for me) that the last version of Crystal Reports that I ...</p> <a class="btn primary xsmall" href="http://jon.doblados.net/crystal-reports-redux.html">more…</a>
+	</div>
+</div>	
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jon.doblados.net/crystal-reports-redux.html" rel="bookmark"
-                           title="Permalink to Crystal Reports Redux">Crystal Reports Redux</a></h1>
-                </header>
+<div class="pagination">
+<ul>
+		<li class="prev disabled"><a href="#">&larr; Previous</a></li>
+		<li class="active"><a href="http://jon.doblados.net/category/tech.html">1</a></li>
+		<li class=""><a href="http://jon.doblados.net/category/tech2.html">2</a></li>
+		<li class=""><a href="http://jon.doblados.net/category/tech3.html">3</a></li>
+		<li class="next"><a href="http://jon.doblados.net/category/tech2.html">Next &rarr;</a></li>
+</ul>
+</div>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2014-06-22T12:13:00+08:00">
-                Published: Sun 22 June 2014
-        </abbr>
+		<footer>
+		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
+		  <p>&copy; Jon</p>
+		</footer>
+	  </div>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
-        </address>
-<p>In <a href="http://jon.doblados.net/category/tech.html">Tech</a>. </p>
-<p>tags: <a href="http://jon.doblados.net/tag/crystal-reports.html">Crystal Reports</a> <a href="http://jon.doblados.net/tag/oracle.html">Oracle</a> <a href="http://jon.doblados.net/tag/oracle-bi.html">Oracle BI</a> </p>
-</footer><!-- /.post-info -->                <p>I didn't think I'd be saying this many years down the road, but here goes anyway. Crystal Reports is my friend. Yep. Apparently, I've forgotten my disdain for this piece of software. It's amusing (well, for me) that the last version of Crystal Reports that I ...</p>
-                <a class="readmore" href="http://jon.doblados.net/crystal-reports-redux.html">read more</a>
-<p>There are <a href="http://jon.doblados.net/crystal-reports-redux.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-<p class="paginator">
-    Page 1 / 3
-        <a href="http://jon.doblados.net/category/tech2.html">&raquo;</a>
-</p>
-                </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-
-                            <li><a href="http://twitter.com/JonDoblados">Twitter</a></li>
-                            <li><a href="http://plus.google.com/+JonDoblados">Google+</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
-<script type="text/javascript">
-    var disqus_shortname = 'jondoblados';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
+	</div>
 </body>
 </html>
