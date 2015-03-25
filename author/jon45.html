@@ -1,150 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <title>Jon Doblados &middot; Articles by jon</title>
-        <link rel="shortcut icon" href="http://jon.doblados.net/favicon.ico" />
-
-        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/screen.css" type="text/css" />
-        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/pygments.css" type="text/css" />
+        <title> Articles by jon - Jon Doblados</title>
+        <meta charset="utf-8" />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="http://jon.doblados.net/theme/static/css/style.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
-    <body>
-<div id="header">
-            <ul id="nav">
-                <li class="ephemeral selected"><a href="http://jon.doblados.net/author/jon45.html">jon</a></li>
-                <li><a href="http://jon.doblados.net">Home</a></li>
-<li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
-<li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
-<li><a href="http://jon.doblados.net/archives.html">Archives</a></li>
-            </ul>
-            <div class="header_box">
-                <h1><a href="http://jon.doblados.net">Jon Doblados</a></h1>
-            </div>
-        </div>
-        <div id="wrapper">
-            <div id="content">
-                <h4 class="date">Mar %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/disabling-ntpupdate.html" rel="bookmark" title="Permanent Link to &quot;Disabling ntpupdate&quot;">Disabling ntpupdate</a>
-                    </h2>
 
-                    <p>This has been quite overdue, as I have been wanting to disable
+    <body id="index" class="archive">
+        <div class="container">
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li class=""><a href="http://jon.doblados.net">Home</a></li>
+                    <li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
+                    <li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
+                    <li class="active"><a href="http://jon.doblados.net/archives.html">Archives</a></li>
+                </ul>
+                <h3 class="text-muted"><a href="http://jon.doblados.net">Jon Doblados</a></h3>
+				<h2 class="text-muted"></h2>
+             </div>
+<section id="content" class="content">
+<h2>Articles by jon</h2>
+
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/disabling-ntpupdate.html" rel="bookmark" title="Permalink to Disabling ntpupdate">Disabling ntpupdate</a></h2> </header>
+                <div class="entry-content"> <p>This has been quite overdue, as I have been wanting to disable
 <code>ntpupdate</code> since the Hoary release. What is <code>ntpupdate</code> anyway? It's
 the program that synchronizes your system time to an ntp server.
 <abbr title="Network Time Protocol">NTP</abbr> is a protocol for
 synchronising the clocks of computer systems over packet-switched,
-variable-latency data networks. Since Ubuntu defaults to an ntp server
-somewhere in the www, and that it will attempt to sync on boot, it
-causes your machine to go through a much much longer startup process if
-an internet connection is not available at boot time.  </p>
-<p>As I am lugging my lappy around a lot and I have not much of a need for
-the program, I knew I had to take it out and save me minutes of boot
-time. <a href="http://blog.ealden.net/">Ealden</a> taught me how to remove
-<code>ntpupdate</code>, and I suppose we can change the arguments to remove other
-programs as well.  </p>
-<p><code>$ sudo update-rc.d -f ntpdate remove</code>  </p>
-<p><code>update-rc.d</code> will remove any system startup links for
-<code>/etc/init.d/ntpdate</code>, or any instances of such in the different run
-levels. Usage is as follows:  </p>
-<div>
-
-<div>
-
-    usage: update-rc.d [-n] [-f] <basename> remove       update-rc.d [-n] <basename> defaults [NN | sNN kNN]       update-rc.d [-n] <basename> start|stop NN runlvl [runlvl] [...] .                -n: not really                -f: force
-
-</div>
-
-<p>
-
-</div>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/disabling-ntpupdate.html">posted at %l:24 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">Misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Mar %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/got-friendster.html" rel="bookmark" title="Permanent Link to &quot;got Friendster?&quot;">got Friendster?</a>
-                    </h2>
-
-                    <p>My wife just got her account and she found it awesome; as she was able
+variable-latency data networks ...</p> </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/got-friendster.html" rel="bookmark" title="Permalink to got Friendster?">got Friendster?</a></h2> </header>
+                <div class="entry-content"> <p>My wife just got her account and she found it awesome; as she was able
 to catch up on old friends. A highschool buddy paid us a visit today and
 she too told me to get a Friendster account and you know, start catching
-up as well (she'd rather that I find out about my batch's whereabouts by
-myself than get bugged by me). So if you're a buddy of mine, add me to
-your 300+ node network of friends, jon dot doblados at gmail dot com.</p>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/got-friendster.html">posted at %l:40 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">Misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Feb %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/e-commerce-theory-and-practice.html" rel="bookmark" title="Permanent Link to &quot;e-commerce Theory and Practice&quot;">e-commerce Theory and Practice</a>
-                    </h2>
-
-                    <p>The coming finals in my e-commerce class got me browsing through piles
+up as well (she'd rather ...</p> </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/e-commerce-theory-and-practice.html" rel="bookmark" title="Permalink to e-commerce Theory and Practice">e-commerce Theory and Practice</a></h2> </header>
+                <div class="entry-content"> <p>The coming finals in my e-commerce class got me browsing through piles
 of readings and notes and I realized that I have not fully appreciated
 e-commerce as I should have. A techie will know what digital signatures,
-catalogs, EDI's, EFT's, shopping carts, or SSL are, as applied to buying
-and selling online; but graduate school won't even let you wallow in
-those. Instead, one gets tasked to relate e-commerce with business
-processes, and usually, look for solutions to support business processes
-that e-commerce systems can't support.  </p>
-<p>TODO: a) Finish schematic diagram of a typical e-commerce
-(server/merchant client/customer setup), b) complete customizations on
-osCommerce, c) harden authentication module, d) re-read security
-framework paper</p>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/e-commerce-theory-and-practice.html">posted at %l:00 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">Misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Feb %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/performance-extension-for-firefox.html" rel="bookmark" title="Permanent Link to &quot;Performance Extension for Firefox&quot;">Performance Extension for Firefox</a>
-                    </h2>
-
-                    <p>Thanks to <a href="http://maxspark.bounceme.net/">Miko</a> for the heads up. Check
+catalogs, EDI's, EFT's, shopping carts, or SSL are, as applied to ...</p> </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/performance-extension-for-firefox.html" rel="bookmark" title="Permalink to Performance Extension for Firefox">Performance Extension for Firefox</a></h2> </header>
+                <div class="entry-content"> <p>Thanks to <a href="http://maxspark.bounceme.net/">Miko</a> for the heads up. Check
 out this quite nice extension to Firefox, which will allow you to do
-updates without having to log in to your _numerous_ blogs.</p>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/performance-extension-for-firefox.html">posted at %l:20 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">Misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <div class="clear"></div>
-                <div class="pages">
-                    <a href="http://jon.doblados.net/author/jon44.html" class="prev_page">&larr;&nbsp;Previous</a>
-                    <a href="http://jon.doblados.net/author/jon46.html" class="next_page">Next&nbsp;&rarr;</a>
-                    <span>Page 45 of 57</span>
-                </div>
-
-                <div class="clear"></div>
-                <div id="footer">
-                    <p>
-                    Mockingbird theme by <a href="http://nevanscott.com/">Nevan Scott</a>
-                    &middot;
-                    <a class="atom" href="http://jon.doblados.net/None">Feed</a>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
+updates without having to log in to your _numerous_ blogs.</p> </div><!-- entry-content -->
+        </article>
+<div class="pager">
+      <ul>
+						<li class="previous"><a href="http://jon.doblados.net/author/jon44.html">← Previous</a></li>
+						<li class="next"><a href="http://jon.doblados.net/author/jon46.html">Next →</a></li>
+      </ul>
+    </div>
+</section><!-- content -->
+            <footer id="contentinfo" class="footer">
+                    <nav class="pull-right bottom-nav">
+                        <a href="http://jon.doblados.net/None">RSS</a>
+                    </nav>
+                    <address id="about" class="vcard body">
+                    &copy; <a href="http://jon.doblados.net">Jon Doblados</a> Proudly powered by <a href="http://getpelican.com/">Pelican</a>
+                    </address><!-- /#about -->
+            </footer><!-- /#contentinfo -->
+        </div><!-- container -->
     </body>
 </html>

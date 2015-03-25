@@ -1,132 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <title>Jon Doblados &middot; articles tagged "Systems Administration"</title>
-        <link rel="shortcut icon" href="http://jon.doblados.net/favicon.ico" />
-
-        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/screen.css" type="text/css" />
-        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/pygments.css" type="text/css" />
+        <title> Articles in Systems Administration tag - Jon Doblados</title>
+        <meta charset="utf-8" />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="http://jon.doblados.net/theme/static/css/style.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
-    <body>
-<div id="header">
-            <ul id="nav">
-                <li class="ephemeral selected"><a href="http://jon.doblados.net/tag/systems-administration5.html">Systems Administration</a></li>
-                <li><a href="http://jon.doblados.net">Home</a></li>
-<li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
-<li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
-<li><a href="http://jon.doblados.net/archives.html">Archives</a></li>
-            </ul>
-            <div class="header_box">
-                <h1><a href="http://jon.doblados.net">Jon Doblados</a></h1>
-            </div>
-        </div>
-        <div id="wrapper">
-            <div id="content">
-                <h4 class="date">Jan %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/piix3-cannot-attach-drive-to-the-secondary-master.html" rel="bookmark" title="Permanent Link to &quot;PIIX3 cannot attach drive to the Secondary Master&quot;">PIIX3 cannot attach drive to the Secondary Master</a>
-                    </h2>
 
-                    <p>I use <a href="http://www.virtualbox.org/" title="VirtualBox">VirtualBox</a> for my
+    <body id="index" class="archive">
+        <div class="container">
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li class=""><a href="http://jon.doblados.net">Home</a></li>
+                    <li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
+                    <li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
+                    <li class="active"active><a href="http://jon.doblados.net/archives.html">Archives</a></li>
+                </ul>
+                <h3 class="text-muted"><a href="http://jon.doblados.net">Jon Doblados</a></h3>
+				<h2 class="text-muted"></h2>
+             </div>
+<section id="content" class="content">
+<h2>Articles with the Systems Administration tag</h2>
+
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/piix3-cannot-attach-drive-to-the-secondary-master.html" rel="bookmark" title="Permalink to PIIX3 cannot attach drive to the Secondary Master">PIIX3 cannot attach drive to the Secondary Master</a></h2> </header>
+                <div class="entry-content"> <p>I use <a href="http://www.virtualbox.org/" title="VirtualBox">VirtualBox</a> for my
 server experimenting requirements, and it's just great!  Just this
 morning, I got an error message when I started an FC8 virtual machine.</p>
 <p><code>PIIX3 cannot attach drive to the Secondary Master.VBox status code: -102 (VERR_FILE_NOT_FOUND).</code></p>
 <p>This
 <a href="http://forums.virtualbox.org/viewtopic.php?p=805" title="PIIX3 cannot attach drive to the Secondary Master">thread</a>
-in the forums explains that the virtual machine was looking for a disk
-that was supposed to be mounted and could not find it.  I was using an
-external DVD drive and had removed it before I shut down the VM.</p>
-<p>You'd get the same problem if you set up a VM to use a mounted disk or
-some other mass storage device.  To fix this, simply uncheck the
-non-existent devices in the VM settings while the VM is powered down. 
-Alternately, you can plug the devices back in before you power up the
-VM.</p>
-<p>If after doing these steps you still get the error, check if the devices
-do get mounted and are accessible from the host as you may be dealing
-with broken or non-functional devices.</p>
-</p>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/piix3-cannot-attach-drive-to-the-secondary-master.html">posted at %l:12 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://jon.doblados.net/tag/gnulinux.html">GNU/Linux</a>
-                            <a href="http://jon.doblados.net/tag/systems-administration.html" class="selected">Systems Administration</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Nov %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/arping-s.html" rel="bookmark" title="Permanent Link to &quot;arping -s&quot;">arping -s</a>
-                    </h2>
-
-                    <p>arping saves the day once again!</p>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/arping-s.html">posted at %l:33 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/tech.html" rel="tag">Tech</a>
-                        <div class="tags">
-                            <a href="http://jon.doblados.net/tag/nix.html">*nix</a>
-                            <a href="http://jon.doblados.net/tag/systems-administration.html" class="selected">Systems Administration</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Aug %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/more-plesk-blues.html" rel="bookmark" title="Permanent Link to &quot;More Plesk Blues&quot;">More Plesk Blues</a>
-                    </h2>
-
-                    <p>
+in the forums explains that the virtual ...</p> </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/arping-s.html" rel="bookmark" title="Permalink to arping -s">arping -s</a></h2> </header>
+                <div class="entry-content"> <p>arping saves the day once again!</p> </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/more-plesk-blues.html" rel="bookmark" title="Permalink to More Plesk Blues">More Plesk Blues</a></h2> </header>
+                <div class="entry-content"> <p>
 I've had this problem with Plesk since I started relying heavily on it
 in 2006.  For some reason, after you've added your client, allocated IP
 address to client's pool, added a domain, and selecting physical
 hosting, you get the message:
 
-> Unable to update hosting preferences: hosting update is failed: object
-> ID is invalid
-> </p>
-
-<p>After getting this error, you get the domain listed, but still requiring
-set up.  Attempting to complete physical hosting setup will give you
-same result.  First thing you'd want to look at would be some log. For
-all of its peculiarities, Plesk has an organized directory tree. Look at
-<code>/usr/local/psa/admin/logs/httpsd_error_log</code> and you'll see that
-skeleton or template is missing.</p>
-<p>I didn't know exactly where to get the <code>.skel</code> directory, but some
-Googling led me to <code>/home/httpd/vhosts/.skel/0</code>, which after some
-directory skimming, I was able to verify as non-existent. I simply
-copied an existing <code>.skel</code> directory from one of our other servers and
-redid the physical hosting setup.</p>
-<p>I'll see if I can find out what's causing the <code>.skel</code> directory to cease
-to exist. This is a fairly easier to solve issue. I so need to start
-looking in forums of Parallels (formerly SWSoft) for solutions.</p>
-</p>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/more-plesk-blues.html">posted at %l:42 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://jon.doblados.net/tag/systems-administration.html" class="selected">Systems Administration</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Nov %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/on-work-and-blogging.html" rel="bookmark" title="Permanent Link to &quot;on work and blogging&quot;">on work and blogging</a>
-                    </h2>
-
-                    <div>
+> Unable to update hosting preferences: hosting update ...</p> </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/on-work-and-blogging.html" rel="bookmark" title="Permalink to on work and blogging">on work and blogging</a></h2> </header>
+                <div class="entry-content"> <div>
 
 i haven't been updating for several important, albeit lousy reasons.
 
@@ -134,42 +57,23 @@ work has been keeping me up at nights and i feel that if i were to write
 entries, i wouldn't be making much sense.
 
 technobabble is fun, but i've long outgrown this preference for writing.
-call it a maturing of sorts, and i'm now ready to take things (read:
-blogging) to higher levels
-
-i've almost completely forgotten about deepest sender, a cool firefox
-[extension](https://addons.mozilla.org/en-US/firefox/addon/1811)for
-blogging, and it's great to be using it again
-
-</div>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/on-work-and-blogging.html">posted at %l:42 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://jon.doblados.net/tag/systems-administration.html" class="selected">Systems Administration</a>
-                            <a href="http://jon.doblados.net/tag/technology.html">Technology</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <div class="clear"></div>
-                <div class="pages">
-                    <a href="http://jon.doblados.net/tag/systems-administration4.html" class="prev_page">&larr;&nbsp;Previous</a>
-                    <a href="http://jon.doblados.net/tag/systems-administration6.html" class="next_page">Next&nbsp;&rarr;</a>
-                    <span>Page 5 of 6</span>
-                </div>
-
-                <div class="clear"></div>
-                <div id="footer">
-                    <p>
-                    Mockingbird theme by <a href="http://nevanscott.com/">Nevan Scott</a>
-                    &middot;
-                    <a class="atom" href="http://jon.doblados.net/None">Feed</a>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
+call it ...</div> </div><!-- entry-content -->
+        </article>
+<div class="pager">
+      <ul>
+						<li class="previous"><a href="http://jon.doblados.net/tag/systems-administration4.html">← Previous</a></li>
+						<li class="next"><a href="http://jon.doblados.net/tag/systems-administration6.html">Next →</a></li>
+      </ul>
+    </div>
+</section><!-- content -->
+            <footer id="contentinfo" class="footer">
+                    <nav class="pull-right bottom-nav">
+                        <a href="http://jon.doblados.net/None">RSS</a>
+                    </nav>
+                    <address id="about" class="vcard body">
+                    &copy; <a href="http://jon.doblados.net">Jon Doblados</a> Proudly powered by <a href="http://getpelican.com/">Pelican</a>
+                    </address><!-- /#about -->
+            </footer><!-- /#contentinfo -->
+        </div><!-- container -->
     </body>
 </html>

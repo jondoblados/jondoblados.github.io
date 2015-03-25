@@ -1,186 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <title>Jon Doblados</title>
-        <link rel="shortcut icon" href="http://jon.doblados.net/favicon.ico" />
-
-        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/screen.css" type="text/css" />
-        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/pygments.css" type="text/css" />
+        <meta charset="utf-8" />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="http://jon.doblados.net/theme/static/css/style.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
-    <body>
-<div id="header">
-            <ul id="nav">
-                <li><a href="http://jon.doblados.net">Home</a></li>
-<li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
-<li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
-<li><a href="http://jon.doblados.net/archives.html">Archives</a></li>
-            </ul>
-            <div class="header_box">
-                <h1><a href="http://jon.doblados.net">Jon Doblados</a></h1>
-            </div>
-        </div>
-        <div id="wrapper">
-            <div id="content">
-                <h4 class="date">Feb %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/untitled-4.html" rel="bookmark" title="Permanent Link to &quot;Untitled&quot;">Untitled</a>
-                    </h2>
 
-                    <div>
+    <body id="index" class="archive">
+        <div class="container">
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li class="active"><a href="http://jon.doblados.net">Home</a></li>
+                    <li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
+                    <li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
+                    <li><a href="http://jon.doblados.net/archives.html">Archives</a></li>
+                </ul>
+                <h3 class="text-muted"><a href="http://jon.doblados.net">Jon Doblados</a></h3>
+				<h2 class="text-muted"></h2>
+             </div>
+<section id="content" class="content">
+
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/untitled-4.html" rel="bookmark" title="Permalink to Untitled">Untitled</a></h2> </header>
+                <div class="entry-content"> <div>
 
 [![Tumblr\_kxp6tfvn7i1qzdv7ao1\_1280](http://jon.doblados.net/wp-content/uploads/2010/02/tumblr_kxp6tfvn7I1qzdv7ao1_1280.jpg.scaled1000-300x225.jpg)](http://jon.doblados.net/wp-content/uploads/2010/02/tumblr_kxp6tfvn7I1qzdv7ao1_1280.jpg.scaled1000.jpg)  
 
 </div>
 
-<p>Miguel on a shopping cart</p>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/untitled-4.html">posted at %l:08 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://jon.doblados.net/tag/family.html">Family</a>
-                            <a href="http://jon.doblados.net/tag/miguel.html">Miguel</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Feb %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/using-non-standard-ssh-port-with-tortoisesvn.html" rel="bookmark" title="Permanent Link to &quot;Using non-standard SSH port with TortoiseSVN&quot;">Using non-standard SSH port with TortoiseSVN</a>
-                    </h2>
-
-                    <p>Some of my students reported that they were having problems connecting
+<p>Miguel on a shopping cart</p> </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/using-non-standard-ssh-port-with-tortoisesvn.html" rel="bookmark" title="Permalink to Using non-standard SSH port with TortoiseSVN">Using non-standard SSH port with TortoiseSVN</a></h2> </header>
+                <div class="entry-content"> <p>Some of my students reported that they were having problems connecting
 to their repositories using
 <a href="http://tortoisesvn.tigris.org/">TortoiseSVN</a>. At first, quick checks
 from my end didn't reveal what caused these, but I realized soon that it
 wasn't a server issue. It seems like the client software that they were
-using (TortoiseSVN) didn't know what to make of the
-<code>svn+ssh://[user]@[ip]:[port]/[repo]</code> URL.</p>
-<p>I use <a href="http://www.rabbitvcs.org/">RabbitVCS</a> on my Linux boxen and get
-the same "Network connection closed unexpectedly" message. A colleague
-at work suggested that since a non-standard port for SSH is used, I
-should modify my <code>/home/&lt;username&gt;/.subversion/config</code> , look for
-the <span style="font-family: monospace;">[tunnels]</span>section, and
-append <code>-p [port number]</code> for the svn tunnel named ssh. Since this
-particular repository is just one among the dozens I access, I can't
-modify the default svn tunnel. Instead, I added a custom tunnel for each
-of the servers that use non-standard SSH ports.</p>
-<p>For the repo that my students were trying to access, I used
-<code>ssh2212 = $SVN_SSH ssh -q -o ControlMaster=no -p 2212</code>. So the URL now
-looks like <code>svn+ssh2212://[user]@[ip]:2212/[repo]</code> and I was able to
-connect successfully.</p>
-<p>In Windows, there are several ways to do this. Since the OS doesn't have
-a native SSH client executable, users will rely on Cygwin, Putty, or on
-TortoisePlink.exe (in newer versions of TortoiseSVN).</p>
-<p>You can try any of the following solutions (they're all searchable in
-the Internets) and see if you can get around the problem. I've tried
-them all on a Windows guest OS on VirtualBox and only the last three
-solutions worked.</p>
-<ul>
-<li>Using Putty: Use saved session name from Putty in the URL:
-    <code>svn+ssh://[user]@[saved putty session name]/[repo]</code>. Make sure that
-    you configure the session to already use the correct port.</li>
-<li>Using Putty: Alternately, use <code>IP:port</code> format for the Putty saved
-    session name so that you still use the
-    <code>svn+ssh://[user]@[ip]:[port]/[repo]</code> URL format, but you're
-    actually calling the saved session name.</li>
-<li>c. Using client packaged with Tortoise. In TortoiseSVN settings ->
-    Network, change SSH client to
-    <code>"C:Program FilesTortoiseSVNbinTortoisePlink.exe"</code> and use standard
-    <code>svn+ssh://[user]@[ip]:[port]/[repo]</code> URL.</li>
-<li>d. Same as d., but for the SSH client, append <code>-P [port number]</code></li>
-<li>e. Using a wrapper script, such as the one provided
-    <a href="http://unformatt.com/news/non-standard-ssh-ports-with-tortoise-svn/">here</a>
-    (excellent solution btw), and use it as the SSH client executable in
-    TortoiseSVN settings -> Network.</li>
-</ul>
-<p>Hope any one of these work for you. As an inside joke from one of my
-sysad friends, it was also suggested that I save myself the troubles and
-just log in to the server and revert to the default SSH port. LOL.</p>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/using-non-standard-ssh-port-with-tortoisesvn.html">posted at %l:09 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://jon.doblados.net/tag/gnulinux.html">GNU/Linux</a>
-                            <a href="http://jon.doblados.net/tag/systems-administration.html">Systems Administration</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Feb %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/firebug-lite-1-3-0-beta-via-sitepoint-tech-times.html" rel="bookmark" title="Permanent Link to &quot;Firebug Lite 1.3.0 beta /via sitepoint tech times&quot;">Firebug Lite 1.3.0 beta /via sitepoint tech times</a>
-                    </h2>
-
-                    <p><a href="http://getfirebug.com/releases/lite/beta/">http://getfirebug.com/releases/lite/beta/</a></p>
+using ...</p> </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/firebug-lite-1-3-0-beta-via-sitepoint-tech-times.html" rel="bookmark" title="Permalink to Firebug Lite 1.3.0 beta /via sitepoint tech times">Firebug Lite 1.3.0 beta /via sitepoint tech times</a></h2> </header>
+                <div class="entry-content"> <p><a href="http://getfirebug.com/releases/lite/beta/">http://getfirebug.com/releases/lite/beta/</a></p>
 <p>Man, it’s about time! Some Firebug functionality on my other browsers
 would be awesome!</p>
-</p>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/firebug-lite-1-3-0-beta-via-sitepoint-tech-times.html">posted at %l:36 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://jon.doblados.net/tag/technology.html">Technology</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jan %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/repost-system-for-staying-on-top-of-priorities.html" rel="bookmark" title="Permanent Link to &quot;[repost] System for staying on top of priorities&quot;">[repost] System for staying on top of priorities</a>
-                    </h2>
-
-                    <p>I’ve tried a lot of productivity tools to get better control over my
+</p> </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/repost-system-for-staying-on-top-of-priorities.html" rel="bookmark" title="Permalink to [repost] System for staying on top of priorities">[repost] System for staying on top of priorities</a></h2> </header>
+                <div class="entry-content"> <p>I’ve tried a lot of productivity tools to get better control over my
 ever-bloating task lists, and none have been as effective for me, as
 using Gmail with the GTDInbox add-on, and Google Tasks. How I make these
-work for me is a result of several months of trials, using Google Tasks
-initially, then with custom labeling and automatic label switching with
-GTDInbox.</p>
-<p>The goal was simple, and that was to attain inbox zero at least once a
-day. GTDInbox allows me to mark or tag emails containing tasks with
-action, wait-for, delegated, and finished. After the emails are tagged,
-they get added to Google Tasks, so that I’ll have an easy way to pull up
-a related email for a particular task. Lastly, these emails get
-archived, keeping the goal of inbox zero in mind, always.</p>
-<p>What tools do you use, and have you already gotten into a rhythm of
-using these efficiently while working?</p>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/repost-system-for-staying-on-top-of-priorities.html">posted at %l:28 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://jon.doblados.net/tag/technology.html">Technology</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <div class="clear"></div>
-                <div class="pages">
-                    <a href="http://jon.doblados.net/index23.html" class="prev_page">&larr;&nbsp;Previous</a>
-                    <a href="http://jon.doblados.net/index25.html" class="next_page">Next&nbsp;&rarr;</a>
-                    <span>Page 24 of 57</span>
-                </div>
-
-                <div class="clear"></div>
-                <div id="footer">
-                    <p>
-                    Mockingbird theme by <a href="http://nevanscott.com/">Nevan Scott</a>
-                    &middot;
-                    <a class="atom" href="http://jon.doblados.net/None">Feed</a>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
+work for me is a result of several months of trials ...</p> </div><!-- entry-content -->
+        </article>
+<div class="pager">
+      <ul>
+						<li class="previous"><a href="http://jon.doblados.net/index23.html">← Previous</a></li>
+						<li class="next"><a href="http://jon.doblados.net/index25.html">Next →</a></li>
+      </ul>
+    </div>
+</section><!-- content -->
+            <footer id="contentinfo" class="footer">
+                    <nav class="pull-right bottom-nav">
+                        <a href="http://jon.doblados.net/None">RSS</a>
+                    </nav>
+                    <address id="about" class="vcard body">
+                    &copy; <a href="http://jon.doblados.net">Jon Doblados</a> Proudly powered by <a href="http://getpelican.com/">Pelican</a>
+                    </address><!-- /#about -->
+            </footer><!-- /#contentinfo -->
+        </div><!-- container -->
     </body>
 </html>

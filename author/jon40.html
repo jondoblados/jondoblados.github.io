@@ -1,188 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <title>Jon Doblados &middot; Articles by jon</title>
-        <link rel="shortcut icon" href="http://jon.doblados.net/favicon.ico" />
-
-        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/screen.css" type="text/css" />
-        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/pygments.css" type="text/css" />
+        <title> Articles by jon - Jon Doblados</title>
+        <meta charset="utf-8" />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="http://jon.doblados.net/theme/static/css/style.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
-    <body>
-<div id="header">
-            <ul id="nav">
-                <li class="ephemeral selected"><a href="http://jon.doblados.net/author/jon40.html">jon</a></li>
-                <li><a href="http://jon.doblados.net">Home</a></li>
-<li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
-<li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
-<li><a href="http://jon.doblados.net/archives.html">Archives</a></li>
-            </ul>
-            <div class="header_box">
-                <h1><a href="http://jon.doblados.net">Jon Doblados</a></h1>
-            </div>
-        </div>
-        <div id="wrapper">
-            <div id="content">
-                <h4 class="date">Feb %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/ip-hijacking-and-then-some.html" rel="bookmark" title="Permanent Link to &quot;IP-hijacking and then some&quot;">IP-hijacking and then some</a>
-                    </h2>
 
-                    <p>Almost a month of downtime. The servers were fine, but our IP addresses
+    <body id="index" class="archive">
+        <div class="container">
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li class=""><a href="http://jon.doblados.net">Home</a></li>
+                    <li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
+                    <li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
+                    <li class="active"><a href="http://jon.doblados.net/archives.html">Archives</a></li>
+                </ul>
+                <h3 class="text-muted"><a href="http://jon.doblados.net">Jon Doblados</a></h3>
+				<h2 class="text-muted"></h2>
+             </div>
+<section id="content" class="content">
+<h2>Articles by jon</h2>
+
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/ip-hijacking-and-then-some.html" rel="bookmark" title="Permalink to IP-hijacking and then some">IP-hijacking and then some</a></h2> </header>
+                <div class="entry-content"> <p>Almost a month of downtime. The servers were fine, but our IP addresses
 were not. Somehow, a system bug from one of the hosting companies caused
 our plan to include 14 other IP addresses, and we only maintained 6 as
 far as I am concerned.</p>
-<p>So the hosting company eventually understood what was happening and
-started asking the right questions. The bug is that the system allowed
-network administrators to assign to new clients, the IP addresses that
-have already been assigned to a current client.</p>
-<p>We spent crazy hours figuring out what happened. Since the domains were
-not loading our sites, and instead were redirecting to some domains we
-don’t own (real bad sites btw), we checked if .htaccess was modified and
-tested if it was working at all. I also did double checks on virtual
-host configurations and they all looked clean.</p>
-<p>I started thinking that it was a routing issue. We were not using the
-publicly routable IPs for the virtual hosts; instead, we used internal
-IPs as mapped to the firewall hardware. A lookup on the domain/s that we
-were being redirected to reported different IP addresses, which didn’t
-readily confirm my suspicions, but stressed the possibility of
-IP-hijacking.</p>
-<p>It’s not supposed to be taken in the context of BGP (border gateway
-protocol), as this is beyond me. Instead, think of your assumption over
-IP addresses that we’re using, to serve your websites. Sounds clear? I
-hope it does. I got pretty lost myself and it isn’t after deep digging
-at the hosting company’s end that their errors became apparent.</p>
-<p>So in the light of this realization, I’ve already moved the domains to
-some other hosting. Way too much work and way uncool.</p>
-</p>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/ip-hijacking-and-then-some.html">posted at %l:51 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://jon.doblados.net/tag/domains.html">Domains</a>
-                            <a href="http://jon.doblados.net/tag/hosting.html">Hosting</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jan %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/using-symbolic-links-for-mysql-data-files.html" rel="bookmark" title="Permanent Link to &quot;Using symbolic links for MySQL data files&quot;">Using symbolic links for MySQL data files</a>
-                    </h2>
-
-                    <p>Over a year ago, we had several servers configured for high traffic
+<p>So the hosting company eventually ...</p> </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/using-symbolic-links-for-mysql-data-files.html" rel="bookmark" title="Permalink to Using symbolic links for MySQL data files">Using symbolic links for MySQL data files</a></h2> </header>
+                <div class="entry-content"> <p>Over a year ago, we had several servers configured for high traffic
 websites. A mispartioning resulted in /var becoming obscenely small, and
 it was only after MySQL crashed that we remembered this. We couldn’t
 afford more downtime if we dealt with the partition size problem, so I
-thought of quickly moving the data files into /home/mysql/{dbname} from
-/var/lib/mysql/{dbname} and create the symlink /var/lib/mysql/{dbname}
--> /home/mysql/{dbname}.</p>
-<p>I was not certain of the performance implications to this. I heard from
-a fellow Linux junkie here that there may be a slight penalties in terms
-of access speed, since /home was meant for generic read/write, whereas
-/var was accessed in a very quick manner. Gotta verify this. But for
-now, I dwell in the power of symbolic links.</p>
-</p>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/using-symbolic-links-for-mysql-data-files.html">posted at %l:47 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://jon.doblados.net/tag/hosting.html">Hosting</a>
-                            <a href="http://jon.doblados.net/tag/mysql.html">MySQL</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Dec %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/leeching-for-internet-access.html" rel="bookmark" title="Permanent Link to &quot;Leeching for internet access&quot;">Leeching for internet access</a>
-                    </h2>
-
-                    <p>Sure, my bosses do this all the time…in airports, hotel lobbies, and
+thought of ...</p> </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/leeching-for-internet-access.html" rel="bookmark" title="Permalink to Leeching for internet access">Leeching for internet access</a></h2> </header>
+                <div class="entry-content"> <p>Sure, my bosses do this all the time…in airports, hotel lobbies, and
 coffee shops. The mere act of “connecting” to an unsecured wireless
 network doubles as a necessity and as a leaching of sorts. Gotta love
-wireless. :)</p>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/leeching-for-internet-access.html">posted at %l:14 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">Misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Dec %e,  %G</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://jon.doblados.net/what-it-means-to-aggregate-thinking.html" rel="bookmark" title="Permanent Link to &quot;What it means to aggregate thinking&quot;">What it means to aggregate thinking</a>
-                    </h2>
-
-                    <p>I love thinking. They say thinking burns as many calories as when you're
+wireless. :)</p> </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jon.doblados.net/what-it-means-to-aggregate-thinking.html" rel="bookmark" title="Permalink to What it means to aggregate thinking">What it means to aggregate thinking</a></h2> </header>
+                <div class="entry-content"> <p>I love thinking. They say thinking burns as many calories as when you're
 having sex...so you may liken thinking to sex. Sounds good, eh? But be
 warned. Although you can easily fake either one, you don't lose as many
 calories as doing it for real!</p>
-<p>This isn't a sex column, so it's best I get straight to the point and
-present my thoughts on what aggregated thinking is (and what constitutes
-faking it). Wiktionary defines
-<a href="http://en.wiktionary.org/wiki/aggregate">aggregation</a> as an act of
-bringing together, or collecting into a mass or sum.</p>
-<p>We programmers are more familiar with aggregation as a slight
-modification of composition (yeah, we're no fun).
-<a href="http://en.wikipedia.org/wiki/Object_composition#Aggregation">Aggregation</a>
-differs from ordinary composition in that it does not imply ownership.
-For example, an older model of a car engine will have a carburetor
-(yeah, it's spelled that way). Take away the engine and the carburetor
-will lose its usability. That's composition. Then there's a pond with a
-duck swimming about. Take away the pond and the duck will still be a
-waddling duck, and will continue to exist as one. That's aggregation.</p>
-<p>When used to modify the verb thinking, aggregation may denote:</p>
-<ol>
-<li>thinking as a process of collecting or bringing together facts,
-    ideas, and other thoughts and try to make sense out of their fusion,</li>
-<li>thinking in order to benefit not only yourself but everyone who is
-    in your thought stream as well,</li>
-<li>thinking in a radical way, such as being "one" with what is
-    generally accepted but in a manner that retains one's identity and
-    ownership over thoughts</li>
-</ol>
-<p>Clearly, aggregated thinking is awesome brain calisthenics. So aggregate
-your thinking when you can. God did not create mindless people to go
-where  mindful" people go. If you lost your backbone, get one ASAP, and
-start thinking for real.</p>
-<p>To fake all these, you can cheat! You can take public opinion and adopt
-that as your own. You can also squint your eyes and frown like you're in
-deep thought, trying to look busy! Whichever way, you don't burn
-calories, and you don't burn off any brain cells. :)</p>
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://jon.doblados.net/what-it-means-to-aggregate-thinking.html">posted at %l:55 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">Misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <div class="clear"></div>
-                <div class="pages">
-                    <a href="http://jon.doblados.net/author/jon39.html" class="prev_page">&larr;&nbsp;Previous</a>
-                    <a href="http://jon.doblados.net/author/jon41.html" class="next_page">Next&nbsp;&rarr;</a>
-                    <span>Page 40 of 57</span>
-                </div>
-
-                <div class="clear"></div>
-                <div id="footer">
-                    <p>
-                    Mockingbird theme by <a href="http://nevanscott.com/">Nevan Scott</a>
-                    &middot;
-                    <a class="atom" href="http://jon.doblados.net/None">Feed</a>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
+<p>This isn ...</p> </div><!-- entry-content -->
+        </article>
+<div class="pager">
+      <ul>
+						<li class="previous"><a href="http://jon.doblados.net/author/jon39.html">← Previous</a></li>
+						<li class="next"><a href="http://jon.doblados.net/author/jon41.html">Next →</a></li>
+      </ul>
+    </div>
+</section><!-- content -->
+            <footer id="contentinfo" class="footer">
+                    <nav class="pull-right bottom-nav">
+                        <a href="http://jon.doblados.net/None">RSS</a>
+                    </nav>
+                    <address id="about" class="vcard body">
+                    &copy; <a href="http://jon.doblados.net">Jon Doblados</a> Proudly powered by <a href="http://getpelican.com/">Pelican</a>
+                    </address><!-- /#about -->
+            </footer><!-- /#contentinfo -->
+        </div><!-- container -->
     </body>
 </html>
