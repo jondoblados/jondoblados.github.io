@@ -1,155 +1,216 @@
-<!doctype html>
-<html lang="">	
-<head>
-	<meta charset="utf-8"/>
-	<title>Hosting - Jon Doblados</title>	
-	<meta name="author" content="Jon">
-	
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <title>Jon Doblados &middot; articles tagged "Hosting"</title>
+        <link rel="shortcut icon" href="http://jon.doblados.net/favicon.ico" />
 
-	<link rel="top" href="#" /><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
-	<link rel="stylesheet" href="http://jon.doblados.net/theme/css/main.css" type="text/css" />
-		
+        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/screen.css" type="text/css" />
+        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/pygments.css" type="text/css" />
+    </head>
+    <body>
+<div id="header">
+            <ul id="nav">
+                <li class="ephemeral selected"><a href="http://jon.doblados.net/tag/hosting.html">Hosting</a></li>
+                <li><a href="http://jon.doblados.net">Home</a></li>
+<li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
+<li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
+<li><a href="http://jon.doblados.net/archives.html">Archives</a></li>
+            </ul>
+            <div class="header_box">
+                <h1><a href="http://jon.doblados.net">Jon Doblados</a></h1>
+            </div>
+        </div>
+        <div id="wrapper">
+            <div id="content">
+                <h4 class="date">Jul %e,  %G</h4>
+                <div class="post">
+<h2 class="title">
+                        <a href="http://jon.doblados.net/how-to-count-instances-of-an-ip-address-in-a-log-file.html" rel="bookmark" title="Permanent Link to &quot;How to count instances of an IP address in a log file&quot;">How to count instances of an IP address in a log file</a>
+                    </h2>
 
-</head>
-	
-<body>
-
-    <div class="container">
-	  
-	  <header role="banner">
-	    <div class="feeds">
-	    </div>
-	      <nav class="pages">
-			  <a href="http://jon.doblados.net/pages/about.html">About</a>
--			  <a href="http://jon.doblados.net/pages/contact.html">Contact</a>
-	      </nav>
-		<a href="http://jon.doblados.net" class="title">Jon Doblados</a>
-      </header>
-	
-	  <div class="wrapper">
-
-		  <div role="main" class="content">
-
-<h1>Post tagged: Hosting</h1>
-
-<article class="summary">
-<div class="metadata">
-  <time datetime="2010-07-24T12:00:00+08:00" pubdate>Sat 24 July 2010</time>
-    <address class="vcard author">
-      by <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
-    </address>
-  in <a href="http://jon.doblados.net/category/misc.html">misc</a>
-<p class="tags">tagged <a href="http://jon.doblados.net/tag/gnulinux.html">GNU/Linux</a>, <a href="http://jon.doblados.net/tag/hosting.html">Hosting</a>, <a href="http://jon.doblados.net/tag/systems-administration.html">Systems Administration</a></p></div>  <div>
-    <h2>
-      <a href="http://jon.doblados.net/how-to-count-instances-of-an-ip-address-in-a-log-file.html" rel="bookmark" title="Permalink to How to count instances of an IP address in a log file">How to count instances of an IP address in a log file</a>
-    </h2>
-    <p><p>I was looking for a quick and painless way to determine what IP
+                    <p>I was looking for a quick and painless way to determine what IP
 addresses used our web app the most and stumbled across this excellent
 <a href="http://encodable.com/tech/blog/2008/12/17/Count_IP_Addresses_in_Access_Log_File_BASH_OneLiner">post</a>. I
 got reminded of the power of the command-line interface and that often,
-I underestimate the way these commands are supposed to make a ...</p></p>
-  </div>
-</article><article class="summary">
-<div class="metadata">
-  <time datetime="2007-08-14T04:09:00+08:00" pubdate>Tue 14 August 2007</time>
-    <address class="vcard author">
-      by <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
-    </address>
-  in <a href="http://jon.doblados.net/category/misc.html">misc</a>
-<p class="tags">tagged <a href="http://jon.doblados.net/tag/hosting.html">Hosting</a>, <a href="http://jon.doblados.net/tag/mysql.html">MySQL</a></p></div>  <div>
-    <h2>
-      <a href="http://jon.doblados.net/plesk-wont-start-after-tweaking-mysql.html" rel="bookmark" title="Permalink to plesk won't start after tweaking mysql">plesk won't start after tweaking mysql</a>
-    </h2>
-    <p><p>i've had this happen to me again the other week and as always, felt like
+I underestimate the way these commands are supposed to make a sysad's
+life easier.</p>
+<p>So here's a quick tip for counting unique visitors to your web app.
+Locate your web app's log file and do a quick scan of the last few
+lines. In my case, this is what I saw:</p>
+<p><code>112.198.79.223 - - [10/Jul/2010:00:57:29 -0400] "POST /v2/api/execute.php?method=upload_time&amp;ver=win1.1.15 HTTP/1.1" 200 116 "-" "Mozilla/5.0"117.241.112.254 - - [10/Jul/2010:00:57:30 -0400] "POST /v2/api/execute.php?method=timestat&amp;ver=win1.1.15 HTTP/1.1" 200 288 "-" "Mozilla/5.0"80.249.84.105 - - [10/Jul/2010:00:57:29 -0400] "POST /v2/api/execute.php?method=offtime&amp;ver=win1.1.15 HTTP/1.1" 200 19 "-" "Mozilla/5.0"117.241.112.254 - - [10/Jul/2010:00:57:32 -0400] "POST /v2/api/execute.php?method=get_defaults&amp;ver=win1.1.15 HTTP/1.1" 200 77 "-" "Mozilla/5.0"</code></p>
+<p>In this log format, the IP address appears first, so we will only need
+to get the first set of characters, separated by a space. In order to
+count instances of an IP address, we sort the IP addresses so similar IP
+addresses are grouped together, then count them. Then we sort them again
+so that the sums are arranged. The number of unique IPs may give you
+pages of standard output, so optionally, if you only want to see which
+IP addresses accessed the web app the most, we look at the top results
+only.</p>
+<p>So these are the commands used, piped one after the other, with the
+output:</p>
+<p><code>[root@server2 ~]# cat /var/log/httpd/access_ssl.log | awk '{print $1}' | sort | uniq -c | sort -nr | head&gt;</code></p>
+<p><code>71612 216.157.78.237 34094 120.28.205.244 30091 119.93.97.54 25078 120.28.214.104 18949 120.28.195.151 17929 58.107.64.40 14877 212.98.174.235 14752 117.241.112.143 14429 120.28.247.74 12864 117.241.113.183 [root@server2 ~]#</code></p>
+<p>Happy counting, err reporting!</p>
+
+                    <div class="clear"></div>
+                    <div class="info">
+<a href="http://jon.doblados.net/how-to-count-instances-of-an-ip-address-in-a-log-file.html">posted at %l:00 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">misc</a>
+                        <div class="tags">
+                            <a href="http://jon.doblados.net/tag/gnulinux.html">GNU/Linux</a>
+                            <a href="http://jon.doblados.net/tag/hosting.html" class="selected">Hosting</a>
+                            <a href="http://jon.doblados.net/tag/systems-administration.html">Systems Administration</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <h4 class="date">Aug %e,  %G</h4>
+                <div class="post">
+<h2 class="title">
+                        <a href="http://jon.doblados.net/plesk-wont-start-after-tweaking-mysql.html" rel="bookmark" title="Permanent Link to &quot;plesk won't start after tweaking mysql&quot;">plesk won't start after tweaking mysql</a>
+                    </h2>
+
+                    <p>i've had this happen to me again the other week and as always, felt like
 kicking myself for not remembering.</p>
 <p>we do a lot of performance tuning on mysql, and as a result, we almost
-always manage to get plesk mangled. not its fault, it just can't run ...</p></p>
-  </div>
-</article><article class="summary">
-<div class="metadata">
-  <time datetime="2007-02-25T11:51:00+08:00" pubdate>Sun 25 February 2007</time>
-    <address class="vcard author">
-      by <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
-    </address>
-  in <a href="http://jon.doblados.net/category/misc.html">misc</a>
-<p class="tags">tagged <a href="http://jon.doblados.net/tag/domains.html">Domains</a>, <a href="http://jon.doblados.net/tag/hosting.html">Hosting</a></p></div>  <div>
-    <h2>
-      <a href="http://jon.doblados.net/ip-hijacking-and-then-some.html" rel="bookmark" title="Permalink to IP-hijacking and then some">IP-hijacking and then some</a>
-    </h2>
-    <p><p>Almost a month of downtime. The servers were fine, but our IP addresses
+always manage to get plesk mangled. not its fault, it just can't run
+without mysql, doh.</p>
+<p>not of preference, but plesk happens to be there to make handling
+domains easier, as a single editing point when you want to change
+something and not worry about missing something out.</p>
+<p>so there's a custom /etc/my.cnf that we use, and with changes to limits
+done (both on mysql and via ulimit), you'd think that a reload of mysqld
+would do. (we use InnoDB btw)</p>
+<p>normally, that's all you need to have mysqld read off the new settings.
+if you've grown so dependent on plesk (like i have), you would not
+notice that mysqld didn't actually start, and you will get an error when
+you load plesk, thinking that it's a plesk error:</p>
+<p><code>ERROR: PleskMainDBExceptionMySQL query failed: Incorrect information in file: './psa/misc.frm'</code></p>
+<p>0: /usr/local/psa/admin/plib/common_func.php3:218<br />
+db_query(string 'select param, val from misc')<br />
+1: /usr/local/psa/admin/plib/common_func.php3:497<br />
+get_param(string 'mysql41_compatible')<br />
+2: /usr/local/psa/admin/plib/common_func.php3:394<br />
+db_set_names()<br />
+3: /usr/local/psa/admin/plib/common_func.php3:373<br />
+db_connect_real(string 'localhost', string 'admin', string
+'********', string 'psa')<br />
+4: /usr/local/psa/admin/plib/common_func.php3:353<br />
+db_connect()<br />
+5: /usr/local/psa/admin/auto_prepend/auth.php3:82<br />
+</code></p>
+<p>even a restart of the plesk service will not work:</p>
+<p><code>[root@jedi]# /etc/init.d/psa restartUnable to query parameter by query select val from misc where param='mysql41_compatible': Incorrect information in file: './psa/misc.frm'Unable to query parameter by query select val from misc where param='mysql41_compatible': Incorrect information in file: './psa/misc.frm'Mysql error: Incorrect information in file: './psa/key_history.frm'Processing config directory: /usr/local/psa/admin/conf/httpsd.*.includeSyntax OK/usr/local/psa/admin/bin/httpsdctl restart: httpd restartedERROR 1033 (HY000) at line 1: Incorrect information in file: './psa/sessions.frm'</code></p>
+<p>so this is a mysqld failing to start properly problem. to fix this, go
+to your mysql datadir and see if the sizes of your innodb log files
+match those in your .cnf. we usually set innodb_log_file_size = 256M
+and innodb_log_buffer_size = 256M in /etc/my.cnf.</p>
+<p>if they don't match, stop mysqld, remove the ib_logfile0 and
+ib_logfile1 files, and start mysqld. be careful not to delete the
+ibdata1 or ibdata2 files or you lose your data. avoid using rm -r ib*
+(yea, wildcards and fast fingers give sysads their most stupefying
+moments)</p>
+<p>innodb will recreate the log files to match your .cnf and mysqld now
+becomes available for plesk.</p>
+</p>
+
+                    <div class="clear"></div>
+                    <div class="info">
+<a href="http://jon.doblados.net/plesk-wont-start-after-tweaking-mysql.html">posted at %l:09 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">misc</a>
+                        <div class="tags">
+                            <a href="http://jon.doblados.net/tag/hosting.html" class="selected">Hosting</a>
+                            <a href="http://jon.doblados.net/tag/mysql.html">MySQL</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <h4 class="date">Feb %e,  %G</h4>
+                <div class="post">
+<h2 class="title">
+                        <a href="http://jon.doblados.net/ip-hijacking-and-then-some.html" rel="bookmark" title="Permanent Link to &quot;IP-hijacking and then some&quot;">IP-hijacking and then some</a>
+                    </h2>
+
+                    <p>Almost a month of downtime. The servers were fine, but our IP addresses
 were not. Somehow, a system bug from one of the hosting companies caused
 our plan to include 14 other IP addresses, and we only maintained 6 as
 far as I am concerned.</p>
-<p>So the hosting company eventually ...</p></p>
-  </div>
-</article><article class="summary">
-<div class="metadata">
-  <time datetime="2007-01-16T08:47:00+08:00" pubdate>Tue 16 January 2007</time>
-    <address class="vcard author">
-      by <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
-    </address>
-  in <a href="http://jon.doblados.net/category/misc.html">misc</a>
-<p class="tags">tagged <a href="http://jon.doblados.net/tag/hosting.html">Hosting</a>, <a href="http://jon.doblados.net/tag/mysql.html">MySQL</a></p></div>  <div>
-    <h2>
-      <a href="http://jon.doblados.net/using-symbolic-links-for-mysql-data-files.html" rel="bookmark" title="Permalink to Using symbolic links for MySQL data files">Using symbolic links for MySQL data files</a>
-    </h2>
-    <p><p>Over a year ago, we had several servers configured for high traffic
+<p>So the hosting company eventually understood what was happening and
+started asking the right questions. The bug is that the system allowed
+network administrators to assign to new clients, the IP addresses that
+have already been assigned to a current client.</p>
+<p>We spent crazy hours figuring out what happened. Since the domains were
+not loading our sites, and instead were redirecting to some domains we
+don’t own (real bad sites btw), we checked if .htaccess was modified and
+tested if it was working at all. I also did double checks on virtual
+host configurations and they all looked clean.</p>
+<p>I started thinking that it was a routing issue. We were not using the
+publicly routable IPs for the virtual hosts; instead, we used internal
+IPs as mapped to the firewall hardware. A lookup on the domain/s that we
+were being redirected to reported different IP addresses, which didn’t
+readily confirm my suspicions, but stressed the possibility of
+IP-hijacking.</p>
+<p>It’s not supposed to be taken in the context of BGP (border gateway
+protocol), as this is beyond me. Instead, think of your assumption over
+IP addresses that we’re using, to serve your websites. Sounds clear? I
+hope it does. I got pretty lost myself and it isn’t after deep digging
+at the hosting company’s end that their errors became apparent.</p>
+<p>So in the light of this realization, I’ve already moved the domains to
+some other hosting. Way too much work and way uncool.</p>
+</p>
+
+                    <div class="clear"></div>
+                    <div class="info">
+<a href="http://jon.doblados.net/ip-hijacking-and-then-some.html">posted at %l:51 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">misc</a>
+                        <div class="tags">
+                            <a href="http://jon.doblados.net/tag/domains.html">Domains</a>
+                            <a href="http://jon.doblados.net/tag/hosting.html" class="selected">Hosting</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <h4 class="date">Jan %e,  %G</h4>
+                <div class="post">
+<h2 class="title">
+                        <a href="http://jon.doblados.net/using-symbolic-links-for-mysql-data-files.html" rel="bookmark" title="Permanent Link to &quot;Using symbolic links for MySQL data files&quot;">Using symbolic links for MySQL data files</a>
+                    </h2>
+
+                    <p>Over a year ago, we had several servers configured for high traffic
 websites. A mispartioning resulted in /var becoming obscenely small, and
 it was only after MySQL crashed that we remembered this. We couldn’t
 afford more downtime if we dealt with the partition size problem, so I
-thought of ...</p></p>
-  </div>
-</article>
-<div class="pagination">
-    Page 1 / 1
-</div>
+thought of quickly moving the data files into /home/mysql/{dbname} from
+/var/lib/mysql/{dbname} and create the symlink /var/lib/mysql/{dbname}
+-> /home/mysql/{dbname}.</p>
+<p>I was not certain of the performance implications to this. I heard from
+a fellow Linux junkie here that there may be a slight penalties in terms
+of access speed, since /home was meant for generic read/write, whereas
+/var was accessed in a very quick manner. Gotta verify this. But for
+now, I dwell in the power of symbolic links.</p>
+</p>
 
-		  </div>	
-		  
-		  <div class="sidebar">
+                    <div class="clear"></div>
+                    <div class="info">
+<a href="http://jon.doblados.net/using-symbolic-links-for-mysql-data-files.html">posted at %l:47 %P</a>&nbsp;&middot;&nbsp;<a href="http://jon.doblados.net/category/misc.html" rel="tag">misc</a>
+                        <div class="tags">
+                            <a href="http://jon.doblados.net/tag/hosting.html" class="selected">Hosting</a>
+                            <a href="http://jon.doblados.net/tag/mysql.html">MySQL</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
 
-	        <nav>
-	          <h2>Categories</h2>
-	          <ul>
-	              <li ><a href="http://jon.doblados.net/category/aside.html">Aside</a></li>
-	              <li ><a href="http://jon.doblados.net/category/gbg.html">GBG</a></li>
-	              <li ><a href="http://jon.doblados.net/category/misc.html">Misc</a></li>
-	              <li ><a href="http://jon.doblados.net/category/python.html">Python</a></li>
-	              <li ><a href="http://jon.doblados.net/category/tech.html">Tech</a></li>
-	          </ul>
-	        </nav>
-
-	          <aside>
-	          <h2>Social</h2>
-			    <ul class="social">
-				  <li><a href="http://twitter.com/JonDoblados">Twitter</a><i></i></li>
-				  <li><a href="http://plus.google.com/+JonDoblados">Google+</a><i></i></li>
-				  <li><a href="http://facebook.com/JonDoblados">Facebook</a><i></i></li>
-			    </ul>
-			  </aside>
-
-	          <aside>
-	            <h2>Blogroll</h2>
-	            <ul>
-	                <li><a href="http://getpelican.com/">Pelican</a></li>
-	                <li><a href="http://python.org/">Python.org</a></li>
-	                <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-	            </ul>
-	          </aside>
-
-		  </div>
-
-	  </div>
-
-      <footer>
-		<p role="contentinfo">
-		  © 2013 Jon - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-simplegrey">pelican-simplegrey</a>.
-    	</p>
-
-	  </footer>	
-
-	</div>
-	
-
-</body>
+                <div class="clear"></div>
+                <div id="footer">
+                    <p>
+                    Mockingbird theme by <a href="http://nevanscott.com/">Nevan Scott</a>
+                    &middot;
+                    <a class="atom" href="http://jon.doblados.net/None">Feed</a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </body>
 </html>
