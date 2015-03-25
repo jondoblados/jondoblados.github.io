@@ -1,107 +1,120 @@
-<!doctype html>
-<html lang="">	
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8"/>
-	<title>RS6000 B50 - Jon Doblados</title>	
-	<meta name="author" content="Jon">
-	
+        <meta charset="utf-8" />
+        <title>Jon Doblados - RS6000 B50</title>
+        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/main.css" />
 
-	<link rel="stylesheet" href="http://jon.doblados.net/theme/css/main.css" type="text/css" />
-		
-
-
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 </head>
-	
-<body>
 
-    <div class="container">
-	  
-	  <header role="banner">
-	    <div class="feeds">
-	    </div>
-	      <nav class="pages">
-			  <a href="http://jon.doblados.net/pages/about.html">About</a>
--			  <a href="http://jon.doblados.net/pages/contact.html">Contact</a>
-	      </nav>
-		<a href="http://jon.doblados.net" class="title">Jon Doblados</a>
-      </header>
-	
-	  <div class="wrapper">
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://jon.doblados.net/">Jon Doblados </a></h1>
+                <nav><ul>
+                    <li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
+                    <li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
+                    <li><a href="http://jon.doblados.net/category/aside.html">Aside</a></li>
+                    <li><a href="http://jon.doblados.net/category/gbg.html">GBG</a></li>
+                    <li><a href="http://jon.doblados.net/category/misc.html">Misc</a></li>
+                    <li><a href="http://jon.doblados.net/category/python.html">Python</a></li>
+                    <li><a href="http://jon.doblados.net/category/tech.html">Tech</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
 
-		  <div role="main" class="content">
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="http://jon.doblados.net/ack.html">ack...</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2004-01-28T23:34:00+08:00">
+                Published: Wed 28 January 2004
+        </abbr>
 
-<h1>Post tagged: RS6000 B50</h1>
-
-<article class="summary">
-<div class="metadata">
-  <time datetime="2004-01-28T23:34:00+08:00" pubdate>Wed 28 January 2004</time>
-    <address class="vcard author">
-      by <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
-    </address>
-  in <a href="http://jon.doblados.net/category/tech.html">Tech</a>
-<p class="tags">tagged <a href="http://jon.doblados.net/tag/ibm.html">IBM</a>, <a href="http://jon.doblados.net/tag/rs6000-b50.html">RS6000 B50</a>, <a href="http://jon.doblados.net/tag/risc.html">RISC</a></p></div>  <div>
-    <h2>
-      <a href="http://jon.doblados.net/ack.html" rel="bookmark" title="Permalink to ack...">ack...</a>
-    </h2>
-    <p><p>I'm down to my last two modules before this quarter ends. the first
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
+        </address>
+<p>In <a href="http://jon.doblados.net/category/tech.html">Tech</a>. </p>
+<p>tags: <a href="http://jon.doblados.net/tag/ibm.html">IBM</a> <a href="http://jon.doblados.net/tag/rs6000-b50.html">RS6000 B50</a> <a href="http://jon.doblados.net/tag/risc.html">RISC</a> </p>
+</footer><!-- /.post-info --><p>I'm down to my last two modules before this quarter ends. the first
 modules have been deployed and parallel-tested, with just a bit of flak
 coming from "concerned" users (since they're sooo used to stand-alone
 applications, they think that intranet applications would have the same
-degree of difficulty ...</p></p>
-  </div>
-</article>
-<div class="pagination">
+degree of difficulty, more or less). hell my scripts generate 5k lines
+of values each for 10 different select elements and they wanted a more
+"user-friendly" output. tsk. :P  </p>
+<p>i posted a concern of mine on the <a href="http://groups.yahoo.com/group/ossa-ph/">Open Source Software Association -
+Phils.</a> message board and got
+this for an answer from one of "them".  </p>
+<blockquote>
+<p><em>first of all, let me iterate on few keypoints, branded computers like
+the IBM/RS6000 is not TOY, and is not Cheap, for that reason it is
+should be running critical applications, coz your paying for it, i
+dont see a reason why should turn in into a frankenstein, i suggest
+you focus on the problem at hand. linux and freebsd are fun to play
+with, but it always been a common practice not to play on production
+environment.</em></p>
+</blockquote>
+<p>my reply:  </p>
+<blockquote>
+<p>I agree that the RS6000 B50 is not a "TOY" as you call it. It has been
+running several of our most critical applications since we acquired
+it. These applications are to be ported to another machine in a month
+(on an HP NetServer), which will leave the B50 unused. I am currently
+running intranet applications on an old P3 machine and am offered to
+use the B50 for these applications, which are very much critical as
+far as we are concerned as the bulk of data entry and processing
+occurs via intranet. Rest assured, we are not "Frankenstein-ing" boxes
+here, as we all know the value of our machines. I'm just opening
+myself to options; thus this research. Thanks for the suggestions
+though.</p>
+</blockquote>
+<p>oh well...some people seem more aghast when i go tell them that we have
+an IBM server here, much more when i ask them if i could try and run
+FreeBSD on it. they all think it's sacrilegious or sumthin. so blame me,
+i'm finding a good use for it :P  </p>
+<p>*yawn</p><p>There are <a href="http://jon.doblados.net/ack.html#disqus_thread">comments</a>.</p>                </article>
+<p class="paginator">
     Page 1 / 1
-</div>
+</p>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
 
-		  </div>	
-		  
-		  <div class="sidebar">
-		    <div class="sidebar-container" >
+                            <li><a href="http://twitter.com/JonDoblados">Twitter</a></li>
+                            <li><a href="http://plus.google.com/+JonDoblados">Google+</a></li>
+                            <li><a href="http://facebook.com/JonDoblados">Facebook</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
 
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
 
-  	          <nav>
-	            <h2>Categories</h2>
-	            <ul>
-	                <li ><a href="http://jon.doblados.net/category/aside.html">Aside</a></li>
-	                <li ><a href="http://jon.doblados.net/category/gbg.html">GBG</a></li>
-	                <li ><a href="http://jon.doblados.net/category/misc.html">Misc</a></li>
-	                <li ><a href="http://jon.doblados.net/category/python.html">Python</a></li>
-	                <li ><a href="http://jon.doblados.net/category/tech.html">Tech</a></li>
-	            </ul>
-	          </nav>
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
 
-	            <aside>
-	            <h2>Social</h2>
-			      <ul class="social">
-				    <li><a href="http://twitter.com/JonDoblados">Twitter</a><i></i></li>
-				    <li><a href="http://plus.google.com/+JonDoblados">Google+</a><i></i></li>
-				    <li><a href="http://facebook.com/JonDoblados">Facebook</a><i></i></li>
-			      </ul>
-			    </aside>
-
-	            <aside>
-	              <h2>Blogroll</h2>
-	              <ul>
-	                  <li><a href="http://getpelican.com/">Pelican</a></li>
-	                  <li><a href="http://python.org/">Python.org</a></li>
-	                  <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-	              </ul>
-	            </aside>
-	        </div>
-		  </div>
-
-	  </div>
-
-      <footer>
-		<p role="contentinfo">
-		  Jon - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-sober">pelican-sober</a>.
-    	</p>
-
-	  </footer>	
-
-	</div>
-	
-
+<script type="text/javascript">
+    var disqus_shortname = 'jondoblados';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
 </body>
 </html>
