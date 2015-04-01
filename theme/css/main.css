@@ -182,6 +182,9 @@ hr {
   border-radius: 5px;
 }
 
+td {
+  vertical-align: top;
+}
 
 /* Article */
 
