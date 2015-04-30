@@ -18,303 +18,437 @@
   
     <link rel="icon" href="/favicon.png">
   
-
+  <link href='//fonts.useso.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  
-  
-    <link rel="stylesheet" href="/scrollLoading/style.css" type="text/css">
-  
-  
-
-
-  
-    <style type="text/css">
-      .logo { background-image:url(http://jon.doblados.net/images/JonDoblados.png); }
-    </style>
-  
-
-  
-    <link href='//fonts.googleapis.com/css?family=Titillium+Web:300,400,600' rel='stylesheet' type='text/css'>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
   
 
 </head>
-
 <body>
-  <div id="wrap">
+  <div id="container">
     <header id="header">
-  <div id="header-outer" class="outer">
-    <div class="container">
-      <div class="container-inner">
-        <div id="header-title">
-          <h1 class="logo-wrap">
-            <a href="/" class="logo"></a>
-          </h1>
-          
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><i class="logo"></i><span class="site-title">Jon Doblados</span></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div class="profile" id="profile-nav">
+          <a id="profile-anchor" href="javascript:;"><img class="avatar" src="/"><i class="fa fa-caret-down"></i></a>
         </div>
-        <div id="header-inner" class="nav-container">
-          <a id="main-nav-toggle" class="nav-icon"></a>
-          <div class="nav-container-inner">
-            <ul id="main-nav">
-              
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/">Home</a></li>
-              
-                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Aside/">Aside</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Misc/">Misc</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tech/">Tech</a></li></ul>
-                  
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/about.html">About</a></li>
-              
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="/contact.html">Contact</a></li>
-              
-            </ul>
-            <nav id="sub-nav">
-              <div id="search-form-wrap">
-                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="q" value="site:http://jon.doblados.net"></form>
-              </div>
-            </nav>
-          </div>
-        </div>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="q" value="site:http://jon.doblados.net"></form>
       </div>
     </div>
   </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+      
+        <td><a class="main-nav-link" href="/">Home</a></td>
+      
+        <td><a class="main-nav-link" href="/archives">Archives</a></td>
+      
+        <td><a class="main-nav-link" href="/about">About</a></td>
+      
+      <td>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="q" value="site:http://jon.doblados.net"></form>
+      </td>
+      </tr>
+    </table>
+  </div>
+  
 </header>
-    <div class="container">
-      <div class="main-body container-inner">
-        <div class="main-body-inner">
-          <section id="main">
-            <div class="main-body-header">
-
-              <h1 class="header"><i class="icon" id="icon-tag"></i>tag : <em>Personal</em></h1>
-            </div>
-            <div class="main-body-content">
-              
+    <div class="outer">
+      <aside id="profile">
+  <div class="inner profile-inner">
+  	<div class="base-info profile-block">
+		  <img id="avatar" src="/">
+      <h2 id="name">Jon</h2>
+      <h3 id="title">undefined</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>undefined</span>
+      <a id="follow" href="undefined">FOLLOW</a>
+  	</div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        12
+        <span>posts</span>
+      </div>
+      <div class="article-info-block">
+        25
+        <span>tags</span>
+      </div>
+    </div>
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+        
+          <td><a href="http://github.com/JonDoblados" title="github"><i class="fa fa-github"></i></a></td>
+        
+          <td><a href="http://twitter.com/JonDoblados" title="twitter"><i class="fa fa-twitter"></i></a></td>
+        
+          <td><a href="http://www.facebook.com/JonDoblados" title="facebook"><i class="fa fa-facebook"></i></a></td>
+        
+          <td><a href="http://plus.google.com/+JonDoblados" title="google+"><i class="fa fa-google+"></i></a></td>
+        
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+      <section id="main">
   
   
     
     
       
-      
-      <section class="archives-wrap">
         <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year"><i class="icon" id="icon-calendar-o"></i>2015</a>
+          <i class="fa fa-calendar"></i>
+          <a href="/archives/2015" class="archive-year">2015</a>
         </div>
-        <div class="archives">
+    
+    <article id="post-moving-forward" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
     
-    
-      <div class="article-row">
-    
+      <header class="article-header">
         
-  <article class="article article-summary">
-    <div class="article-summary-inner">
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/30/moving-forward/">Moving Forward</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/04/30/moving-forward/">
+    <time datetime="2015-04-29T16:55:01.000Z" itemprop="datePublished">2015-04-30</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Aside/">Aside</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/Aside/">Aside</a></p>
-        <p class="date"><time datetime="2015-04-29T16:55:01.000Z" itemprop="datePublished">2015-04-30</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2015/04/30/moving-forward/" class="title">Moving Forward</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        In a month’s time, I would be transferring offices again. I started from a very technical department, under the administration cluster. A year and about 3 months later, I was given the privilege to tr
-      </p>
-    </div>
-  </article>
+        <p>In a month’s time, I would be transferring offices again. I started from a very technical department, under the administration cluster. A year and about 3 months later, I was given the privilege to transfer to one of the most influential and authoritative departments in the academic cluster. It was still a split engagement, with me going back and forth these two offices.</p>
+<p>And for almost 2 years, I improved processes, handled, battled, and took care of hundreds of scenarios, cases, and situations that seem to always come with the university seasons. I became cognizant of academic procedures and with this knowledge came the understanding of many realities that I vowed to try to fix, given the chance, and if I can.</p>
+<p>I will miss being up to my neck deep in operations and in SLMIS. But I think I will miss more being in the company of great people who, inspite of erecting a facade of sternness in all their dealings, turned out to be really cool and happy persons. I will always have their friendship and can always count on them even if I would no longer spend most of the day with them.</p>
+<p>Movement is good. But moving forward is always better because you can always look back and see everything you’ve done. :D</p>
 
-    
-  
-    
-    
-    
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
       
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
-        <p class="date"><time datetime="2015-02-20T04:05:00.000Z" itemprop="datePublished">2015-02-20</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2015/02/20/civic-tales-0215/" class="title">Civic Tales 0215</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        
-
-
-
-
-      </p>
     </div>
-  </article>
-
-    
-      </div>
-    
-  
-    
-    
-    
-    
-      <div class="article-row">
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
+    <footer class="article-footer">
+      <a data-url="http://jon.doblados.net/2015/04/30/moving-forward/" data-id="ci93333bc000vc9n22t0kdzr2" class="article-share-link">Share</a>
       
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
-        <p class="date"><time datetime="2015-01-25T04:05:00.000Z" itemprop="datePublished">2015-01-25</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2015/01/25/first-bonding-for-2015/" class="title">First Bonding for 2015</a>
-      </h2>
-      <p class="article-excerpt">
+        <a href="http://jon.doblados.net/2015/04/30/moving-forward/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Personal/">Personal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SLMIS/">SLMIS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Systems-Administration/">Systems Administration</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
+    
+    <article id="post-civic-tales-0215" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/20/civic-tales-0215/">Civic Tales 0215</a>
+    </h1>
+  
 
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/02/20/civic-tales-0215/">
+    <time datetime="2015-02-20T04:05:00.000Z" itemprop="datePublished">2015-02-20</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Misc/">Misc</a>
+  </div>
 
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Place this tag in your head or just before your close body tag. -->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 
-
-      </p>
+<!-- Place this tag where you want the widget to render. -->
+<div class="g-post" data-href="https://plus.google.com/114642277785568765419/posts/TKx2nSWRu3g"></div>
+      
     </div>
-  </article>
+    <footer class="article-footer">
+      <a data-url="http://jon.doblados.net/2015/02/20/civic-tales-0215/" data-id="ci93333dd002mc9n2uqoj1e1a" class="article-share-link">Share</a>
+      
+        <a href="http://jon.doblados.net/2015/02/20/civic-tales-0215/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Family/">Family</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Miguel/">Miguel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Personal/">Personal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Selfie/">Selfie</a></li></ul>
 
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     
-      </div>
     
+    <article id="post-first-bonding-for-2015" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-  
-    </div></section>
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/25/first-bonding-for-2015/">First Bonding for 2015</a>
+    </h1>
   
 
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/01/25/first-bonding-for-2015/">
+    <time datetime="2015-01-25T04:05:00.000Z" itemprop="datePublished">2015-01-25</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Misc/">Misc</a>
+  </div>
 
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Place this tag in your head or just before your close body tag. -->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<!-- Place this tag where you want the widget to render. -->
+<div class="g-post" data-href="https://plus.google.com/114642277785568765419/posts/TUdnMMFZSsh"></div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jon.doblados.net/2015/01/25/first-bonding-for-2015/" data-id="ci93333ci0021c9n20epb1ur1" class="article-share-link">Share</a>
+      
+        <a href="http://jon.doblados.net/2015/01/25/first-bonding-for-2015/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Family/">Family</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Personal/">Personal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Selfie/">Selfie</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+</section>
+      
+        <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">recents</h3>
+    <div class="widget">
+      <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/04/30/moving-forward/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
             </div>
-          </section>
-          <aside id="sidebar">
-  <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
-  <div class="sidebar-top">
-    <p>follow:</p>
-    <ul class="social-links">
-      
-        <li><a class="social-tooltip" title="twitter" href="http://twitter.com/JonDoblados" target="_blank"><i id="icon-twitter" class="icon"></i></a></li>
-      
-        <li><a class="social-tooltip" title="facebook" href="http://www.facebook.com/JonDoblados" target="_blank"><i id="icon-facebook" class="icon"></i></a></li>
-      
-        <li><a class="social-tooltip" title="google_plus" href="http://plus.google.com/+JonDoblados" target="_blank"><i id="icon-google_plus" class="icon"></i></a></li>
-      
-        <li><a class="social-tooltip" title="github" href="https://github.com/JonDoblados" target="_blank"><i id="icon-github" class="icon"></i></a></li>
-      
-        <li><a class="social-tooltip" title="rss" href="/" target="_blank"><i id="icon-rss" class="icon"></i></a></li>
-      
-    </ul>
-  </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Aside/">Aside</a></p>
+              <p class="item-title"><a href="/2015/04/30/moving-forward/" class="title">Moving Forward</a></p>
+              <p class="item-date"><time datetime="2015-04-29T16:55:01.000Z" itemprop="datePublished">2015-04-30</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/02/27/engg-it-businessmgmt-technopreneurship/" class="thumbnail">
   
-  <div class="widgets-container">
-    
-      <div class="widget-wrap widget-list">
-    <h3 class="widget-title">TODO</h3>
-    <div class="widget">
-    	<script src="https://hackpad.com/6AG5iyzvADe.js?format=html-notitle"></script><noscript><div>View <a href="https://hackpad.com/6AG5iyzvADe">Jon's TODO</a> on Hackpad.</div></noscript>
-    </div>
-  </div>
-    
-      
-  <div class="widget-wrap widget-float">
-    <h3 class="widget-title">tag cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Apple/" style="font-size: 10px;">Apple</a><a href="/tags/Blogging/" style="font-size: 10px;">Blogging</a><a href="/tags/CDO/" style="font-size: 10px;">CDO</a><a href="/tags/Community/" style="font-size: 10px;">Community</a><a href="/tags/Crystal-Reports/" style="font-size: 10px;">Crystal Reports</a><a href="/tags/Data-Center/" style="font-size: 13.33px;">Data Center</a><a href="/tags/Family/" style="font-size: 13.33px;">Family</a><a href="/tags/GBG/" style="font-size: 10px;">GBG</a><a href="/tags/GBG-Cagayan-de-Oro/" style="font-size: 10px;">GBG Cagayan de Oro</a><a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a><a href="/tags/HP/" style="font-size: 10px;">HP</a><a href="/tags/IBM/" style="font-size: 10px;">IBM</a><a href="/tags/Information-Technology/" style="font-size: 10px;">Information Technology</a><a href="/tags/MacBook-Pro/" style="font-size: 10px;">MacBook Pro</a><a href="/tags/Miguel/" style="font-size: 10px;">Miguel</a><a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a><a href="/tags/Oracle-BI/" style="font-size: 10px;">Oracle BI</a><a href="/tags/Pelican/" style="font-size: 10px;">Pelican</a><a href="/tags/Personal/" style="font-size: 16.67px;">Personal</a><a href="/tags/Python/" style="font-size: 10px;">Python</a><a href="/tags/SLMIS/" style="font-size: 10px;">SLMIS</a><a href="/tags/Selfie/" style="font-size: 13.33px;">Selfie</a><a href="/tags/Systems-Administration/" style="font-size: 20px;">Systems Administration</a><a href="/tags/Technopreneurship/" style="font-size: 10px;">Technopreneurship</a><a href="/tags/Virtualization/" style="font-size: 10px;">Virtualization</a>
-    </div>
-  </div>
-
-
-    
-        <div class="widget-wrap widget-list">
-    <h3 class="widget-title">@JonDoblados Tweets</h3>
-    <div class="widget">
-    	<a class="twitter-timeline" href="https://twitter.com/JonDoblados" data-widget-id="365859531445645313" data-chrome="nofooter noscrollbar noborders">@JonDoblados Tweets</a>
-			
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    </div>
-  </div>
-    
-      
-  <div class="widget-wrap widget-list">
-    <h3 class="widget-title">archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">2</span></li></ul>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget-wrap widget-list">
-    <h3 class="widget-title">links</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="http://hexo.io">Hexo</a>
+    <span style="background-image:url(https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT0x5POqU25iVphCtjb-GmPJct6XwGw3YDDZVtohhA1ydSaY6Df
+)" alt="Engineering, I.T., Business Management, and Technopreneurship" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Tech/">Tech</a></p>
+              <p class="item-title"><a href="/2015/02/27/engg-it-businessmgmt-technopreneurship/" class="title">Engineering, I.T., Business Management, and Technopreneurship</a></p>
+              <p class="item-date"><time datetime="2015-02-27T01:35:00.000Z" itemprop="datePublished">2015-02-27</time></p>
+            </div>
           </li>
         
           <li>
-            <a href="http://hardwyrd.github.io">Eyn chaya kazo</a>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/02/25/macbook-pro-repair-extension-program/" class="thumbnail">
+  
+    <span style="background-image:url(http://o.aolcdn.com/hss/storage/midas/1832ae613253d9905a62cc78a047028/201580477/macbook-pro-2011-630.jpg
+)" alt="Apple Announces MacBook Pro Repair Extension Program for Video Issues" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Tech/">Tech</a></p>
+              <p class="item-title"><a href="/2015/02/25/macbook-pro-repair-extension-program/" class="title">Apple Announces MacBook Pro Repair Extension Program for Video Issues</a></p>
+              <p class="item-date"><time datetime="2015-02-25T03:35:00.000Z" itemprop="datePublished">2015-02-25</time></p>
+            </div>
           </li>
         
           <li>
-            <a href="http://killertilapia.blogspot.com">angwebampgonnakillsomebody</a>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/02/20/civic-tales-0215/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+              <p class="item-title"><a href="/2015/02/20/civic-tales-0215/" class="title">Civic Tales 0215</a></p>
+              <p class="item-date"><time datetime="2015-02-20T04:05:00.000Z" itemprop="datePublished">2015-02-20</time></p>
+            </div>
           </li>
         
           <li>
-            <a href="http://thermaljahero.blogspot.com">Thermal Ja{va}Hero</a>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/02/01/got-static/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Python/">Python</a></p>
+              <p class="item-title"><a href="/2015/02/01/got-static/" class="title">Got Static!</a></p>
+              <p class="item-date"><time datetime="2015-02-01T14:45:00.000Z" itemprop="datePublished">2015-02-01</time></p>
+            </div>
           </li>
         
       </ul>
     </div>
   </div>
 
-
+  
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Aside/">Aside</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Misc/">Misc</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tech/">Tech</a><span class="category-list-count">6</span></li></ul>
+    </div>
   </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/">Apple</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blogging/">Blogging</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CDO/">CDO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Community/">Community</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Crystal-Reports/">Crystal Reports</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Center/">Data Center</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Family/">Family</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GBG/">GBG</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GBG-Cagayan-de-Oro/">GBG Cagayan de Oro</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HP/">HP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IBM/">IBM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Information-Technology/">Information Technology</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MacBook-Pro/">MacBook Pro</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Miguel/">Miguel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle-BI/">Oracle BI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pelican/">Pelican</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Personal/">Personal</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SLMIS/">SLMIS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Selfie/">Selfie</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Systems-Administration/">Systems Administration</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Technopreneurship/">Technopreneurship</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Virtualization/">Virtualization</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">tag cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Apple/" style="font-size: 10px;">Apple</a><a href="/tags/Blogging/" style="font-size: 10px;">Blogging</a><a href="/tags/CDO/" style="font-size: 10px;">CDO</a><a href="/tags/Community/" style="font-size: 10px;">Community</a><a href="/tags/Crystal-Reports/" style="font-size: 10px;">Crystal Reports</a><a href="/tags/Data-Center/" style="font-size: 13.33px;">Data Center</a><a href="/tags/Family/" style="font-size: 13.33px;">Family</a><a href="/tags/GBG/" style="font-size: 10px;">GBG</a><a href="/tags/GBG-Cagayan-de-Oro/" style="font-size: 10px;">GBG Cagayan de Oro</a><a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a><a href="/tags/HP/" style="font-size: 10px;">HP</a><a href="/tags/IBM/" style="font-size: 10px;">IBM</a><a href="/tags/Information-Technology/" style="font-size: 10px;">Information Technology</a><a href="/tags/MacBook-Pro/" style="font-size: 10px;">MacBook Pro</a><a href="/tags/Miguel/" style="font-size: 10px;">Miguel</a><a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a><a href="/tags/Oracle-BI/" style="font-size: 10px;">Oracle BI</a><a href="/tags/Pelican/" style="font-size: 10px;">Pelican</a><a href="/tags/Personal/" style="font-size: 16.67px;">Personal</a><a href="/tags/Python/" style="font-size: 10px;">Python</a><a href="/tags/SLMIS/" style="font-size: 10px;">SLMIS</a><a href="/tags/Selfie/" style="font-size: 13.33px;">Selfie</a><a href="/tags/Systems-Administration/" style="font-size: 20px;">Systems Administration</a><a href="/tags/Technopreneurship/" style="font-size: 10px;">Technopreneurship</a><a href="/tags/Virtualization/" style="font-size: 10px;">Virtualization</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+  <div id="toTop" class="fa fa-chevron-up"></div>
 </aside>
-        </div>
-      </div>
+      
     </div>
     <footer id="footer">
   
-  <div class="container">
-    <div class="container-inner">
-      <a id="back-to-top" href="javascript:;"><i class="icon" id="icon-angle-up"></i></a>
-      <div class="credit">
-        <h1 class="logo-wrap">
-          <a href="/" class="logo"></a>
-        </h1>
-        <p>&copy; 2015 Jon</p>
-        <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
-      </div>
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Jon<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
     </div>
   </div>
 </footer>
     
 
+<script>
+  var disqus_shortname = 'jondoblados';
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="//ajax.useso.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
   <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
 
 
-
-  <script src="/scrollLoading/jquery.scrollLoading.js" type="text/javascript"></script>
-  <script src="/scrollLoading/main.js" type="text/javascript"></script>
-
-
-<script src="/js/html-patch.js" type="text/javascript"></script>
 <script src="/js/script.js" type="text/javascript"></script>
 
   </div>
