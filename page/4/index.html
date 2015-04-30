@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Jon Doblados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jon Doblados">
+<meta property="og:url" content="http://jon.doblados.net/page/4/index.html">
+<meta property="og:site_name" content="Jon Doblados">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jon Doblados">
+<meta name="twitter:description">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href='//fonts.useso.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><i class="logo"></i><span class="site-title">Jon Doblados</span></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/about.html">About</a>
+        
+          <a class="main-nav-link" href="/contact.html">Contact</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div class="profile" id="profile-nav">
+          <a id="profile-anchor" href="javascript:;"><img class="avatar" src="/"><i class="fa fa-caret-down"></i></a>
+        </div>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="q" value="site:http://jon.doblados.net"></form>
+      </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+      
+        <td><a class="main-nav-link" href="/">Home</a></td>
+      
+        <td><a class="main-nav-link" href="/about.html">About</a></td>
+      
+        <td><a class="main-nav-link" href="/contact.html">Contact</a></td>
+      
+      <td>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="q" value="site:http://jon.doblados.net"></form>
+      </td>
+      </tr>
+    </table>
+  </div>
+  
+</header>
+    <div class="outer">
+      <aside id="profile">
+  <div class="inner profile-inner">
+  	<div class="base-info profile-block">
+		  <img id="avatar" src="/">
+      <h2 id="name">Jon</h2>
+      <h3 id="title">undefined</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>undefined</span>
+      <a id="follow" href="undefined">FOLLOW</a>
+  	</div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        24
+        <span>posts</span>
+      </div>
+      <div class="article-info-block">
+        40
+        <span>tags</span>
+      </div>
+    </div>
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+        
+          <td><a href="http://github.com/JonDoblados" title="github"><i class="fa fa-github"></i></a></td>
+        
+          <td><a href="http://twitter.com/JonDoblados" title="twitter"><i class="fa fa-twitter"></i></a></td>
+        
+          <td><a href="http://www.facebook.com/JonDoblados" title="facebook"><i class="fa fa-facebook"></i></a></td>
+        
+          <td><a href="http://plus.google.com/+JonDoblados" title="google+"><i class="fa fa-google+"></i></a></td>
+        
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+      <section id="main">
+  
+    <article id="post-using-non-standard-ssh-port-with-tortoisesvn" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2010/02/11/using-non-standard-ssh-port-with-tortoisesvn/">Using non-standard SSH port with TortoiseSVN</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2010/02/11/using-non-standard-ssh-port-with-tortoisesvn/">
+    <time datetime="2010-02-11T13:09:00.000Z" itemprop="datePublished">2010-02-11</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Tech/">Tech</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Some of my students reported that they were having problems connecting to their repositories using <a href="http://tortoisesvn.tigris.org/" target="_blank" rel="external">TortoiseSVN</a>. At first, quick checks from my end didn’t reveal what caused these, but I realized soon that it wasn’t a server issue. It seems like the client software that they were using (TortoiseSVN) didn’t know what to make of the <code>svn+ssh://[user]@[ip]:[port]/[repo]</code> URL.</p>
+<p>I use <a href="http://www.rabbitvcs.org/" target="_blank" rel="external">RabbitVCS</a> on my Linux boxen and get the same “Network connection closed unexpectedly” message. A colleague at work suggested that since a non-standard port for SSH is used, I should modify my <code>/home/&lt;username&gt;/.subversion/config</code> , look for the <span style="font-family: monospace;">[tunnels]</span>section, and append <code>-p [port number]</code> for the svn tunnel named ssh. Since this particular repository is just one among the dozens I access, I can’t modify the default svn tunnel. Instead, I added a custom tunnel for each of the servers that use non-standard SSH ports.</p>
+<p>For the repo that my students were trying to access, I used <code>ssh2212 = $SVN_SSH ssh -q -o ControlMaster=no -p 2212</code>. So the URL now looks like <code>svn+ssh2212://[user]@[ip]:2212/[repo]</code> and I was able to connect successfully.</p>
+<p>In Windows, there are several ways to do this. Since the OS doesn’t have a native SSH client executable, users will rely on Cygwin, Putty, or on TortoisePlink.exe (in newer versions of TortoiseSVN).</p>
+<p>You can try any of the following solutions (they’re all searchable in the Internets) and see if you can get around the problem. I’ve tried them all on a Windows guest OS on VirtualBox and only the last three solutions worked.</p>
+<ul>
+<li>Using Putty: Use saved session name from Putty in the URL: <code>svn+ssh://[user]@[saved putty session name]/[repo]</code>. Make sure that you configure the session to already use the correct port.</li>
+<li>Using Putty: Alternately, use <code>IP:port</code> format for the Putty saved session name so that you still use the <code>svn+ssh://[user]@[ip]:[port]/[repo]</code> URL format, but you’re actually calling the saved session name.</li>
+<li>c. Using client packaged with Tortoise. In TortoiseSVN settings -> Network, change SSH client to <code>&quot;C:Program FilesTortoiseSVNbinTortoisePlink.exe&quot;</code> and use standard <code>svn+ssh://[user]@[ip]:[port]/[repo]</code> URL.</li>
+<li>d. Same as d., but for the SSH client, append <code>-P [port number]</code></li>
+<li>e. Using a wrapper script, such as the one provided <a href="http://unformatt.com/news/non-standard-ssh-ports-with-tortoise-svn/" target="_blank" rel="external">here</a> (excellent solution btw), and use it as the SSH client executable in TortoiseSVN settings -> Network.</li>
+</ul>
+<p>Hope any one of these work for you. As an inside joke from one of my sysad friends, it was also suggested that I save myself the troubles and just log in to the server and revert to the default SSH port. LOL.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jon.doblados.net/2010/02/11/using-non-standard-ssh-port-with-tortoisesvn/" data-id="ci93hbea3000iavn2odnf4g9v" class="article-share-link">Share</a>
+      
+        <a href="http://jon.doblados.net/2010/02/11/using-non-standard-ssh-port-with-tortoisesvn/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RabbitVCS/">RabbitVCS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SVN/">SVN</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Systems-Administration/">Systems Administration</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TortoiseSVN/">TortoiseSVN</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ready-for-her-christmas-event-in-school" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2009/12/17/ready-for-her-christmas-event-in-school/">Ready for her Christmas event in school</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2009/12/17/ready-for-her-christmas-event-in-school/">
+    <time datetime="2009-12-16T23:36:00.000Z" itemprop="datePublished">2009-12-17</time>
+  </a>
+</div>
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div><br>Thanks to mom-la for the makeup. I almost didn’t recognize her hehe<br><br><a href="http://jon.doblados.net/wp-content/uploads/2009/12/Gravity2.jpg.scaled10002.jpg" target="_blank" rel="external"><img src="http://jon.doblados.net/wp-content/uploads/2009/12/Gravity2.jpg.scaled10002-300x225.jpg" alt="Gravity"></a><br><br></div>
+
+
+<div><br><br>via <a href="http://mobileways.de/gravity" target="_blank" rel="external">Gravity</a><br><br></div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jon.doblados.net/2009/12/17/ready-for-her-christmas-event-in-school/" data-id="ci93hbeb50017avn25c0sw7gc" class="article-share-link">Share</a>
+      
+        <a href="http://jon.doblados.net/2009/12/17/ready-for-her-christmas-event-in-school/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Family/">Family</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Galleries/">Galleries</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kysa/">Kysa</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-at-mcdo-sm-with-mae-angela-kysa-and-miguel" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2009/11/20/at-mcdo-sm-with-mae-angela-kysa-and-miguel/">At McDo SM with Mae, Angela, Kysa, and Miguel</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2009/11/20/at-mcdo-sm-with-mae-angela-kysa-and-miguel/">
+    <time datetime="2009-11-20T07:00:00.000Z" itemprop="datePublished">2009-11-20</time>
+  </a>
+</div>
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Placeholder</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jon.doblados.net/2009/11/20/at-mcdo-sm-with-mae-angela-kysa-and-miguel/" data-id="ci93hbe860000avn2j9bv6v21" class="article-share-link">Share</a>
+      
+        <a href="http://jon.doblados.net/2009/11/20/at-mcdo-sm-with-mae-angela-kysa-and-miguel/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Family/">Family</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Galleries/">Galleries</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Miguel/">Miguel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Parenthood/">Parenthood</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Personal/">Personal</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-miguels-ready-for-church" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2009/11/15/miguels-ready-for-church/">Miguel&#39;s ready for church.</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2009/11/15/miguels-ready-for-church/">
+    <time datetime="2009-11-15T15:58:00.000Z" itemprop="datePublished">2009-11-15</time>
+  </a>
+</div>
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div><br><a href="http://jon.doblados.net/wp-content/uploads/2009/11/Gravity6.jpg.scaled10006.jpg" target="_blank" rel="external"><img src="http://jon.doblados.net/wp-content/uploads/2009/11/Gravity6.jpg.scaled10006-300x225.jpg" alt="Gravity"></a><br><br></div>
+
+<div><br><br>via <a href="http://mobileways.de/gravity" target="_blank" rel="external">Gravity</a><br><br></div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jon.doblados.net/2009/11/15/miguels-ready-for-church/" data-id="ci93hbeb9001cavn2lpf3fuuu" class="article-share-link">Share</a>
+      
+        <a href="http://jon.doblados.net/2009/11/15/miguels-ready-for-church/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Galleries/">Galleries</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Miguel/">Miguel</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-in-other-news" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2009/05/28/in-other-news/">In other news</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2009/05/28/in-other-news/">
+    <time datetime="2009-05-27T20:14:00.000Z" itemprop="datePublished">2009-05-28</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Misc/">Misc</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I’ve gone impulsive again. I was waiting for a good time to make this personal (more or less) blog, public. But then I realize that I may have just been waiting for my hair to grow back. Believe me, that’s going to take much, much longer!</p>
+<p>I may as well chronicle everything now that my kids are growing up. I also think that I and my wife are now going through that most interesting phase of life, and it’s probably worth writing about.  Nothing related to midlife crisis yet, thank God, but definitely worth sharing.</p>
+<p>All of my tech posts are now on <a href="http://tech.doblados.net/" title="aggregated thinking" target="_blank" rel="external">tech.doblados.net</a> (about time!!) Do you think it’s better this way?</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jon.doblados.net/2009/05/28/in-other-news/" data-id="ci93hbebv001wavn2y30jumra" class="article-share-link">Share</a>
+      
+        <a href="http://jon.doblados.net/2009/05/28/in-other-news/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-removing-adobe-air-apps-on-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/08/21/removing-adobe-air-apps-on-ubuntu/">Removing Adobe Air apps on Ubuntu</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2008/08/21/removing-adobe-air-apps-on-ubuntu/">
+    <time datetime="2008-08-21T07:52:00.000Z" itemprop="datePublished">2008-08-21</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Tech/">Tech</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I was trying to remove AgileAgenda after fiddling with it for a week and deciding it wasn’t going to cut it. There’s no Adobe Air Application “uninstaller” in the menu, and search engine results usually point to Mac lurv, or not.  Seems like uninstalling Air apps on OSX is bloody.</p>
+<p>I did find this nice <a href="http://digitalspaghetti.me.uk/index.php/DigitalSpaghetti/Remove_Adobe_AIR_in_linux" target="_blank" rel="external">article on removing Adobe Air on Linux</a> and gave it (well parts of it) a shot.</p>
+<p><code>jon@jedi-ntbk:/opt$ sudo dpkg -S /opt/*adobeair-enu: /opt/Adobe AIRcom.agileagenda.agileagenda.f49a4d8df78a1fee7a3be440dc11bab18d922274.1: /opt/AgileAgendade.makesoft.twhirl.0ea062bc275e7ed1e6ec3762effd73c7158adf33.1: /opt/twhirl</code></p>
+<p>I merely copied the package name of AgileAgenda, ran <code>dpkg</code> with the right switches, and pfft app’s gone! Menu entry seems to be gone too.</p>
+<p><code>jon@jedi-ntbk:/opt$ sudo dpkg -P com.agileagenda.agileagenda.f49a4d8df78a1fee7a3be440dc11bab18d922274.1(Reading database ... 128350 files and directories currently installed.)Removing com.agileagenda.agileagenda.f49a4d8df78a1fee7a3be440dc11bab18d922274.1 ...jon@jedi-ntbk:/opt$</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jon.doblados.net/2008/08/21/removing-adobe-air-apps-on-ubuntu/" data-id="ci93hbeaz0011avn2pecwhoek" class="article-share-link">Share</a>
+      
+        <a href="http://jon.doblados.net/2008/08/21/removing-adobe-air-apps-on-ubuntu/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Adobe-Air/">Adobe Air</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    </nav>
+  
+</section>
+      
+        <aside id="sidebar">
+  
+    <div class="widget-wrap widget-list">
+    <h3 class="widget-title">TODO</h3>
+    <div class="widget">
+    	<script src="https://hackpad.com/6AG5iyzvADe.js?format=html-notitle"></script><noscript><div>View <a href="https://hackpad.com/6AG5iyzvADe">Jon's TODO</a> on Hackpad.</div></noscript>
+    </div>
+  </div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">tag cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Adobe-Air/" style="font-size: 10px;">Adobe Air</a><a href="/tags/Apple/" style="font-size: 10px;">Apple</a><a href="/tags/Blogging/" style="font-size: 10px;">Blogging</a><a href="/tags/CDO/" style="font-size: 10px;">CDO</a><a href="/tags/Christianity/" style="font-size: 14px;">Christianity</a><a href="/tags/Community/" style="font-size: 10px;">Community</a><a href="/tags/Crystal-Reports/" style="font-size: 10px;">Crystal Reports</a><a href="/tags/Data-Center/" style="font-size: 12px;">Data Center</a><a href="/tags/Family/" style="font-size: 18px;">Family</a><a href="/tags/GBG/" style="font-size: 10px;">GBG</a><a href="/tags/GBG-Cagayan-de-Oro/" style="font-size: 10px;">GBG Cagayan de Oro</a><a href="/tags/Galleries/" style="font-size: 16px;">Galleries</a><a href="/tags/Gallery/" style="font-size: 10px;">Gallery</a><a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a><a href="/tags/HP/" style="font-size: 10px;">HP</a><a href="/tags/IBM/" style="font-size: 10px;">IBM</a><a href="/tags/Information-Technology/" style="font-size: 10px;">Information Technology</a><a href="/tags/Kysa/" style="font-size: 10px;">Kysa</a><a href="/tags/Linux/" style="font-size: 10px;">Linux</a><a href="/tags/MacBook-Pro/" style="font-size: 10px;">MacBook Pro</a><a href="/tags/Marriage/" style="font-size: 10px;">Marriage</a><a href="/tags/Miguel/" style="font-size: 18px;">Miguel</a><a href="/tags/Office/" style="font-size: 10px;">Office</a><a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a><a href="/tags/Oracle-BI/" style="font-size: 10px;">Oracle BI</a><a href="/tags/Parenthood/" style="font-size: 16px;">Parenthood</a><a href="/tags/Pelican/" style="font-size: 10px;">Pelican</a><a href="/tags/Personal/" style="font-size: 20px;">Personal</a><a href="/tags/Python/" style="font-size: 10px;">Python</a><a href="/tags/RabbitVCS/" style="font-size: 10px;">RabbitVCS</a><a href="/tags/Relationships/" style="font-size: 10px;">Relationships</a><a href="/tags/SLMIS/" style="font-size: 10px;">SLMIS</a><a href="/tags/SVN/" style="font-size: 10px;">SVN</a><a href="/tags/Selfie/" style="font-size: 12px;">Selfie</a><a href="/tags/Systems-Administration/" style="font-size: 16px;">Systems Administration</a><a href="/tags/Technopreneurship/" style="font-size: 10px;">Technopreneurship</a><a href="/tags/TortoiseSVN/" style="font-size: 10px;">TortoiseSVN</a><a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a><a href="/tags/Virtualization/" style="font-size: 10px;">Virtualization</a><a href="/tags/XU/" style="font-size: 10px;">XU</a>
+    </div>
+  </div>
+
+  
+      <div class="widget-wrap widget-list">
+    <h3 class="widget-title">@JonDoblados Tweets</h3>
+    <div class="widget">
+    	<a class="twitter-timeline" href="https://twitter.com/JonDoblados" data-widget-id="365859531445645313" data-chrome="nofooter noscrollbar noborders">@JonDoblados Tweets</a>
+			
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+  </div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Aside/">Aside</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Misc/">Misc</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tech/">Tech</a><span class="category-list-count">8</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/12/">December 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/08/">August 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/07/">July 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/02/">February 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/12/">December 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/11/">November 2009</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/05/">May 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/08/">August 2008</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+  <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Jon<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+
+<script>
+  var disqus_shortname = 'jondoblados';
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.useso.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
