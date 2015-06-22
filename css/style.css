@@ -173,13 +173,16 @@ a:visited {
   #main {
     display: inline;
     float: left;
-    width: 98%;
+    width: 68%;
     margin: 0 1%;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1199px) {
   #main {
-    width: 100%;
+    display: inline;
+    float: left;
+    width: 57.99999999999999%;
+    margin: 0 1%;
   }
 }
 .archive-article-header a,
