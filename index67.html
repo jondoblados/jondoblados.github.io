@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="http://jon.doblados.net/theme/css/style.min.css">
+  <link rel="stylesheet" type="text/css" href="http://jon.doblados.net/theme/css/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="http://jon.doblados.net/theme/css/font-awesome.min.css">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+  <meta name="author" content="Jon" />
+  <meta name="description" content="" />
+<meta property="og:site_name" content="A Pelican Blog"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="A Pelican Blog"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://jon.doblados.net"/>
+<meta property="og:image" content="https://dl.dropboxusercontent.com/u/712927/jon_gotchi.png">
+  <title>A Pelican Blog</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://jon.doblados.net">
+        <img src="https://dl.dropboxusercontent.com/u/712927/jon_gotchi.png" alt="Jon Doblados" title="Jon Doblados">
+      </a>
+      <h1><a href="http://jon.doblados.net">Jon Doblados</a></h1>
+      <p>Community Lead, Technology Evangelist</p>
+      <nav>
+        <ul class="list">
+          <li><a href="http://jon.doblados.net/pages/about.html#about">About</a></li>
+          <li><a href="http://jon.doblados.net/pages/contact.html#contact">Contact</a></li>
+          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li><a href="http://www.ansible.com/" target="_blank">Ansible</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-linkedin" href="https://ph.linkedin.com/in/JonDoblados" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-google" href="http://plus.google.com/+JonDoblados" target="_blank"><i class="fa fa-google"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/JonDoblados" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-facebook" href="http://www.facebook.com/JonDoblados" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/JonDoblados" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="http://jon.doblados.net">Home</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/archives.html">Archives</a>
+      <a href="/tags.html">Tags</a>
+    </nav>
+
+<article>
+  <header>
+    <h2><a href="http://jon.doblados.net/csi-season-finale.html#csi-season-finale">CSI: Season Finale</a></h2>
+    <p>
+      Posted on Wed 27 July 2005 in <a href="http://jon.doblados.net/category/uncategorized.html">Uncategorized</a>
+      &#8226; <a href="http://jon.doblados.net/csi-season-finale.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <p>
+I am one with the millions of CSI fans raring to watch the 2-hour season
+finale of the top rated series on television. Quentin Tarantino has been
+tapped to direct this one and I'm sure it'll be a very, very good 2
+hours. My daughter needs to sleep a good hour before that starts because
+she won't sleep if she sees CSI on. Like father, like daughter.
+
+I posted this on my [tech blog][], but I feel that I'll probably have
+more people see it here in LJ, which will hopefully translate to more
+ready answers for me. I did a script that displays my planner's buffer
+files. It would've been easier if I used emac's wiki publishing, but I
+wanted to format the output so that it'll look good on wp, and decided
+on it otherwise. Save for some quirks on the display, my tasks list
+shows up just fine.  
+
+I was asking around earlier about system-dependent directory reading
+methods. I couldn't get my display to sort properly. So what exactly is
+the order in which directory items are fetched? In the php manual:  
+
+
+>   
+> Note:   
+> The order in which directory entries are returned by the read method
+> is system-dependent.
+> </p>
+
+<p>
+
+I would assume that a system read from a directory will return an
+alphanumerically sorted list, but I had the feeling that it isn't the
+case here. I used the `dir` class (readily available in php3 and up).  
+
+
+> A pseudo-object oriented mechanism for reading a directory. The given
+> directory is opened. Two properties are available once the directory
+> has been opened. The handle property can be used with other directory
+> functions such as readdir(), rewinddir() and closedir(). The path
+> property is set to path the directory that was opened. Three methods
+> are available: read, rewind and close.
+> </p>
+
+<p>No parameters passed to any of these three methods. Sucks.</p>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jon.doblados.net/mysql-woes.html#mysql-woes">mysql woes</a></h2>
+    <p>
+      Posted on Wed 13 July 2005 in <a href="http://jon.doblados.net/category/uncategorized.html">Uncategorized</a>
+      &#8226; <a href="http://jon.doblados.net/mysql-woes.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <p>In my quest to have my "dead" blog resuscitated on our new p5 server so
+that I have something to use for my tech notes here at work as well as
+my MS requirements, I downloaded <code>MySQL-4.1.12-0.sles9.src.rpm</code> from
+<a href="http://www.mysql.com/">mysql.com</a> in the hope of getting <a href="http://wordpress.org/">Wordpress</a> running on our
+server. I can't seem to install the darn thing. So I dl'ed
+<code>mysql-standard-4.1.12-unknown-linux-gnu-powerpc-glibc23.tar.gz</code> and
+tried to use the binaries instead.  </p>
+<p>Viola! MySQL4.1.12 managed to run fine. The only problem is that even
+with all the usual accounts set up, including privileges and access
+rights to hosts set up correctly, wordpress can't connect to the
+localhost database. Baaaaad!!! I ended up setting up the database on my
+trusty workstation and connected to that instead.  </p>
+<p><a href="http://www.technorati.com/claim/2huq9dg32">Technorati Profile</a></p>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jon.doblados.net/hiyaah.html#hiyaah">hiyaah!</a></h2>
+    <p>
+      Posted on Tue 12 July 2005 in <a href="http://jon.doblados.net/category/uncategorized.html">Uncategorized</a>
+      &#8226; <a href="http://jon.doblados.net/hiyaah.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <div>
+
+![][]  
+
+</div>
+  </div>
+</article>
+
+  <div class="pagination">
+    <a class="btn" href="http://jon.doblados.net/index68.html">
+      <i class="fa fa-angle-left"></i> Older Posts
+    </a>
+      <a class="btn float-right" href="http://jon.doblados.net/index66.html">
+        Newer Posts <i class="fa fa-angle-right"></i>
+      </a>
+  </div>
+
+    <footer>
+<p>
+  &copy; Jon 2015 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " A Pelican Blog ",
+  "url" : "http://jon.doblados.net",
+  "image": "https://dl.dropboxusercontent.com/u/712927/jon_gotchi.png",
+  "description": ""
+}
+</script><script type="text/javascript">
+    var disqus_shortname = 'jondoblados';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>

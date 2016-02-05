@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="http://jon.doblados.net/theme/css/style.min.css">
+  <link rel="stylesheet" type="text/css" href="http://jon.doblados.net/theme/css/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="http://jon.doblados.net/theme/css/font-awesome.min.css">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+  <meta name="author" content="Jon" />
+  <meta name="description" content="" />
+<meta property="og:site_name" content="A Pelican Blog"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="A Pelican Blog"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://jon.doblados.net"/>
+<meta property="og:image" content="https://dl.dropboxusercontent.com/u/712927/jon_gotchi.png">
+  <title>A Pelican Blog</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://jon.doblados.net">
+        <img src="https://dl.dropboxusercontent.com/u/712927/jon_gotchi.png" alt="Jon Doblados" title="Jon Doblados">
+      </a>
+      <h1><a href="http://jon.doblados.net">Jon Doblados</a></h1>
+      <p>Community Lead, Technology Evangelist</p>
+      <nav>
+        <ul class="list">
+          <li><a href="http://jon.doblados.net/pages/about.html#about">About</a></li>
+          <li><a href="http://jon.doblados.net/pages/contact.html#contact">Contact</a></li>
+          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li><a href="http://www.ansible.com/" target="_blank">Ansible</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-linkedin" href="https://ph.linkedin.com/in/JonDoblados" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-google" href="http://plus.google.com/+JonDoblados" target="_blank"><i class="fa fa-google"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/JonDoblados" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-facebook" href="http://www.facebook.com/JonDoblados" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/JonDoblados" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="http://jon.doblados.net">Home</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/archives.html">Archives</a>
+      <a href="/tags.html">Tags</a>
+    </nav>
+
+<article>
+  <header>
+    <h2><a href="http://jon.doblados.net/ip-hijacking-and-then-some.html#ip-hijacking-and-then-some">IP-hijacking and then some</a></h2>
+    <p>
+      Posted on Sun 25 February 2007 in <a href="http://jon.doblados.net/category/domains-hosting.html">Domains, Hosting</a>
+      &#8226; <a href="http://jon.doblados.net/ip-hijacking-and-then-some.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <p>Almost a month of downtime. The servers were fine, but our IP addresses
+were not. Somehow, a system bug from one of the hosting companies caused
+our plan to include 14 other IP addresses, and we only maintained 6 as
+far as I am concerned.</p>
+<p>So the hosting company eventually understood what was happening and
+started asking the right questions. The bug is that the system allowed
+network administrators to assign to new clients, the IP addresses that
+have already been assigned to a current client.</p>
+<p>We spent crazy hours figuring out what happened. Since the domains were
+not loading our sites, and instead were redirecting to some domains we
+don’t own (real bad sites btw), we checked if .htaccess was modified and
+tested if it was working at all. I also did double checks on virtual
+host configurations and they all looked clean.</p>
+<p>I started thinking that it was a routing issue. We were not using the
+publicly routable IPs for the virtual hosts; instead, we used internal
+IPs as mapped to the firewall hardware. A lookup on the domain/s that we
+were being redirected to reported different IP addresses, which didn’t
+readily confirm my suspicions, but stressed the possibility of
+IP-hijacking.</p>
+<p>It’s not supposed to be taken in the context of BGP (border gateway
+protocol), as this is beyond me. Instead, think of your assumption over
+IP addresses that we’re using, to serve your websites. Sounds clear? I
+hope it does. I got pretty lost myself and it isn’t after deep digging
+at the hosting company’s end that their errors became apparent.</p>
+<p>So in the light of this realization, I’ve already moved the domains to
+some other hosting. Way too much work and way uncool.</p>
+</p>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jon.doblados.net/using-symbolic-links-for-mysql-data-files.html#using-symbolic-links-for-mysql-data-files">Using symbolic links for MySQL data files</a></h2>
+    <p>
+      Posted on Tue 16 January 2007 in <a href="http://jon.doblados.net/category/hosting-mysql.html">Hosting, MySQL</a>
+      &#8226; <a href="http://jon.doblados.net/using-symbolic-links-for-mysql-data-files.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <p>Over a year ago, we had several servers configured for high traffic
+websites. A mispartioning resulted in /var becoming obscenely small, and
+it was only after MySQL crashed that we remembered this. We couldn’t
+afford more downtime if we dealt with the partition size problem, so I
+thought of quickly moving the data files into /home/mysql/{dbname} from
+/var/lib/mysql/{dbname} and create the symlink /var/lib/mysql/{dbname}
+-> /home/mysql/{dbname}.</p>
+<p>I was not certain of the performance implications to this. I heard from
+a fellow Linux junkie here that there may be a slight penalties in terms
+of access speed, since /home was meant for generic read/write, whereas
+/var was accessed in a very quick manner. Gotta verify this. But for
+now, I dwell in the power of symbolic links.</p>
+</p>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jon.doblados.net/leeching-for-internet-access.html#leeching-for-internet-access">Leeching for internet access</a></h2>
+    <p>
+      Posted on Fri 29 December 2006 in <a href="http://jon.doblados.net/category/uncategorized.html">Uncategorized</a>
+      &#8226; <a href="http://jon.doblados.net/leeching-for-internet-access.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <p>Sure, my bosses do this all the time…in airports, hotel lobbies, and
+coffee shops. The mere act of “connecting” to an unsecured wireless
+network doubles as a necessity and as a leaching of sorts. Gotta love
+wireless. :)</p>
+  </div>
+</article>
+
+  <div class="pagination">
+    <a class="btn" href="http://jon.doblados.net/index57.html">
+      <i class="fa fa-angle-left"></i> Older Posts
+    </a>
+      <a class="btn float-right" href="http://jon.doblados.net/index55.html">
+        Newer Posts <i class="fa fa-angle-right"></i>
+      </a>
+  </div>
+
+    <footer>
+<p>
+  &copy; Jon 2015 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " A Pelican Blog ",
+  "url" : "http://jon.doblados.net",
+  "image": "https://dl.dropboxusercontent.com/u/712927/jon_gotchi.png",
+  "description": ""
+}
+</script><script type="text/javascript">
+    var disqus_shortname = 'jondoblados';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>

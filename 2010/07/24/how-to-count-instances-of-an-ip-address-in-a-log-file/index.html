@@ -1,43 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
-        <title>How to count instances of an IP address in a log file</title>
-        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/main.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jon Doblados, ">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+
+        <title>How to count instances of an IP address in a log file // Jon Doblados // </title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://jon.doblados.net/theme/css/pure.css">
+    <link rel="stylesheet" href="http://jon.doblados.net/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
 </head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://jon.doblados.net/">Jon Doblados </a></h1>
-                <nav><ul>
-                    <li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
-                    <li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="http://jon.doblados.net/2010/07/24/how-to-count-instances-of-an-ip-address-in-a-log-file/" rel="bookmark"
-           title="Permalink to How to count instances of an IP address in a log file">How to count instances of an IP address in a log file</a></h1>
-    </header>
-
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2010-07-24T20:00:00">
-                Sat 24 July 2010
-        </abbr>
-
-        <address class="vcard author">
-                By <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
-        </address>
-<p>In <a href="http://jon.doblados.net/category/gnulinux-hosting-systems-administration.html">GNU/Linux, Hosting, Systems Administration</a>. </p>
-
-</footer><!-- /.post-info -->      <p>I was looking for a quick and painless way to determine what IP
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+            <hgroup>
+                <a href="http://jon.doblados.net/author/jon.html" title="See posts by jon">
+                </a>
+                <h2 class="article-info">jon</h2>
+                <small class="about-author"></small>
+                <h5>Published</h5>
+                <p>Sat 24 July 2010</p>
+                <a href="/">&larr;Home</a>
+            </hgroup>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>How to count instances of an IP address in a log file</h1>
+                        <p class="post-meta">
+                            // under                         </p>
+                </header>
+            </section>
+            <p>I was looking for a quick and painless way to determine what IP
 addresses used our web app the most and stumbled across this excellent
 <a href="http://encodable.com/tech/blog/2008/12/17/Count_IP_Addresses_in_Access_Log_File_BASH_OneLiner">post</a>. I got reminded of the power of the command-line interface and
 that often, I underestimate the way these commands are supposed to make
@@ -59,63 +69,54 @@ output:</p>
 <p><code>[root@server2 ~]# cat /var/log/httpd/access_ssl.log | awk '{print $1}' | sort | uniq -c | sort -nr | head&gt;</code></p>
 <p><code>71612 216.157.78.237 34094 120.28.205.244 30091 119.93.97.54 25078 120.28.214.104 18949 120.28.195.151 17929 58.107.64.40 14877 212.98.174.235 14752 117.241.112.143 14429 120.28.247.74 12864 117.241.113.183 [root@server2 ~]#</code></p>
 <p>Happy counting, err reporting!</p>
-    </div><!-- /.entry-content -->
-    <div class="comments">
-      <h2>Comments !</h2>
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        var disqus_identifier = "2010/07/24/how-to-count-instances-of-an-ip-address-in-a-log-file/";
-        var disqus_url = "http://jon.doblados.net/2010/07/24/how-to-count-instances-of-an-ip-address-in-a-log-file/";
+            <div class="hr"></div>
+            <a href="#" class="go-top">Go Top</a>
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = "jondoblados"; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://jondoblados.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-      </script>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><footer class="footer">
+    <p>&copy; Jon Doblados &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
     </div>
+</div>
+    <script>
+        var $top = $('.go-top');
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="http://hardwyrd.github.io">Eyn chaya kazo</a></li>
-                            <li><a href="http://killertilapia.blogspot.com">angwebampgonnakillsomebody</a></li>
-                            <li><a href="http://thermaljahero.blogspot.com">Thermal Ja{va}Hero</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
 
-                            <li><a href="http://twitter.com/JonDoblados">Twitter</a></li>
-                            <li><a href="https://github.com/JonDoblados">Github</a></li>
-                            <li><a href="http://www.facebook.com/JonDoblados">Facebook</a></li>
-                            <li><a href="http://plus.google.com/+JonDoblados">Google+</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
-<script type="text/javascript">
-    var disqus_shortname = 'jondoblados';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
 </body>
 </html>
