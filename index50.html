@@ -56,6 +56,43 @@
 
 <article>
   <header>
+    <h2><a href="http://jon.doblados.net/more-plesk-blues.html#more-plesk-blues">More Plesk Blues</a></h2>
+    <p>
+      Posted on Thu 21 August 2008 in <a href="http://jon.doblados.net/category/systems-administration.html">Systems Administration</a>
+      &#8226; <a href="http://jon.doblados.net/more-plesk-blues.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <p>
+I've had this problem with Plesk since I started relying heavily on it
+in 2006.  For some reason, after you've added your client, allocated IP
+address to client's pool, added a domain, and selecting physical
+hosting, you get the message:
+
+> Unable to update hosting preferences: hosting update is failed: object
+> ID is invalid
+> </p>
+
+<p>After getting this error, you get the domain listed, but still requiring
+set up.  Attempting to complete physical hosting setup will give you
+same result.  First thing you'd want to look at would be some log. For
+all of its peculiarities, Plesk has an organized directory tree. Look at
+<code>/usr/local/psa/admin/logs/httpsd_error_log</code> and you'll see that
+skeleton or template is missing.</p>
+<p>I didn't know exactly where to get the <code>.skel</code> directory, but some
+Googling led me to <code>/home/httpd/vhosts/.skel/0</code>, which after some
+directory skimming, I was able to verify as non-existent. I simply
+copied an existing <code>.skel</code> directory from one of our other servers and
+redid the physical hosting setup.</p>
+<p>I'll see if I can find out what's causing the <code>.skel</code> directory to cease
+to exist. This is a fairly easier to solve issue. I so need to start
+looking in forums of Parallels (formerly SWSoft) for solutions.</p>
+</p>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://jon.doblados.net/on-statuses-and-micro-blogging.html#on-statuses-and-micro-blogging">on statuses(?) and micro-blogging</a></h2>
     <p>
       Posted on Mon 28 July 2008 in <a href="http://jon.doblados.net/category/technology.html">Technology</a>
@@ -79,20 +116,6 @@ talking about this and thought i'd check it out.</p>
   <div>
       <p>Also playing in twitter, pownce, and soon identi.ca, but plurk wins for
 me, hands down. Check it out <a href="http://plurk.com/redeemByURL?from_uid=19593&amp;check=-884040077&amp;s=1">here</a></p>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jon.doblados.net/feeling-bene-gesserit.html#feeling-bene-gesserit">Feeling Bene Gesserit</a></h2>
-    <p>
-      Posted on Thu 03 July 2008 in <a href="http://jon.doblados.net/category/personal.html">Personal</a>
-      &#8226; <a href="http://jon.doblados.net/feeling-bene-gesserit.html#disqus_thread">Leave a comment</a>
-    </p>
-  </header>
-  <div>
-      <p>I must not fear. Fear is the mind-killer. Fear is the little-death that
-brings total obliteration.</p>
   </div>
 </article>
 

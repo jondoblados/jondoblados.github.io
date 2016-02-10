@@ -56,6 +56,20 @@
 
 <article>
   <header>
+    <h2><a href="http://jon.doblados.net/best-viewed-in-firefox.html#best-viewed-in-firefox">Best Viewed in Firefox</a></h2>
+    <p>
+      Posted on Sun 02 April 2006 in <a href="http://jon.doblados.net/category/uncategorized.html">Uncategorized</a>
+      &#8226; <a href="http://jon.doblados.net/best-viewed-in-firefox.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <p>It's so dissapointing to see CSS that you really like "unrenderable" in
+IE. All I can say is get Firefox now!</p>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://jon.doblados.net/promoting-gnulinux-through-competition.html#promoting-gnulinux-through-competition">Promoting GNU/Linux through Competition</a></h2>
     <p>
       Posted on Wed 22 March 2006 in <a href="http://jon.doblados.net/category/uncategorized.html">Uncategorized</a>
@@ -86,48 +100,6 @@ tinkering with. Can you say Dovecot or Cyrus?</p>
 entire day, and can’t help but snort and stifle a laughing bout each
 time. Who doesn’t associate that song with Latrell Spencer (Terry Crews)
 in the movie White Chicks? LOL!</p>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jon.doblados.net/disabling-ntpupdate.html#disabling-ntpupdate">Disabling ntpupdate</a></h2>
-    <p>
-      Posted on Mon 13 March 2006 in <a href="http://jon.doblados.net/category/uncategorized.html">Uncategorized</a>
-      &#8226; <a href="http://jon.doblados.net/disabling-ntpupdate.html#disqus_thread">Leave a comment</a>
-    </p>
-  </header>
-  <div>
-      <p>This has been quite overdue, as I have been wanting to disable
-<code>ntpupdate</code> since the Hoary release. What is <code>ntpupdate</code> anyway? It's
-the program that synchronizes your system time to an ntp server.
-<abbr title="Network Time Protocol">NTP</abbr> is a protocol for
-synchronising the clocks of computer systems over packet-switched,
-variable-latency data networks. Since Ubuntu defaults to an ntp server
-somewhere in the www, and that it will attempt to sync on boot, it
-causes your machine to go through a much much longer startup process if
-an internet connection is not available at boot time.  </p>
-<p>As I am lugging my lappy around a lot and I have not much of a need for
-the program, I knew I had to take it out and save me minutes of boot
-time. [Ealden][] taught me how to remove <code>ntpupdate</code>, and I suppose we
-can change the arguments to remove other programs as well.  </p>
-<p><code>$ sudo update-rc.d -f ntpdate remove</code>  </p>
-<p><code>update-rc.d</code> will remove any system startup links for
-<code>/etc/init.d/ntpdate</code>, or any instances of such in the different run
-levels. Usage is as follows:  </p>
-<div>
-
-<div>
-
-    usage: update-rc.d [-n] [-f] <basename> remove       update-rc.d [-n] <basename> defaults [NN | sNN kNN]       update-rc.d [-n] <basename> start|stop NN runlvl [runlvl] [...] .                -n: not really                -f: force
-
-</div>
-
-<p>
-
-</div>
-
-  [Ealden]: http://blog.ealden.net/
   </div>
 </article>
 

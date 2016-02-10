@@ -56,6 +56,48 @@
 
 <article>
   <header>
+    <h2><a href="http://jon.doblados.net/disabling-ntpupdate.html#disabling-ntpupdate">Disabling ntpupdate</a></h2>
+    <p>
+      Posted on Mon 13 March 2006 in <a href="http://jon.doblados.net/category/uncategorized.html">Uncategorized</a>
+      &#8226; <a href="http://jon.doblados.net/disabling-ntpupdate.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <p>This has been quite overdue, as I have been wanting to disable
+<code>ntpupdate</code> since the Hoary release. What is <code>ntpupdate</code> anyway? It's
+the program that synchronizes your system time to an ntp server.
+<abbr title="Network Time Protocol">NTP</abbr> is a protocol for
+synchronising the clocks of computer systems over packet-switched,
+variable-latency data networks. Since Ubuntu defaults to an ntp server
+somewhere in the www, and that it will attempt to sync on boot, it
+causes your machine to go through a much much longer startup process if
+an internet connection is not available at boot time.  </p>
+<p>As I am lugging my lappy around a lot and I have not much of a need for
+the program, I knew I had to take it out and save me minutes of boot
+time. [Ealden][] taught me how to remove <code>ntpupdate</code>, and I suppose we
+can change the arguments to remove other programs as well.  </p>
+<p><code>$ sudo update-rc.d -f ntpdate remove</code>  </p>
+<p><code>update-rc.d</code> will remove any system startup links for
+<code>/etc/init.d/ntpdate</code>, or any instances of such in the different run
+levels. Usage is as follows:  </p>
+<div>
+
+<div>
+
+    usage: update-rc.d [-n] [-f] <basename> remove       update-rc.d [-n] <basename> defaults [NN | sNN kNN]       update-rc.d [-n] <basename> start|stop NN runlvl [runlvl] [...] .                -n: not really                -f: force
+
+</div>
+
+<p>
+
+</div>
+
+  [Ealden]: http://blog.ealden.net/
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://jon.doblados.net/got-friendster.html#got-friendster">got Friendster?</a></h2>
     <p>
       Posted on Sun 12 March 2006 in <a href="http://jon.doblados.net/category/uncategorized.html">Uncategorized</a>
@@ -93,21 +135,6 @@ that e-commerce systems can't support.  </p>
 (server/merchant client/customer setup), b) complete customizations on
 osCommerce, c) harden authentication module, d) re-read security
 framework paper</p>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jon.doblados.net/performance-extension-for-firefox.html#performance-extension-for-firefox">Performance Extension for Firefox</a></h2>
-    <p>
-      Posted on Thu 23 February 2006 in <a href="http://jon.doblados.net/category/uncategorized.html">Uncategorized</a>
-      &#8226; <a href="http://jon.doblados.net/performance-extension-for-firefox.html#disqus_thread">Leave a comment</a>
-    </p>
-  </header>
-  <div>
-      <p>Thanks to <a href="http://maxspark.bounceme.net/">Miko</a> for the heads up. Check out this quite nice extension
-to Firefox, which will allow you to do updates without having to log in
-to your _numerous_ blogs.</p>
   </div>
 </article>
 

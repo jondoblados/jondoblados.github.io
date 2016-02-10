@@ -56,6 +56,19 @@
 
 <article>
   <header>
+    <h2><a href="http://jon.doblados.net/friday-gold-rush-on-y101.html#friday-gold-rush-on-y101">Friday Gold Rush on Y101</a></h2>
+    <p>
+      Posted on Fri 03 October 2008 in <a href="http://jon.doblados.net/category/uncategorized.html">Uncategorized</a>
+      &#8226; <a href="http://jon.doblados.net/friday-gold-rush-on-y101.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <p>good morning! friday gold rush!</p>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://jon.doblados.net/deplurked.html#deplurked">Deplurked</a></h2>
     <p>
       Posted on Fri 05 September 2008 in <a href="http://jon.doblados.net/category/personal-technology.html">Personal, Technology</a>
@@ -82,43 +95,6 @@
 <p><code>jon@jedi-ntbk:/opt$ sudo dpkg -S /opt/*adobeair-enu: /opt/Adobe AIRcom.agileagenda.agileagenda.f49a4d8df78a1fee7a3be440dc11bab18d922274.1: /opt/AgileAgendade.makesoft.twhirl.0ea062bc275e7ed1e6ec3762effd73c7158adf33.1: /opt/twhirl</code></p>
 <p>I merely copied the package name of AgileAgenda, ran <code>dpkg</code> with the right switches, and pfft app's gone! Menu entry seems to be gone too.</p>
 <p><code>jon@jedi-ntbk:/opt$ sudo dpkg -P com.agileagenda.agileagenda.f49a4d8df78a1fee7a3be440dc11bab18d922274.1(Reading database ... 128350 files and directories currently installed.)Removing com.agileagenda.agileagenda.f49a4d8df78a1fee7a3be440dc11bab18d922274.1 ...jon@jedi-ntbk:/opt$</code></p>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jon.doblados.net/more-plesk-blues.html#more-plesk-blues">More Plesk Blues</a></h2>
-    <p>
-      Posted on Thu 21 August 2008 in <a href="http://jon.doblados.net/category/systems-administration.html">Systems Administration</a>
-      &#8226; <a href="http://jon.doblados.net/more-plesk-blues.html#disqus_thread">Leave a comment</a>
-    </p>
-  </header>
-  <div>
-      <p>
-I've had this problem with Plesk since I started relying heavily on it
-in 2006.  For some reason, after you've added your client, allocated IP
-address to client's pool, added a domain, and selecting physical
-hosting, you get the message:
-
-> Unable to update hosting preferences: hosting update is failed: object
-> ID is invalid
-> </p>
-
-<p>After getting this error, you get the domain listed, but still requiring
-set up.  Attempting to complete physical hosting setup will give you
-same result.  First thing you'd want to look at would be some log. For
-all of its peculiarities, Plesk has an organized directory tree. Look at
-<code>/usr/local/psa/admin/logs/httpsd_error_log</code> and you'll see that
-skeleton or template is missing.</p>
-<p>I didn't know exactly where to get the <code>.skel</code> directory, but some
-Googling led me to <code>/home/httpd/vhosts/.skel/0</code>, which after some
-directory skimming, I was able to verify as non-existent. I simply
-copied an existing <code>.skel</code> directory from one of our other servers and
-redid the physical hosting setup.</p>
-<p>I'll see if I can find out what's causing the <code>.skel</code> directory to cease
-to exist. This is a fairly easier to solve issue. I so need to start
-looking in forums of Parallels (formerly SWSoft) for solutions.</p>
-</p>
   </div>
 </article>
 
