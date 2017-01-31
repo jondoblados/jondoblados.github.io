@@ -3,7 +3,7 @@
 <head>
         <meta charset="utf-8" />
         <title>Jon Doblados - RabbitVCS</title>
-        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/main.css" />
+        <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
             <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -12,29 +12,29 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="http://jon.doblados.net/">Jon Doblados  <strong>Community Lead, Technology Evangelist</strong></a></h1>
+                <h1><a href="/">Jon Doblados  <strong>Writing about emerging technologies, communities, life, and some asides.</strong></a></h1>
                 <nav><ul>
                     <li><a href="/categories.html">Categories</a></li>
                     <li><a href="/archives.html">Archives</a></li>
                     <li><a href="/tags.html">Tags</a></li>
-                    <li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
-                    <li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
+                    <li><a href="/pages/about.html">About</a></li>
+                    <li><a href="/pages/contact.html">Contact</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://jon.doblados.net/using-non-standard-ssh-port-with-tortoisesvn.html">Using non-standard SSH port with TortoiseSVN</a></h1>
+                    <h1 class="entry-title"><a href="/using-non-standard-ssh-port-with-tortoisesvn.html">Using non-standard SSH port with TortoiseSVN</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2010-02-11T21:09:00+08:00">
                 Published: Thu 11 February 2010
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="http://jon.doblados.net/author/jon.html">Jon</a>
+                By                         <a class="url fn" href="/author/jon.html">Jon</a>
         </address>
-<p>In <a href="http://jon.doblados.net/category/misc.html">misc</a>.</p>
-<p>tags: <a href="http://jon.doblados.net/tag/svn.html">[SVN</a> <a href="http://jon.doblados.net/tag/rabbitvcs.html">RabbitVCS</a> <a href="http://jon.doblados.net/tag/tortoisesvn.html">TortoiseSVN</a> <a href="http://jon.doblados.net/tag/linux.html">Linux</a> <a href="http://jon.doblados.net/tag/systems-administration.html">Systems Administration]</a> </p>
+<p>In <a href="/category/misc.html">misc</a>.</p>
+<p>tags: <a href="/tag/svn.html">[SVN</a> <a href="/tag/rabbitvcs.html">RabbitVCS</a> <a href="/tag/tortoisesvn.html">TortoiseSVN</a> <a href="/tag/linux.html">Linux</a> <a href="/tag/systems-administration.html">Systems Administration]</a> </p>
 </footer><!-- /.post-info --><p>Some of my students reported that they were having problems connecting to their repositories using <a href="http://tortoisesvn.tigris.org/">TortoiseSVN</a>. At first, quick checks from my end didn't reveal what caused these, but I realized soon that it wasn't a server issue. It seems like the client software that they were using (TortoiseSVN) didn't know what to make of the <code>svn+ssh://[user]@[ip]:[port]/[repo]</code> URL.</p>
 <p>I use <a href="http://www.rabbitvcs.org/">RabbitVCS</a> on my Linux boxen and get the same "Network connection closed unexpectedly" message. A colleague at work suggested that since a non-standard port for SSH is used, I should modify my <code>/home/&lt;username&gt;/.subversion/config</code> , look for the <span style="font-family: monospace;">[tunnels]</span>section, and append <code>-p [port number]</code> for the svn tunnel named ssh. Since this particular repository is just one among the dozens I access, I can't modify the default svn tunnel. Instead, I added a custom tunnel for each of the servers that use non-standard SSH ports.</p>
 <p>For the repo that my students were trying to access, I used <code>ssh2212 = $SVN_SSH ssh -q -o ControlMaster=no -p 2212</code>. So the URL now looks like <code>svn+ssh2212://[user]@[ip]:2212/[repo]</code> and I was able to connect successfully.</p>
@@ -47,7 +47,7 @@
 <li>d. Same as d., but for the SSH client, append <code>-P [port number]</code></li>
 <li>e. Using a wrapper script, such as the one provided <a href="http://unformatt.com/news/non-standard-ssh-ports-with-tortoise-svn/">here</a> (excellent solution btw), and use it as the SSH client executable in TortoiseSVN settings -> Network.</li>
 </ul>
-<p>Hope any one of these work for you. As an inside joke from one of my sysad friends, it was also suggested that I save myself the troubles and just log in to the server and revert to the default SSH port. LOL.</p><p>There are <a href="http://jon.doblados.net/using-non-standard-ssh-port-with-tortoisesvn.html#disqus_thread">comments</a>.</p>                </article>
+<p>Hope any one of these work for you. As an inside joke from one of my sysad friends, it was also suggested that I save myself the troubles and just log in to the server and revert to the default SSH port. LOL.</p><p>There are <a href="/using-non-standard-ssh-port-with-tortoisesvn.html#disqus_thread">comments</a>.</p>                </article>
             </aside><!-- /#featured -->
         <section id="extras" class="body">
                 <div class="blogroll">
