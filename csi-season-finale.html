@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>CSI: Season Finale</title>
+        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://jon.doblados.net/">Jon Doblados  <strong>Community Lead, Technology Evangelist</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/categories.html">Categories</a></li>
+                    <li><a href="/archives.html">Archives</a></li>
+                    <li><a href="/tags.html">Tags</a></li>
+                    <li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
+                    <li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="http://jon.doblados.net/csi-season-finale.html" rel="bookmark"
+           title="Permalink to CSI: Season Finale">CSI: Season Finale</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2005-07-27T07:36:00+08:00">
+                Published: Wed 27 July 2005
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
+        </address>
+<p>In <a href="http://jon.doblados.net/category/uncategorized.html">Uncategorized</a>.</p>
+
+</footer><!-- /.post-info -->      <p>
+I am one with the millions of CSI fans raring to watch the 2-hour season
+finale of the top rated series on television. Quentin Tarantino has been
+tapped to direct this one and I'm sure it'll be a very, very good 2
+hours. My daughter needs to sleep a good hour before that starts because
+she won't sleep if she sees CSI on. Like father, like daughter.
+
+I posted this on my [tech blog][], but I feel that I'll probably have
+more people see it here in LJ, which will hopefully translate to more
+ready answers for me. I did a script that displays my planner's buffer
+files. It would've been easier if I used emac's wiki publishing, but I
+wanted to format the output so that it'll look good on wp, and decided
+on it otherwise. Save for some quirks on the display, my tasks list
+shows up just fine.  
+
+I was asking around earlier about system-dependent directory reading
+methods. I couldn't get my display to sort properly. So what exactly is
+the order in which directory items are fetched? In the php manual:  
+
+
+>   
+> Note:   
+> The order in which directory entries are returned by the read method
+> is system-dependent.
+> </p>
+
+<p>
+
+I would assume that a system read from a directory will return an
+alphanumerically sorted list, but I had the feeling that it isn't the
+case here. I used the `dir` class (readily available in php3 and up).  
+
+
+> A pseudo-object oriented mechanism for reading a directory. The given
+> directory is opened. Two properties are available once the directory
+> has been opened. The handle property can be used with other directory
+> functions such as readdir(), rewinddir() and closedir(). The path
+> property is set to path the directory that was opened. Three methods
+> are available: read, rewind and close.
+> </p>
+
+<p>No parameters passed to any of these three methods. Sucks.</p>
+    </div><!-- /.entry-content -->
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'jondoblados';
+        var disqus_identifier = 'csi-season-finale.html';
+        var disqus_url = 'http://jon.doblados.net/csi-season-finale.html';
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//jondoblados.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the comments.</noscript>
+    </div>
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://www.ansible.com/">Ansible</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://ph.linkedin.com/in/JonDoblados">linkedin</a></li>
+                            <li><a href="http://plus.google.com/+JonDoblados">google</a></li>
+                            <li><a href="https://twitter.com/JonDoblados">twitter</a></li>
+                            <li><a href="http://www.facebook.com/JonDoblados">facebook</a></li>
+                            <li><a href="https://github.com/JonDoblados">github</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-73376034-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'jondoblados';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>

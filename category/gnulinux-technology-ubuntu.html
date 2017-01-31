@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Jon Doblados - GNU/Linux, Technology, Ubuntu</title>
+        <link rel="stylesheet" href="http://jon.doblados.net/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://jon.doblados.net/">Jon Doblados  <strong>Community Lead, Technology Evangelist</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/categories.html">Categories</a></li>
+                    <li><a href="/archives.html">Archives</a></li>
+                    <li><a href="/tags.html">Tags</a></li>
+                    <li><a href="http://jon.doblados.net/pages/about.html">About</a></li>
+                    <li><a href="http://jon.doblados.net/pages/contact.html">Contact</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="http://jon.doblados.net/export-tweetdeck-groups-in-ubuntu.html">Export TweetDeck groups in Ubuntu</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2009-05-28T05:20:00+08:00">
+                Published: Thu 28 May 2009
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
+        </address>
+<p>In <a href="http://jon.doblados.net/category/gnulinux-technology-ubuntu.html">GNU/Linux, Technology, Ubuntu</a>.</p>
+
+</footer><!-- /.post-info --><p>If you have multiple installs of TweetDeck on different computers, I bet
+you wished there were ways to save the groups you set up. These
+groupings are not saved in your Twitter profile, but are kept in a local
+database in your computer. This means that for each install of
+TweetDeck, you will have to re-set up your groups, and any changes won't
+replicate to your other installs.</p>
+<p>This <a href="http://bit.ly/ljKUO">post</a> about copying TweetDeck settings in Windows explains this
+in detail, and I have been able to do the same for Ubuntu, replicating
+TweetDeck settings across 3 machines. Just take note of some of the
+differences that I'm going to point out here.</p>
+<p>Adobe Air for Linux uses the <code>.appdata</code> directory in your home
+directory, for profile settings, configurations, etc. In the computer
+that has your groups and is the source for the export, change working
+directory into <code>.appdata</code>, and look for the
+<code>TweetDeckFast.{some hash here}</code>.</p>
+<p><code>jon@jedi-ntbk:~$ cd .appdatajon@jedi-ntbk:~/.appdata$ lsAdobecookie_file.txtde.makesoft.twhirl.0EA062BC275E7ED1E6EC3762EFFD73C7158ADF33.1jrcf_H7t6Apjrcf_RA5I7wjrcf_wdLW48Snippage.B28FB424FD6880E47B18D7D649F6CC93BDE9B29B.1TweetDeckFast.F9107117265DB7542C1A806C8DB837742CE14C21.1jon@jedi-ntbk:~/.appdata$</code></p>
+<p>Change directory to the one that says <code>TweeDeckFast</code> and list the
+contents. Change directory into <code>Local Store</code> and you should find two
+files that has your username. In my case, they are</p>
+<p><code>preferences_jjdoblados.xmltd_26_jjdoblados.db</code></p>
+<p>Simply copy these two files to any target machine in the same directory
+where you got them. Make sure that TweetDeck is closed before copying.
+When done copying, start TweetDeck and you will have all of your groups
+intact!</p>
+</p><p>There are <a href="http://jon.doblados.net/export-tweetdeck-groups-in-ubuntu.html#disqus_thread">comments</a>.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jon.doblados.net/apt-get-install-kicker-kblogger.html" rel="bookmark"
+                           title="Permalink to apt-get install kicker-kblogger">apt-get install kicker-kblogger</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2007-08-14T11:26:00+08:00">
+                Published: Tue 14 August 2007
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://jon.doblados.net/author/jon.html">jon</a>
+        </address>
+<p>In <a href="http://jon.doblados.net/category/gnulinux-technology-ubuntu.html">GNU/Linux, Technology, Ubuntu</a>.</p>
+
+</footer><!-- /.post-info -->                <p>i don't know with you, but i sometimes get the big push to update, if
+and when there's something new (relatively, for me) to try.</p>
+<p>up for this week is my dabbling with stuff around kicker, and using
+kblogger to do some much needed updates.</p>
+</p>
+                <a class="readmore" href="http://jon.doblados.net/apt-get-install-kicker-kblogger.html">read more</a>
+<p>There are <a href="http://jon.doblados.net/apt-get-install-kicker-kblogger.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://www.ansible.com/">Ansible</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://ph.linkedin.com/in/JonDoblados">linkedin</a></li>
+                            <li><a href="http://plus.google.com/+JonDoblados">google</a></li>
+                            <li><a href="https://twitter.com/JonDoblados">twitter</a></li>
+                            <li><a href="http://www.facebook.com/JonDoblados">facebook</a></li>
+                            <li><a href="https://github.com/JonDoblados">github</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-73376034-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'jondoblados';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
