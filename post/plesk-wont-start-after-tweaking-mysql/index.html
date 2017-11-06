@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Jon Doblados</title>
+        <meta name="author">
+        <meta name="description" content="Emerging Technologies, Communities, and Asides">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Hugo 0.29" />
+        <link href="https://jondoblados.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="Jon Doblados" />
+        <link href="https://jondoblados.github.io/post/index.xml" rel="feed" type="application/rss+xml" title="Jon Doblados" />
+        <link href='//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://jondoblados.github.io/css/styles.css">
+        <link rel="icon" href="https://jondoblados.github.io/favicon.ico">
+        <link rel="apple-touch-icon" href="https://jondoblados.github.io/apple-touch-icon.png" />
+        <link rel="stylesheet" href="https://jondoblados.github.io/css/highlightjs/monokai.css">
+        <script src="https://jondoblados.github.io/js/vendor/modernizr-2.8.0.min.js"></script>
+        
+        <style>
+        .site-header h2 .logo {
+        background: url(https://jondoblados.github.io/img/desk.jpg) no-repeat 0 0;
+        }
+        @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+          .site-header h2 .logo {
+            background-image: url(https://jondoblados.github.io/img/desk.jpg);
+        }}
+       .site-header {
+         background: #2a373d url(https://jondoblados.github.io/img/desk.jpg) no-repeat center center;
+         z-index: -1;
+        }
+        </style>
+    </head>
+    <body>
+        
+        <header class="site-header">
+          <div class="transparent-layer">
+              <h2>Jon Doblados</h2>
+          </div>
+        </header>
+
+
+<div class="container clearfix">
+    <main role="main" class="content">
+        <article class="post">
+            <a class="btn home" href="https://jondoblados.github.io/" title="">&laquo; </a>
+            
+<h1><a href="https://jondoblados.github.io/post/plesk-wont-start-after-tweaking-mysql/" title="plesk won&#39;t start after tweaking mysql">plesk won&#39;t start after tweaking mysql</a></h1>
+
+<footer class="post-info"> <span class="post-meta"><time datetime="2007.08.14">2007.08.14</time>
+
+    &middot; 
+        
+        <a href="https://jondoblados.github.io/tags/hosting">hosting</a>, 
+        
+        <a href="https://jondoblados.github.io/tags/mysql">mysql</a>
+        
+    
+
+</span>
+</footer>
+
+            <p>i&rsquo;ve had this happen to me again the other week and as always, felt like kicking myself for not remembering.<p />we do a lot of performance tuning on mysql, and as a result, we almost always manage to get plesk mangled. not its fault, it just can&rsquo;t run without mysql, doh.<p />not of preference, but plesk happens to be there to make handling domains easier, as a single editing point when you want to change something and not worry about missing something out.<p />so there&rsquo;s a custom /etc/my.cnf that we use, and with changes to limits done (both on mysql and via ulimit), you&rsquo;d think that a reload of mysqld would do. (we use InnoDB btw)<p />normally, that&rsquo;s all you need to have mysqld read off the new settings. if you&rsquo;ve grown so dependent on plesk (like i have), you would not notice that mysqld didn&rsquo;t actually start, and you will get an error when you load plesk, thinking that it&rsquo;s a plesk error:<p /><code><br />ERROR: PleskMainDBException<br />MySQL query failed: Incorrect information in file: &lsquo;./psa/misc.frm&rsquo;<br /><br />0: /usr/local/psa/admin/plib/common_func.php3:218<br />db_query(string &lsquo;select param, val from misc&rsquo;)<br />1: /usr/local/psa/admin/plib/common_func.php3:497<br />get_param(string &lsquo;mysql41_compatible&rsquo;)<br />2: /usr/local/psa/admin/plib/common_func.php3:394<br />db_set_names()<br />3: /usr/local/psa/admin/plib/common_func.php3:373<br />db_connect_real(string &lsquo;localhost&rsquo;, string &lsquo;admin&rsquo;, string &lsquo;*******<em>&rsquo;, string &lsquo;psa&rsquo;)<br />4: /usr/local/psa/admin/plib/common_func.php3:353<br />db_connect()<br />5: /usr/local/psa/admin/auto_prepend/auth.php3:82<br /></code><p />even a restart of the plesk service will not work:<p /><code><br />[root@jedi]# /etc/init.d/psa restart<br />Unable to query parameter by query select val from misc where param=&lsquo;mysql41_compatible&rsquo;: Incorrect information in file: &lsquo;./psa/misc.frm&rsquo;<br />Unable to query parameter by query select val from misc where param=&lsquo;mysql41_compatible&rsquo;: Incorrect information in file: &lsquo;./psa/misc.frm&rsquo;<br />Mysql error: Incorrect information in file: &lsquo;./psa/key_history.frm&rsquo;<br />Processing config directory: /usr/local/psa/admin/conf/httpsd.</em>.include<br />Syntax OK<br />/usr/local/psa/admin/bin/httpsdctl restart: httpd restarted<br />ERROR 1033 (HY000) at line 1: Incorrect information in file: &lsquo;./psa/sessions.frm&rsquo;<br /></code><p />so this is a mysqld failing to start properly problem. to fix this, go to your mysql datadir and see if the sizes of your innodb log files match those in your .cnf. we usually set innodb_log_file_size = 256M and innodb_log_buffer_size = 256M in /etc/my.cnf.<p />if they don&rsquo;t match, stop mysqld, remove the ib_logfile0 and ib_logfile1 files, and start mysqld. be careful not to delete the ibdata1 or ibdata2 files or you lose your data. avoid using rm -r ib* (yea, wildcards and fast fingers give sysads their most stupefying moments)<p />innodb will recreate the log files to match your .cnf and mysqld now becomes available for plesk.</p>
+
+            <ul class="share-buttons">
+    <li></li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjondoblados.github.io%2fpost%2fplesk-wont-start-after-tweaking-mysql%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title=""></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=plesk%20won%27t%20start%20after%20tweaking%20mysql&amp;url=https%3a%2f%2fjondoblados.github.io%2fpost%2fplesk-wont-start-after-tweaking-mysql%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title=""></a>
+    </li>
+    <li>
+        <a class="icon-gplus" href="https://plus.google.com/share?url=https%3a%2f%2fjondoblados.github.io%2fpost%2fplesk-wont-start-after-tweaking-mysql%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title=""></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fjondoblados.github.io%2fpost%2fplesk-wont-start-after-tweaking-mysql%2f&title=plesk%20won%27t%20start%20after%20tweaking%20mysql" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title=""></a>
+    </li>
+</ul>
+
+        </article>
+        
+        <div class="comments">
+            <h3></h3>
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "JonDoblados" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
+    </main>
+    <aside class="author">
+  <img class="profile-image" src="https://jondoblados.github.io/img/profile-image.png" alt="Jon Doblados" />
+  <p class="name"> 
+  <strong>Jon Doblados</strong></p>
+  <p class="address">Earth</p>
+  <p class="link"></p>
+  <ul class="social">
+    
+<li><a href="//twitter.com/JonDoblados" class="icon-twitter" target="_blank" title="Twitter"></a></li>
+
+
+
+<li><a href="//facebook.com/JonDoblados" class="icon-facebook-squared" target="_blank" title="Facebook"></a></li>
+
+
+
+<li><a href="//linkedin.com/in/JonDoblados" class="icon-linkedin" target="_blank" title="Linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//plus.google.com/+JonDoblados" class="icon-gplus" target="_blank" title="Google+"></a></li>
+
+
+<li><a href="https://jondoblados.github.io/post/index.xml" class="icon-rss" target="_blank" title="RSS"></a></li>
+
+  </ul>
+  <br><br>
+</aside>
+
+</div>
+
+<footer class="main-footer">
+  <div class="container clearfix">
+        <a class="icon-rss" href="https://jondoblados.github.io/post/index.xml" title="RSS"></a>
+        <p>&copy; 2017 &middot; Powered by <a href="http://gohugo.io">Hugo</a>.</p>
+  </div>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>window.jQuery || document.write('<script src="https:\/\/jondoblados.github.io\/js\/vendor\/jquery-1.11.0.min.js"><\/script>')</script>
+<script src="https://jondoblados.github.io/js/plugins.js"></script>
+
+
+
+
+</body>
+</html>
+

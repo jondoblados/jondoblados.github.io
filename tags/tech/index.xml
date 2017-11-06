@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on Jon Doblados</title>
+    <link>https://jondoblados.github.io/tags/tech/</link>
+    <description>Recent content in Tech on Jon Doblados</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
+    <lastBuildDate>Sun, 06 Feb 2011 21:13:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jondoblados.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Plans for a 500-Word Project</title>
+      <link>https://jondoblados.github.io/post/plans-for-a-500-word-project/</link>
+      <pubDate>Sun, 06 Feb 2011 21:13:00 +0000</pubDate>
+      
+      <guid>https://jondoblados.github.io/post/plans-for-a-500-word-project/</guid>
+      <description>I haven&#39;t written a proper blog entry since 2006. I feel that my recent entries are worthy of post tags that I would consider &#34;forgettable&#34;, or &#34;archive-able&#34; (if there is such a thing).
+I so need motivation. Anything to get the old drive for writing flowing in my veins again. I&#39;d appreciate any inputs from you. Just leave a comment.
+At this stage, I can&#39;t say I still want this blog focused on work and tech stuff.</description>
+    </item>
+    
+  </channel>
+</rss>
