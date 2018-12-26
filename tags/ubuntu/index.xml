@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on aggregated thinking</title>
+    <link>https://jondoblados.github.io/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on aggregated thinking</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Jul 2011 11:18:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jondoblados.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Have you updated?</title>
+      <link>https://jondoblados.github.io/posts/have-you-updated/</link>
+      <pubDate>Wed, 20 Jul 2011 11:18:00 +0000</pubDate>
+      
+      <guid>https://jondoblados.github.io/posts/have-you-updated/</guid>
+      <description>jon@jedi-ntbk:~$ lsb_release -aLSB Version: core-2.0-ia32:core-2.0-noarch:core-3.0-ia32:core-3.0-noarch:core-3.1-ia32:core-3.1-noarch:core-3.2-ia32:core-3.2-noarch:core-4.0-ia32:core-4.0-noarchDistributor ID: UbuntuDescription: Ubuntu 10.04.3 LTSRelease: 10.04Codename: lucid</description>
+    </item>
+    
+    <item>
+      <title>Export TweetDeck groups in Ubuntu</title>
+      <link>https://jondoblados.github.io/posts/export-tweetdeck-groups-in-ubuntu/</link>
+      <pubDate>Thu, 28 May 2009 05:20:00 +0000</pubDate>
+      
+      <guid>https://jondoblados.github.io/posts/export-tweetdeck-groups-in-ubuntu/</guid>
+      <description>If you have multiple installs of TweetDeck on different computers, I bet you wished there were ways to save the groups you set up. These groupings are not saved in your Twitter profile, but are kept in a local database in your computer. This means that for each install of TweetDeck, you will have to re-set up your groups, and any changes won&amp;rsquo;t replicate to your other installs.This post about copying TweetDeck settings in Windows explains this in detail, and I have been able to do the same for Ubuntu, replicating TweetDeck settings across 3 machines.</description>
+    </item>
+    
+    <item>
+      <title>you&#39;re looking good, opensource!</title>
+      <link>https://jondoblados.github.io/posts/youre-looking-good-opensource/</link>
+      <pubDate>Tue, 27 Nov 2007 00:18:00 +0000</pubDate>
+      
+      <guid>https://jondoblados.github.io/posts/youre-looking-good-opensource/</guid>
+      <description>opensource gets another breakthrough today, as canonical launches launchpad personal package archive (PPA), an ubuntu linux developers service intended to extend collaboration in software development and give the community equal opportunity to build and package code for ubuntu on the desktop, server, and for mobile applications.great news for those itching to modify packages and contribute to the furtherance of opensource! users can make changes on packages of their choice, and these will be published in the PPA system, somewhat like a special repository.</description>
+    </item>
+    
+    <item>
+      <title>apt-get install kicker-kblogger</title>
+      <link>https://jondoblados.github.io/posts/apt-get-install-kicker-kblogger/</link>
+      <pubDate>Tue, 14 Aug 2007 11:26:00 +0000</pubDate>
+      
+      <guid>https://jondoblados.github.io/posts/apt-get-install-kicker-kblogger/</guid>
+      <description>i don&amp;rsquo;t know with you, but i sometimes get the big push to update, if and when there&amp;rsquo;s something new (relatively, for me) to try.up for this week is my dabbling with stuff around kicker, and using kblogger to do some much needed updates.</description>
+    </item>
+    
+    <item>
+      <title>Pushing on</title>
+      <link>https://jondoblados.github.io/posts/pushing-on/</link>
+      <pubDate>Sun, 13 May 2007 09:49:00 +0000</pubDate>
+      
+      <guid>https://jondoblados.github.io/posts/pushing-on/</guid>
+      <description>I recently got Ubuntu Feisty Fawn Beta running on my HP Pavilion dv2001tu notebook, and I&amp;rsquo;m very happy with the way it&amp;rsquo;s running. Here&amp;rsquo;s what I&amp;rsquo;ve done and have been doing the past month. Nothing out of the ordinary for me, but some of the activities mentioned here could have been keeping you up late at nights, coveting much of the understated successes of
+running Ubuntu on HP laptops. If this is indeed so, do let me know your woes and I&amp;rsquo;ll see what I can do to help.</description>
+    </item>
+    
+  </channel>
+</rss>
