@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ibm on aggregated thinking</title>
+    <title>Ibm on amalgamated thoughts </title>
     <link>https://jondoblados.github.io/tags/ibm/</link>
-    <description>Recent content in Ibm on aggregated thinking</description>
+    <description>Recent content in Ibm on amalgamated thoughts </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://jondoblados.github.io/&#34;&gt;Jon Doblados&lt;/a&gt; 2018</copyright>
     <lastBuildDate>Fri, 23 Jan 2015 10:33:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jondoblados.github.io/tags/ibm/index.xml" rel="self" type="application/rss+xml" />

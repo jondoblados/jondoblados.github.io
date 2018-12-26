@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Systems Administration on aggregated thinking</title>
+    <title>Systems Administration on amalgamated thoughts </title>
     <link>https://jondoblados.github.io/tags/systems-administration/</link>
-    <description>Recent content in Systems Administration on aggregated thinking</description>
+    <description>Recent content in Systems Administration on amalgamated thoughts </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://jondoblados.github.io/&#34;&gt;Jon Doblados&lt;/a&gt; 2018</copyright>
     <lastBuildDate>Thu, 30 Apr 2015 10:58:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jondoblados.github.io/tags/systems-administration/index.xml" rel="self" type="application/rss+xml" />
@@ -47,15 +48,6 @@ Next up, the classic IBM BladeCenter!</description>
       
       <guid>https://jondoblados.github.io/posts/on-slmis/</guid>
       <description>End users complain because the system isn&amp;rsquo;t &amp;ldquo;user-friendly&amp;rdquo;. FYI, it&amp;rsquo;s meant to be that way. It&amp;rsquo;s the only way we can guarantee that the system will still be helpful 25 years from now.</description>
-    </item>
-    
-    <item>
-      <title>GWF Team CDO</title>
-      <link>https://jondoblados.github.io/posts/gwf-team-cdo/</link>
-      <pubDate>Wed, 10 Aug 2011 08:50:00 +0000</pubDate>
-      
-      <guid>https://jondoblados.github.io/posts/gwf-team-cdo/</guid>
-      <description>We&amp;rsquo;ve come a long way since 2006; but it wasn&amp;rsquo;t until 2009 that we had a solid team based in CDO. We&amp;rsquo;re not even all sysads, but we love the fact that besides Romar, who has been my friend from way back, it was only after Carlo and Alvin joined GWF did we learn where they&amp;rsquo;re from.[nggallery id=4]Looking forward to another TBA at the later part of this year, hopefully with more people.</description>
     </item>
     
     <item>
@@ -178,25 +170,6 @@ VBox status code: -102 (VERR_FILE_NOT_FOUND).This thread in the forums explains 
       <description>I&amp;rsquo;ve had this problem with Plesk since I started relying heavily on it in 2006. For some reason, after you&amp;rsquo;ve added your client, allocated IP address to client&amp;rsquo;s pool, added a domain, and selecting physical hosting, you get the message:
 Unable to update hosting preferences: hosting update is failed: object ID is invalid
 After getting this error, you get the domain listed, but still requiring set up. Attempting to complete physical hosting setup will give you same result.</description>
-    </item>
-    
-    <item>
-      <title>on work and blogging</title>
-      <link>https://jondoblados.github.io/posts/on-work-and-blogging/</link>
-      <pubDate>Mon, 26 Nov 2007 20:42:00 +0000</pubDate>
-      
-      <guid>https://jondoblados.github.io/posts/on-work-and-blogging/</guid>
-      <description>i haven&#39;t been updating for several important, albeit lousy reasons.work has been keeping me up at nights and i feel that if i were to write entries, i wouldn&#39;t be making much sense.technobabble is fun, but i&#39;ve long outgrown this preference for writing. call it a maturing of sorts, and i&#39;m now ready to take things (read: blogging) to higher levelsi&#39;ve almost completely forgotten about deepest sender, a cool firefox extension for blogging, and it&#39;s great to be using it again</description>
-    </item>
-    
-    <item>
-      <title>Pushing on</title>
-      <link>https://jondoblados.github.io/posts/pushing-on/</link>
-      <pubDate>Sun, 13 May 2007 09:49:00 +0000</pubDate>
-      
-      <guid>https://jondoblados.github.io/posts/pushing-on/</guid>
-      <description>I recently got Ubuntu Feisty Fawn Beta running on my HP Pavilion dv2001tu notebook, and I&amp;rsquo;m very happy with the way it&amp;rsquo;s running. Here&amp;rsquo;s what I&amp;rsquo;ve done and have been doing the past month. Nothing out of the ordinary for me, but some of the activities mentioned here could have been keeping you up late at nights, coveting much of the understated successes of
-running Ubuntu on HP laptops. If this is indeed so, do let me know your woes and I&amp;rsquo;ll see what I can do to help.</description>
     </item>
     
   </channel>

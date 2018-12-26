@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hosting on aggregated thinking</title>
+    <title>Hosting on amalgamated thoughts </title>
     <link>https://jondoblados.github.io/tags/hosting/</link>
-    <description>Recent content in Hosting on aggregated thinking</description>
+    <description>Recent content in Hosting on amalgamated thoughts </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://jondoblados.github.io/&#34;&gt;Jon Doblados&lt;/a&gt; 2018</copyright>
     <lastBuildDate>Sat, 24 Jul 2010 20:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jondoblados.github.io/tags/hosting/index.xml" rel="self" type="application/rss+xml" />

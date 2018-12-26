@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://jondoblados.github.io/sitemap.xml

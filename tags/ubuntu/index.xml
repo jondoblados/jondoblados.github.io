@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ubuntu on aggregated thinking</title>
+    <title>Ubuntu on amalgamated thoughts </title>
     <link>https://jondoblados.github.io/tags/ubuntu/</link>
-    <description>Recent content in Ubuntu on aggregated thinking</description>
+    <description>Recent content in Ubuntu on amalgamated thoughts </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://jondoblados.github.io/&#34;&gt;Jon Doblados&lt;/a&gt; 2018</copyright>
     <lastBuildDate>Wed, 20 Jul 2011 11:18:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jondoblados.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
@@ -45,16 +46,6 @@
       
       <guid>https://jondoblados.github.io/posts/apt-get-install-kicker-kblogger/</guid>
       <description>i don&amp;rsquo;t know with you, but i sometimes get the big push to update, if and when there&amp;rsquo;s something new (relatively, for me) to try.up for this week is my dabbling with stuff around kicker, and using kblogger to do some much needed updates.</description>
-    </item>
-    
-    <item>
-      <title>Pushing on</title>
-      <link>https://jondoblados.github.io/posts/pushing-on/</link>
-      <pubDate>Sun, 13 May 2007 09:49:00 +0000</pubDate>
-      
-      <guid>https://jondoblados.github.io/posts/pushing-on/</guid>
-      <description>I recently got Ubuntu Feisty Fawn Beta running on my HP Pavilion dv2001tu notebook, and I&amp;rsquo;m very happy with the way it&amp;rsquo;s running. Here&amp;rsquo;s what I&amp;rsquo;ve done and have been doing the past month. Nothing out of the ordinary for me, but some of the activities mentioned here could have been keeping you up late at nights, coveting much of the understated successes of
-running Ubuntu on HP laptops. If this is indeed so, do let me know your woes and I&amp;rsquo;ll see what I can do to help.</description>
     </item>
     
   </channel>
