@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Todo on Jon Doblados</title>
+    <title>Todo on aggregated thinking</title>
     <link>https://jondoblados.github.io/tags/todo/</link>
-    <description>Recent content in Todo on Jon Doblados</description>
+    <description>Recent content in Todo on aggregated thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
     <lastBuildDate>Mon, 21 Feb 2011 19:30:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jondoblados.github.io/tags/todo/index.xml" rel="self" type="application/rss+xml" />
@@ -14,20 +13,20 @@
     
     <item>
       <title>End-of-the-month TODOs</title>
-      <link>https://jondoblados.github.io/post/end-of-the-month-todos/</link>
+      <link>https://jondoblados.github.io/posts/end-of-the-month-todos/</link>
       <pubDate>Mon, 21 Feb 2011 19:30:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/end-of-the-month-todos/</guid>
+      <guid>https://jondoblados.github.io/posts/end-of-the-month-todos/</guid>
       <description>I have again changed the look of my tech blog. I&#39;ve actually mulled over this for quite some time since I was also thinking of just moving everything to my own hosted Wordpress install. But, lazy as I am, I was content to tweak as little as I can. Posterous has a few really nice themes built-in so moving my stuff out was really a bad idea.
 In case you&#39;re curious, here are some of the things that I intend to complete this month:</description>
     </item>
     
     <item>
       <title>New theme, needs more work</title>
-      <link>https://jondoblados.github.io/post/new-theme-needs-more-work/</link>
+      <link>https://jondoblados.github.io/posts/new-theme-needs-more-work/</link>
       <pubDate>Sat, 29 May 2010 22:41:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/new-theme-needs-more-work/</guid>
+      <guid>https://jondoblados.github.io/posts/new-theme-needs-more-work/</guid>
       <description>I&amp;rsquo;m doing some major cosmetic changes with this blog; and I&amp;rsquo;m sort of working off this to-do:1. come up with a manageable set of tags2. update posts with appropriate tags3. look for any form of twitter integrationYes, I think I&amp;rsquo;ll be blogging more now. More than anything else, I need the writing exercise.</description>
     </item>
     

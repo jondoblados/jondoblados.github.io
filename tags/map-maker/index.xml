@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Map Maker on Jon Doblados</title>
+    <title>Map Maker on aggregated thinking</title>
     <link>https://jondoblados.github.io/tags/map-maker/</link>
-    <description>Recent content in Map Maker on Jon Doblados</description>
+    <description>Recent content in Map Maker on aggregated thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
     <lastBuildDate>Thu, 13 Feb 2014 11:10:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jondoblados.github.io/tags/map-maker/index.xml" rel="self" type="application/rss+xml" />
@@ -14,10 +13,10 @@
     
     <item>
       <title>Sign up for the first MapUp this 2014!</title>
-      <link>https://jondoblados.github.io/post/sign-up-for-the-first-mapup-this-2014/</link>
+      <link>https://jondoblados.github.io/posts/sign-up-for-the-first-mapup-this-2014/</link>
       <pubDate>Thu, 13 Feb 2014 11:10:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/sign-up-for-the-first-mapup-this-2014/</guid>
+      <guid>https://jondoblados.github.io/posts/sign-up-for-the-first-mapup-this-2014/</guid>
       <description>This is our opening salvo for the year. Since we started last year, GBG Cagayan de Oro has been receiving a lot of good feedback from the locals. But we&#39;ve put our attention on the areas where we can improve, and I really believe that this mapping event is a step towards that direction. A well-mapped city improves tourism and support services. It also opens numerous planning opportunities for the local government.</description>
     </item>
     

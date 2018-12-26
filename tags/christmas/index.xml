@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Christmas on Jon Doblados</title>
+    <title>Christmas on aggregated thinking</title>
     <link>https://jondoblados.github.io/tags/christmas/</link>
-    <description>Recent content in Christmas on Jon Doblados</description>
+    <description>Recent content in Christmas on aggregated thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
     <lastBuildDate>Fri, 27 Dec 2013 06:52:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jondoblados.github.io/tags/christmas/index.xml" rel="self" type="application/rss+xml" />
@@ -14,10 +13,10 @@
     
     <item>
       <title>Christmas 2013</title>
-      <link>https://jondoblados.github.io/post/christmas-2013/</link>
+      <link>https://jondoblados.github.io/posts/christmas-2013/</link>
       <pubDate>Fri, 27 Dec 2013 06:52:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/christmas-2013/</guid>
+      <guid>https://jondoblados.github.io/posts/christmas-2013/</guid>
       <description>We decided to go to Cebu and spend Christmas this year with my parents and brother. I suppose it has been more than 15 years since we last celebrated Christmas together. The trip was really stressful because it was passenger season. But it was really worth lugging heavy bags since the cousins got to goof off and have a lot of fun, and the grandparents got to see all of their grandchildren in one place.</description>
     </item>
     

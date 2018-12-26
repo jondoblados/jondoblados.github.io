@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Valentines Day on Jon Doblados</title>
+    <title>Valentines Day on aggregated thinking</title>
     <link>https://jondoblados.github.io/tags/valentines-day/</link>
-    <description>Recent content in Valentines Day on Jon Doblados</description>
+    <description>Recent content in Valentines Day on aggregated thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
     <lastBuildDate>Thu, 14 Feb 2013 17:06:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jondoblados.github.io/tags/valentines-day/index.xml" rel="self" type="application/rss+xml" />
@@ -14,10 +13,10 @@
     
     <item>
       <title>Valentine Surprise</title>
-      <link>https://jondoblados.github.io/post/valentine-surprise/</link>
+      <link>https://jondoblados.github.io/posts/valentine-surprise/</link>
       <pubDate>Thu, 14 Feb 2013 17:06:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/valentine-surprise/</guid>
+      <guid>https://jondoblados.github.io/posts/valentine-surprise/</guid>
       <description>Each year, on Valentine&amp;rsquo;s day, I usually surprise my darling wife with a letter/card, or a bouquet of roses. As it was a yearly thing, I knew she sort of expected these surprises; she&amp;rsquo;d look surprised, but I knew she wasn&amp;rsquo;t really. Occasionally, she does get surprised. Like that time back in Cebu when I bought her a rather intricate bouquet of flowers. Her head spun when she found out how much I paid for it.</description>
     </item>
     

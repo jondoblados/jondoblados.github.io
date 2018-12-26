@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gallery on Jon Doblados</title>
+    <title>Gallery on aggregated thinking</title>
     <link>https://jondoblados.github.io/tags/gallery/</link>
-    <description>Recent content in Gallery on Jon Doblados</description>
+    <description>Recent content in Gallery on aggregated thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
     <lastBuildDate>Mon, 02 Jul 2012 00:16:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jondoblados.github.io/tags/gallery/index.xml" rel="self" type="application/rss+xml" />
@@ -14,28 +13,28 @@
     
     <item>
       <title>Kids on Photobooth</title>
-      <link>https://jondoblados.github.io/post/kids-on-photobooth/</link>
+      <link>https://jondoblados.github.io/posts/kids-on-photobooth/</link>
       <pubDate>Mon, 02 Jul 2012 00:16:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/kids-on-photobooth/</guid>
+      <guid>https://jondoblados.github.io/posts/kids-on-photobooth/</guid>
       <description>Miguel and Isabel goofing off in front of the laptop. They discovered the 4-shot option and started taking pictures by themselves.Please don&amp;rsquo;t mind if I start posting more pictures here. I’ve really been keeping myself from posting these to Facebook, which was the natural tendency, no thanks to endless egging by the family. But no. It’s been a couple of years now that I’ve wanted to steer clear from FB when it comes to posting pictures; especially of family.</description>
     </item>
     
     <item>
       <title>Miguel, lately.</title>
-      <link>https://jondoblados.github.io/post/miguel-lately./</link>
+      <link>https://jondoblados.github.io/posts/miguel-lately./</link>
       <pubDate>Fri, 30 Dec 2011 23:00:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/miguel-lately./</guid>
+      <guid>https://jondoblados.github.io/posts/miguel-lately./</guid>
       <description>Since we moved apartments, the little man started doing facial expressions that always gets us wondering how he got them. I&amp;rsquo;ve tried capturing these expressions with a camera but it&amp;rsquo;s a lot harder than simply having the phone or the point-and-shoot handy at all times.Well today was a treat. He fired up one facial expression, and let me take a picture! Yay![nggallery id=6]</description>
     </item>
     
     <item>
       <title>Disneyland, HK - April 2011</title>
-      <link>https://jondoblados.github.io/post/disneyland-hk---april-2011/</link>
+      <link>https://jondoblados.github.io/posts/disneyland-hk-april-2011/</link>
       <pubDate>Thu, 14 Apr 2011 13:07:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/disneyland-hk---april-2011/</guid>
+      <guid>https://jondoblados.github.io/posts/disneyland-hk-april-2011/</guid>
       <description>[gallery columns=&amp;ldquo;5&amp;rdquo; orderby=&amp;ldquo;post_date&amp;rdquo;]</description>
     </item>
     

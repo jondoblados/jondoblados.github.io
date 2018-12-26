@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kysa on Jon Doblados</title>
+    <title>Kysa on aggregated thinking</title>
     <link>https://jondoblados.github.io/tags/kysa/</link>
-    <description>Recent content in Kysa on Jon Doblados</description>
+    <description>Recent content in Kysa on aggregated thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
     <lastBuildDate>Tue, 18 Dec 2012 16:28:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jondoblados.github.io/tags/kysa/index.xml" rel="self" type="application/rss+xml" />
@@ -14,65 +13,56 @@
     
     <item>
       <title>Civic Stories - December 2012</title>
-      <link>https://jondoblados.github.io/post/civic-stories---december-2012/</link>
+      <link>https://jondoblados.github.io/posts/civic-stories-december-2012/</link>
       <pubDate>Tue, 18 Dec 2012 16:28:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/civic-stories---december-2012/</guid>
+      <guid>https://jondoblados.github.io/posts/civic-stories-december-2012/</guid>
       <description>I sort of miss being in the backseat. A lot of my goofing off years have been conducted within the confines of the passenger doors, backside of the front seats, and the backseat.[gallery columns=&amp;ldquo;4&amp;rdquo; type=&amp;ldquo;rectangular&amp;rdquo; ids=&amp;ldquo;3012,3011,3010,3009,3008,3007,3006,3005,3004,3003&amp;rdquo;]</description>
     </item>
     
     <item>
       <title>Goofing off at SM.</title>
-      <link>https://jondoblados.github.io/post/goofing-off-at-sm./</link>
+      <link>https://jondoblados.github.io/posts/goofing-off-at-sm./</link>
       <pubDate>Fri, 17 Jun 2011 17:40:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/goofing-off-at-sm./</guid>
+      <guid>https://jondoblados.github.io/posts/goofing-off-at-sm./</guid>
       <description>via Gravity </description>
     </item>
     
     <item>
       <title>I lurv going places - Miguel</title>
-      <link>https://jondoblados.github.io/post/i-lurv-going-places---miguel/</link>
+      <link>https://jondoblados.github.io/posts/i-lurv-going-places-miguel/</link>
       <pubDate>Tue, 16 Nov 2010 22:14:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/i-lurv-going-places---miguel/</guid>
+      <guid>https://jondoblados.github.io/posts/i-lurv-going-places-miguel/</guid>
       <description>[gallery columns=&#34;5&#34; orderby=&#34;post_date&#34;] </description>
     </item>
     
     <item>
       <title>Kysa Knows</title>
-      <link>https://jondoblados.github.io/post/kysa-knows/</link>
+      <link>https://jondoblados.github.io/posts/kysa-knows/</link>
       <pubDate>Wed, 10 Nov 2010 23:48:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/kysa-knows/</guid>
+      <guid>https://jondoblados.github.io/posts/kysa-knows/</guid>
       <description>Well here are a couple of shots of our princess, who was trying to finish off her purchases so she can brush teeth and sleep already. She&amp;rsquo;s tried doing some blogging in her spare time (I think this is a good thing for her) and you can follow her here.Nomnomnom! First shot settings were F/7.1, ISO-400, shutter speed of 0.81secNext shot used F/2.8, ISO-400, and shutter speed of 1/10sec. The better shot I think.</description>
     </item>
     
     <item>
-      <title>Our favorite &#39;Bubbles!&#39; video</title>
-      <link>https://jondoblados.github.io/post/our-favorite-bubbles-video/</link>
+      <title>Our favorite &#39;Bubbles!&#39;&#39; video</title>
+      <link>https://jondoblados.github.io/posts/our-favorite-bubbles-video/</link>
       <pubDate>Tue, 02 Nov 2010 11:01:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/our-favorite-bubbles-video/</guid>
+      <guid>https://jondoblados.github.io/posts/our-favorite-bubbles-video/</guid>
       <description>Taken some months back.&amp;nbsp;Always makes us smile when we see this.15052010.mp4Watch on Posterous</description>
     </item>
     
     <item>
       <title>Breakfast after early morning church service</title>
-      <link>https://jondoblados.github.io/post/breakfast-after-early-morning-church-service/</link>
+      <link>https://jondoblados.github.io/posts/breakfast-after-early-morning-church-service/</link>
       <pubDate>Sun, 01 Aug 2010 12:15:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/breakfast-after-early-morning-church-service/</guid>
+      <guid>https://jondoblados.github.io/posts/breakfast-after-early-morning-church-service/</guid>
       <description>[gallery orderby=&#34;post_date&#34;] </description>
-    </item>
-    
-    <item>
-      <title>After a busy afternoon of play, Ate Kysa attended to her brother and shared a meal with him.</title>
-      <link>https://jondoblados.github.io/post/after-a-busy-afternoon-of-play-ate-kysa-attended-to-her-brother-andshared-a-meal-with-him./</link>
-      <pubDate>Sat, 29 May 2010 17:22:00 +0000</pubDate>
-      
-      <guid>https://jondoblados.github.io/post/after-a-busy-afternoon-of-play-ate-kysa-attended-to-her-brother-andshared-a-meal-with-him./</guid>
-      <description>via Gravity </description>
     </item>
     
   </channel>

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Image on Jon Doblados</title>
+    <title>Image on aggregated thinking</title>
     <link>https://jondoblados.github.io/tags/image/</link>
-    <description>Recent content in Image on Jon Doblados</description>
+    <description>Recent content in Image on aggregated thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
     <lastBuildDate>Thu, 14 Apr 2011 19:51:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jondoblados.github.io/tags/image/index.xml" rel="self" type="application/rss+xml" />
@@ -14,19 +13,19 @@
     
     <item>
       <title>Ocean Park and around HK - April 2011</title>
-      <link>https://jondoblados.github.io/post/ocean-park-and-around-hk---april-2011/</link>
+      <link>https://jondoblados.github.io/posts/ocean-park-and-around-hk-april-2011/</link>
       <pubDate>Thu, 14 Apr 2011 19:51:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/ocean-park-and-around-hk---april-2011/</guid>
+      <guid>https://jondoblados.github.io/posts/ocean-park-and-around-hk-april-2011/</guid>
       <description>[gallery columns=&#34;5&#34; orderby=&#34;post_date&#34;]&amp;nbsp; </description>
     </item>
     
     <item>
       <title>Ever wondered how I look like after pulling an all-nighter?</title>
-      <link>https://jondoblados.github.io/post/ever-wondered-how-i-look-like-after-pulling-an-all-nighter/</link>
+      <link>https://jondoblados.github.io/posts/ever-wondered-how-i-look-like-after-pulling-an-all-nighter/</link>
       <pubDate>Sat, 10 Jul 2010 10:18:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/ever-wondered-how-i-look-like-after-pulling-an-all-nighter/</guid>
+      <guid>https://jondoblados.github.io/posts/ever-wondered-how-i-look-like-after-pulling-an-all-nighter/</guid>
       <description>via Gravity </description>
     </item>
     

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cloud on Jon Doblados</title>
+    <title>Cloud on aggregated thinking</title>
     <link>https://jondoblados.github.io/tags/cloud/</link>
-    <description>Recent content in Cloud on Jon Doblados</description>
+    <description>Recent content in Cloud on aggregated thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
     <lastBuildDate>Wed, 12 Feb 2014 14:03:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jondoblados.github.io/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
@@ -14,10 +13,10 @@
     
     <item>
       <title>MySQL on Google Cloud Infrastructure Now Available</title>
-      <link>https://jondoblados.github.io/post/mysql-on-google-cloud-infrastructure-now-available/</link>
+      <link>https://jondoblados.github.io/posts/mysql-on-google-cloud-infrastructure-now-available/</link>
       <pubDate>Wed, 12 Feb 2014 14:03:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/post/mysql-on-google-cloud-infrastructure-now-available/</guid>
+      <guid>https://jondoblados.github.io/posts/mysql-on-google-cloud-infrastructure-now-available/</guid>
       <description> </description>
     </item>
     

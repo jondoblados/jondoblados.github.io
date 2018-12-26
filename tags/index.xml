@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Jon Doblados</title>
+    <title>Tags on aggregated thinking</title>
     <link>https://jondoblados.github.io/tags/</link>
-    <description>Recent content in Tags on Jon Doblados</description>
+    <description>Recent content in Tags on aggregated thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
     <lastBuildDate>Wed, 25 Feb 2015 10:43:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jondoblados.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -230,10 +229,10 @@
     
     <item>
       <title>Gnu/Linux</title>
-      <link>https://jondoblados.github.io/tags/gnu/linux/</link>
+      <link>https://jondoblados.github.io/tags/gnu-linux/</link>
       <pubDate>Wed, 20 Jul 2011 11:18:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/tags/gnu/linux/</guid>
+      <guid>https://jondoblados.github.io/tags/gnu-linux/</guid>
       <description></description>
     </item>
     
