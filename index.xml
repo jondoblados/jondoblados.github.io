@@ -6,10 +6,19 @@
     <description>Recent content on aggregated thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Oct 2018 00:05:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Dec 2018 17:29:55 +0800</lastBuildDate>
     
 	<atom:link href="https://jondoblados.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Settling Down With Hugo</title>
+      <link>https://jondoblados.github.io/posts/settling-down-with-hugo/</link>
+      <pubDate>Wed, 26 Dec 2018 17:29:55 +0800</pubDate>
+      
+      <guid>https://jondoblados.github.io/posts/settling-down-with-hugo/</guid>
+      <description>For the upteenth time, I&amp;rsquo;m switching to an all-static approach to writing. Since Go (the programming language) has been quite popular with most of the 3rd-party tools we use, most particularly Traefik, I&amp;rsquo;ve decided to start reading and learning about this programming language and document exercises and attempts at using it for tooling. It also makes sense to use Hugo, an ultra-fast and modern static site generator written in Go, as my writing tool.</description>
+    </item>
     
     <item>
       <title>Family Visits Singapura</title>

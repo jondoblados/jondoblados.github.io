@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jondoblados.github.io/posts/settling-down-with-hugo/</loc>
+    <lastmod>2018-12-26T17:29:55+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jondoblados.github.io/posts/family-visits-singapura/</loc>
     <lastmod>2018-10-06T00:05:00+00:00</lastmod>
   </url>
@@ -1359,7 +1364,7 @@
   
   <url>
     <loc>https://jondoblados.github.io/posts/</loc>
-    <lastmod>2018-10-06T00:05:00+00:00</lastmod>
+    <lastmod>2018-12-26T17:29:55+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1491,7 +1496,7 @@
   
   <url>
     <loc>https://jondoblados.github.io/</loc>
-    <lastmod>2018-10-06T00:05:00+00:00</lastmod>
+    <lastmod>2018-12-26T17:29:55+08:00</lastmod>
     <priority>0</priority>
   </url>
   
