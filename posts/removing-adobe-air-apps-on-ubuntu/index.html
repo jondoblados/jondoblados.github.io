@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+    <head>
+        
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+        <title>Removing Adobe Air apps on Ubuntu &middot; Jon Doblados</title>
+        <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' type='text/css'>
+        <link rel="stylesheet" href="https://jon.doblados.net/libraries/normalize.3.0.1.css" />
+        <link rel="stylesheet" href="https://jon.doblados.net/css/liquorice.css" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-144-precomposed.png" sizes="144x144" />
+        <link rel="alternate" href="" type="application/rss+xml" title="Jon Doblados" />
+    </head>
+    <body class="li-body">
+
+<header class="li-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="sixteen columns">
+                <div class="li-brand li-left">
+                <a href="https://jon.doblados.net">Jon Doblados</a></div>
+                <div class="li-menu li-right">
+                    <span class="li-menu-icon" onclick="javascript:toggle('menu');">&#9776;</span>
+                    <ul id="menu2" class="li-menu-items">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="sixteen columns">
+                <ul id="menu" class="li-menu-items li-menu-mobile">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="sixteen columns">
+                <article class="li-article">
+                    <header class="li-article-header">
+                        <h1 class="li-article-title">Removing Adobe Air apps on Ubuntu</h1>
+                        <span class="li-article-taxonomies">
+                            
+
+                            
+                                with tags
+                                
+                                    <a href="https://jon.doblados.net/tags/technology">Technology</a>
+                                
+                            
+                        </span>
+                         - 
+                        <time class="li-article-date">Thursday, August 21, 2008</time>
+                    </header>
+                    <section>
+                        <p>I was trying to remove AgileAgenda after fiddling with it for a week and deciding it wasn&rsquo;t going to cut it.  There&rsquo;s no Adobe Air Application &ldquo;uninstaller&rdquo; in the menu, and search engine results usually point to Mac lurv, or not.  Seems like uninstalling Air apps on OSX is bloody.<p />I did find this nice <a href="http://digitalspaghetti.me.uk/index.php/DigitalSpaghetti/Remove_Adobe_AIR_in_linux">article on removing Adobe Air on Linux</a> and gave it (well parts of it) a shot.<p /><code>jon@jedi-ntbk:/opt$ sudo dpkg -S /opt/*<br />adobeair-enu: /opt/Adobe AIR<br />com.agileagenda.agileagenda.f49a4d8df78a1fee7a3be440dc11bab18d922274.1: /opt/AgileAgenda<br />de.makesoft.twhirl.0ea062bc275e7ed1e6ec3762effd73c7158adf33.1: /opt/twhirl</code><p />I merely copied the package name of AgileAgenda, ran <code>dpkg</code> with the right switches, and pfft app&rsquo;s gone!  Menu entry seems to be gone too.<p /><code>jon@jedi-ntbk:/opt$ sudo dpkg -P com.agileagenda.agileagenda.f49a4d8df78a1fee7a3be440dc11bab18d922274.1<br />(Reading database &hellip; 128350 files and directories currently installed.)<br />Removing com.agileagenda.agileagenda.f49a4d8df78a1fee7a3be440dc11bab18d922274.1 &hellip;<br />jon@jedi-ntbk:/opt$</code></p>
+
+                    </section>
+                </article>
+            </div>
+        </div>
+
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_config = function () {
+        this.page.url = "https://jon.doblados.net";  
+        this.page.identifier = "aggregatedthinking"; 
+        };
+        
+        (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://aggregatedthinking.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        <div class="row li-pagination">
+            <div class="eight columns">
+                <div class="li-pagination-previous">
+                    
+                        Later article<br />
+                        <a href="https://jon.doblados.net/posts/arping-s/"> arping -s</a>
+                    
+                </div>
+            </div>
+            <div class="eight columns">
+                <div class="li-pagination-next">
+                    
+                        Older article<br />
+                        <a href="https://jon.doblados.net/posts/more-plesk-blues/"> More Plesk Blues</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer class="li-page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="sixteen columns">
+                <div class="li-page-footer-legal">
+                    aggregated thinking &copy; 2018. all rights reserved. 
+                </div>
+                <div class="li-page-footer-theme">
+                    <span class=""><a href="https://github.com/eliasson/liquorice/">liquorice</a> is a theme for <a href="http://hugo.spf13.com">hugo</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script type="text/javascript">
+    <!--
+    function toggle(id) {
+        var e = document.getElementById(id);
+        e.style.display == 'block' ? e.style.display = 'none' : e.style.display = 'block';
+    }
+    
+    </script>
+    
+    </body>
+</html>
+

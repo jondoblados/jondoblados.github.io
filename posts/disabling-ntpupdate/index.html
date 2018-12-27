@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+    <head>
+        
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+        <title>Disabling ntpupdate &middot; Jon Doblados</title>
+        <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' type='text/css'>
+        <link rel="stylesheet" href="https://jon.doblados.net/libraries/normalize.3.0.1.css" />
+        <link rel="stylesheet" href="https://jon.doblados.net/css/liquorice.css" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-144-precomposed.png" sizes="144x144" />
+        <link rel="alternate" href="" type="application/rss+xml" title="Jon Doblados" />
+    </head>
+    <body class="li-body">
+
+<header class="li-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="sixteen columns">
+                <div class="li-brand li-left">
+                <a href="https://jon.doblados.net">Jon Doblados</a></div>
+                <div class="li-menu li-right">
+                    <span class="li-menu-icon" onclick="javascript:toggle('menu');">&#9776;</span>
+                    <ul id="menu2" class="li-menu-items">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="sixteen columns">
+                <ul id="menu" class="li-menu-items li-menu-mobile">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="sixteen columns">
+                <article class="li-article">
+                    <header class="li-article-header">
+                        <h1 class="li-article-title">Disabling ntpupdate</h1>
+                        <span class="li-article-taxonomies">
+                            
+
+                            
+                        </span>
+                        
+                        <time class="li-article-date">Monday, March 13, 2006</time>
+                    </header>
+                    <section>
+                        <p>This has been quite overdue, as I have been wanting to disable <code>ntpupdate</code> since the Hoary release. What is <code>ntpupdate</code> anyway? It&rsquo;s the program that synchronizes your system time to an ntp server. <abbr title="Network Time Protocol">NTP</abbr> is a protocol for synchronising the clocks of computer systems over packet-switched, variable-latency data networks. Since Ubuntu defaults to an ntp server somewhere in the www, and that it will attempt to sync on boot, it causes your machine to go through a much much longer startup process if an internet connection is not available at boot time.<br/><br/>As I am lugging my lappy around a lot and I have not much of a need for the program, I knew I had to take it out and save me minutes of boot time. <a href="http://blog.ealden.net">Ealden</a> taught me how to remove <code>ntpupdate</code>, and I suppose we can change the arguments to remove other programs as well.<br/><br/><code>$ sudo update-rc.d -f ntpdate remove</code><br/><br/><code>update-rc.d</code> will remove any system startup links for <code>/etc/init.d/ntpdate</code>, or any instances of such in the different run levels. Usage is as follows:<br/><div class="CodeRay"><br/>  <div class="code"><pre>usage: update-rc.d [-n] [-f] &lt;basename&gt; remove<br/>       update-rc.d [-n] &lt;basename&gt; defaults [NN | sNN kNN]<br/>       update-rc.d [-n] &lt;basename&gt; start|stop NN runlvl [runlvl] [&hellip;] .<br/>                -n: not really<br/>                -f: force</pre></div><br/></div></p>
+
+                    </section>
+                </article>
+            </div>
+        </div>
+
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_config = function () {
+        this.page.url = "https://jon.doblados.net";  
+        this.page.identifier = "aggregatedthinking"; 
+        };
+        
+        (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://aggregatedthinking.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        <div class="row li-pagination">
+            <div class="eight columns">
+                <div class="li-pagination-previous">
+                    
+                        Later article<br />
+                        <a href="https://jon.doblados.net/posts/promoting-gnulinux-through-competition/"> Promoting GNU/Linux through Competition</a>
+                    
+                </div>
+            </div>
+            <div class="eight columns">
+                <div class="li-pagination-next">
+                    
+                        Older article<br />
+                        <a href="https://jon.doblados.net/posts/e-commerce-theory-and-practice/"> e-commerce Theory and Practice</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer class="li-page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="sixteen columns">
+                <div class="li-page-footer-legal">
+                    aggregated thinking &copy; 2018. all rights reserved. 
+                </div>
+                <div class="li-page-footer-theme">
+                    <span class=""><a href="https://github.com/eliasson/liquorice/">liquorice</a> is a theme for <a href="http://hugo.spf13.com">hugo</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script type="text/javascript">
+    <!--
+    function toggle(id) {
+        var e = document.getElementById(id);
+        e.style.display == 'block' ? e.style.display = 'none' : e.style.display = 'block';
+    }
+    
+    </script>
+    
+    </body>
+</html>
+

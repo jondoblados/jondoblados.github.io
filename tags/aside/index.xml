@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aside on Jon Doblados</title>
+    <link>https://jon.doblados.net/tags/aside/</link>
+    <description>Recent content in Aside on Jon Doblados</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Jan 2013 17:15:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jon.doblados.net/tags/aside/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>on SLMIS</title>
+      <link>https://jon.doblados.net/posts/on-slmis/</link>
+      <pubDate>Sat, 19 Jan 2013 17:15:00 +0000</pubDate>
+      
+      <guid>https://jon.doblados.net/posts/on-slmis/</guid>
+      <description>End users complain because the system isn&amp;rsquo;t &amp;ldquo;user-friendly&amp;rdquo;. FYI, it&amp;rsquo;s meant to be that way. It&amp;rsquo;s the only way we can guarantee that the system will still be helpful 25 years from now.</description>
+    </item>
+    
+  </channel>
+</rss>

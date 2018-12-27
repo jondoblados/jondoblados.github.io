@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal on Jon Doblados</title>
+    <link>https://jon.doblados.net/tags/personal/</link>
+    <description>Recent content in Personal on Jon Doblados</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Jan 2013 17:15:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jon.doblados.net/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>on SLMIS</title>
+      <link>https://jon.doblados.net/posts/on-slmis/</link>
+      <pubDate>Sat, 19 Jan 2013 17:15:00 +0000</pubDate>
+      
+      <guid>https://jon.doblados.net/posts/on-slmis/</guid>
+      <description>End users complain because the system isn&amp;rsquo;t &amp;ldquo;user-friendly&amp;rdquo;. FYI, it&amp;rsquo;s meant to be that way. It&amp;rsquo;s the only way we can guarantee that the system will still be helpful 25 years from now.</description>
+    </item>
+    
+    <item>
+      <title>Revisited: Blog changes, etc.</title>
+      <link>https://jon.doblados.net/posts/revisited-blog-changes-etc./</link>
+      <pubDate>Tue, 13 Nov 2012 18:30:00 +0000</pubDate>
+      
+      <guid>https://jon.doblados.net/posts/revisited-blog-changes-etc./</guid>
+      <description>I&amp;rsquo;ve once more moved my blog. This time, it&amp;rsquo;s on my own hosting account and it&amp;rsquo;s back to using WP. Same blog, different flavor now and moving forward. I&amp;rsquo;ve had this short discussion with a co-leader in church on going back to blogging, and he pointed out the importance of identifying to a particular niche. I said sure, it&amp;rsquo;s important, but I think I wouldn&amp;rsquo;t want to separate my technical gibberish from my thoughts and reflections on God and Christianity.</description>
+    </item>
+    
+    <item>
+      <title>Healthy alternative to the regular sunny-side up. Mae did poached eggs for the first time! Deeelish!</title>
+      <link>https://jon.doblados.net/posts/healthy-alternative-to-the-regular-sunny-side-up.-mae-did-poached-eggsfor-the-first-time-deeelish/</link>
+      <pubDate>Tue, 22 Feb 2011 06:50:00 +0000</pubDate>
+      
+      <guid>https://jon.doblados.net/posts/healthy-alternative-to-the-regular-sunny-side-up.-mae-did-poached-eggsfor-the-first-time-deeelish/</guid>
+      <description>via Gravity </description>
+    </item>
+    
+  </channel>
+</rss>
