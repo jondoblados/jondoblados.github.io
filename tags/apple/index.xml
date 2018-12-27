@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Apple on Amalgamated Thoughts </title>
-    <link>https://jondoblados.github.io/tags/apple/</link>
-    <description>Recent content in Apple on Amalgamated Thoughts </description>
+    <title>Apple on Jon Doblados</title>
+    <link>https://jon.doblados.net/tags/apple/</link>
+    <description>Recent content in Apple on Jon Doblados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 25 Feb 2015 10:43:00 +0000</lastBuildDate>
     
-	<atom:link href="https://jondoblados.github.io/tags/apple/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jon.doblados.net/tags/apple/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Apple Announces MacBook Pro Repair Extension Program for Video Issues</title>
-      <link>https://jondoblados.github.io/posts/apple-announces-macbook-pro-repair-extension-program-for-video-issues/</link>
+      <link>https://jon.doblados.net/posts/apple-announces-macbook-pro-repair-extension-program-for-video-issues/</link>
       <pubDate>Wed, 25 Feb 2015 10:43:00 +0000</pubDate>
       
-      <guid>https://jondoblados.github.io/posts/apple-announces-macbook-pro-repair-extension-program-for-video-issues/</guid>
+      <guid>https://jon.doblados.net/posts/apple-announces-macbook-pro-repair-extension-program-for-video-issues/</guid>
       <description>I didn&amp;rsquo;t think there was going to be any hope for my early 2011 MacBook Pro, which had GPU-related problems after only about a year of use. The only obvious option I had was to buy a replacement laptop. But Apple seems to have been receiving a lot of reports that they&amp;rsquo;ve launched a repair progam that will fix the graphics problem for free.
 If you bought a 15-inch or 17-inch MacBook Pro between early 2011 and end of 2013, as well as the first two generations of the Retina models, you&amp;rsquo;re in luck.</description>
     </item>
