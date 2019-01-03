@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+    <head>
+        
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+        <title>MTA setup &middot; Aggregated Thinking</title>
+        <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' type='text/css'>
+        <link rel="stylesheet" href="https://jon.doblados.net/libraries/normalize.3.0.1.css" />
+        <link rel="stylesheet" href="https://jon.doblados.net/css/liquorice.css" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-144-precomposed.png" sizes="144x144" />
+        <link rel="alternate" href="" type="application/rss+xml" title="Aggregated Thinking" />
+    </head>
+    <body class="li-body">
+
+<header class="li-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="sixteen columns">
+                <div class="li-brand li-left">
+                <a href="https://jon.doblados.net">Aggregated Thinking</a></div>
+                <div class="li-menu li-right">
+                    <ul>
+                        <li>Jon Doblados</li>
+                    </ul>
+                    <span class="li-menu-icon" onclick="javascript:toggle('menu');">&#9776;</span>
+                    <ul id="menu2" class="li-menu-items">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="sixteen columns">
+                Cloud Platforms, Infrastructure, Containers, Orchestration, and Asides
+                <ul id="menu" class="li-menu-items li-menu-mobile">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="sixteen columns">
+                <article class="li-article">
+                    <header class="li-article-header">
+                        <h1 class="li-article-title">MTA setup</h1>
+                        <span class="li-article-taxonomies">
+                            
+
+                            
+                        </span>
+                        
+                        <time class="li-article-date">Tuesday, April 19, 2005</time>
+                    </header>
+                    <section>
+                        <p>Pending Tjay&rsquo;s visit, the reconfiguration of the Firebox will have to wait. It is important to have the CDO MTA running along with the HTTPD service in the P5-520 to be able to test the configuration  in more or less &ldquo;correct&rdquo; conditions.<br/><code><br/>Public IP: 203.177.75.33<br/>Public Alias: 203.177.75.37<br/></code><br/>TODO:<br/><ul><br/><li>1. set up of CDO MTA (HTTP and Postfix in one machine)</li><br/><li>2. DNS entries for cdo.cepalco.com.ph and mla.cepalco.com.ph</li><br/><li>3. Verify if HTTP NAT and SMTP NAT will not have problems with multiple domains e.g. cepalco.com.ph (for HTTP) and cdo.cepalco.com.ph or mla.cepalco.com.ph (for SMTP) even if email addresses won&rsquo;t change, like that of <a href="mailto:info@cepalco.com.ph">info@cepalco.com.ph</a> (with CDO MTA) and <a href="mailto:mgcamila@cepalco.com.ph">mgcamila@cepalco.com.ph</a> (with MLA MTA)</li><br/></ul></p>
+
+                    </section>
+                </article>
+            </div>
+        </div>
+
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_config = function () {
+        this.page.url = "https://jon.doblados.net";  
+        this.page.identifier = "aggregatedthinking"; 
+        };
+        
+        (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://aggregatedthinking.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        <div class="row li-pagination">
+            <div class="eight columns">
+                <div class="li-pagination-previous">
+                    
+                        Later article<br />
+                        <a href="https://jon.doblados.net/dumbass-mode/"> dumbass mode</a>
+                    
+                </div>
+            </div>
+            <div class="eight columns">
+                <div class="li-pagination-next">
+                    
+                        Older article<br />
+                        <a href="https://jon.doblados.net/on-emacs/"> on emacs</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer class="li-page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="sixteen columns">
+                <div class="li-page-footer-legal">
+                    aggregated thinking &copy; 2019. all rights reserved. 
+                </div>
+                <div class="li-page-footer-theme">
+                    <span class=""><a href="https://github.com/eliasson/liquorice/">liquorice</a> is a theme for <a href="http://hugo.spf13.com">hugo</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script type="text/javascript">
+    <!--
+    function toggle(id) {
+        var e = document.getElementById(id);
+        e.style.display == 'block' ? e.style.display = 'none' : e.style.display = 'block';
+    }
+    
+    </script>
+    
+    </body>
+</html>
+
