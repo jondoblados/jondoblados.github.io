@@ -1,0 +1,19 @@
+baseURL = "https://jondoblados.github.io"
+languageCode = "en-us"
+title = "Amalgamated Thoughts "
+theme = "allegiant"
+
+copyright = "&copy; <a href=\"https://jondoblados.github.io/\">Jon Doblados</a> 2018"
+disqusShortname = "amalgamated-thoughts"
+
+canonifyurls = true
+[params]
+    ga_api_key = "Your Google Analytics tracking id" # Google Analytics API key.
+    avatar = "../../img/avatar.jpg" # Image should be square, and roughly 150px x 150px
+    bio = "Insert your bio here. You should write something really whitty and interesting that nobody is ever going to read or care about. But such is life. I really like the look of having a bio snippet on the blog, though. You may have to adjust some CSS styles depending on how long or short your bio is. I didn't make it super resillient."
+    github = "http://github.com/JonDoblados"
+    twitter = "https://twitter.com/JonDoblados"
+    linkedin = "https://www.linkedin.com/in/JonDoblados"
+    footer_1 = "Some text here."
+    footer_2 = "Some different text here."
+    footer_3 = "Even more different text here."
