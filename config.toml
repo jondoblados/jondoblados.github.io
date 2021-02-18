@@ -75,8 +75,3 @@ pygmentsStyle = "pygments"
     name = "RSS"
     url = "/index.xml"
     weight = 4
-
-
-
-
-
