@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="stylesheet" href="https://jondoblados.github.io/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  
+  
+  
+  <link rel="stylesheet" href="https://jondoblados.github.io/css/cayman.ea0e967413f3851071cc8ace3621bc4205fe8fa79b2abe3d7bf94ff2841f0d47.css">
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+  <title>plesk won&#39;t start after tweaking mysql | Aggregated Thinking</title>
+</head>
+
+<body>
+  <section class="page-header">
+  <h1 class="project-name">
+    Aggregated Thinking
+  </h1>
+  <h2 class="project-tagline">
+    Thoughts and musings of a corporate IT guy
+  </h2>
+  <nav>
+    
+    
+      
+      
+      
+      
+      <a href="/" class="btn">Blog</a>
+    
+      
+      
+      
+      
+      <a href="/tags/" class="btn">Tags</a>
+    
+      
+      
+      
+      
+      <a href="/about/" class="btn">About</a>
+    
+      
+      
+      
+      
+      <a href="/index.xml" class="btn">RSS</a>
+    
+  </nav>
+</section>
+
+  <section class="main-content">
+    
+  <h1>plesk won&#39;t start after tweaking mysql</h1>
+  <p>i&rsquo;ve had this happen to me again the other week and as always, felt like kicking myself for not remembering.</p>
+<p>we do a lot of performance tuning on mysql, and as a result, we almost always manage to get plesk mangled. not its fault, it just can&rsquo;t run without mysql, doh.</p>
+<p>not of preference, but plesk happens to be there to make handling domains easier, as a single editing point when you want to change something and not worry about missing something out.</p>
+<p>so there&rsquo;s a custom /etc/my.cnf that we use, and with changes to limits done (both on mysql and via ulimit), you&rsquo;d think that a reload of mysqld would do. (we use InnoDB btw)</p>
+<p>normally, that&rsquo;s all you need to have mysqld read off the new settings. if you&rsquo;ve grown so dependent on plesk (like i have), you would not notice that mysqld didn&rsquo;t actually start, and you will get an error when you load plesk, thinking that it&rsquo;s a plesk error:</p>
+<p>`<br>
+ERROR: PleskMainDBException<br>
+MySQL query failed: Incorrect information in file: &lsquo;./psa/misc.frm&rsquo;</p>
+<p>0: /usr/local/psa/admin/plib/common_func.php3:218<br>
+db_query(string &lsquo;select param, val from misc&rsquo;)<br>
+1: /usr/local/psa/admin/plib/common_func.php3:497<br>
+get_param(string &lsquo;mysql41_compatible&rsquo;)<br>
+2: /usr/local/psa/admin/plib/common_func.php3:394<br>
+db_set_names()<br>
+3: /usr/local/psa/admin/plib/common_func.php3:373<br>
+db_connect_real(string &lsquo;localhost&rsquo;, string &lsquo;admin&rsquo;, string &lsquo;********&rsquo;, string &lsquo;psa&rsquo;)<br>
+4: /usr/local/psa/admin/plib/common_func.php3:353<br>
+db_connect()<br>
+5: /usr/local/psa/admin/auto_prepend/auth.php3:82<br>
+`</p>
+<p>even a restart of the plesk service will not work:</p>
+<p><code>[root@jedi]# /etc/init.d/psa restart   Unable to query parameter by query select val from misc where param='mysql41_compatible': Incorrect information in file: './psa/misc.frm'   Unable to query parameter by query select val from misc where param='mysql41_compatible': Incorrect information in file: './psa/misc.frm'   Mysql error: Incorrect information in file: './psa/key_history.frm'   Processing config directory: /usr/local/psa/admin/conf/httpsd.*.include   Syntax OK   /usr/local/psa/admin/bin/httpsdctl restart: httpd restarted   ERROR 1033 (HY000) at line 1: Incorrect information in file: './psa/sessions.frm'  </code></p>
+<p>so this is a mysqld failing to start properly problem. to fix this, go to your mysql datadir and see if the sizes of your innodb log files match those in your .cnf. we usually set innodb_log_file_size = 256M and innodb_log_buffer_size = 256M in /etc/my.cnf.</p>
+<p>if they don&rsquo;t match, stop mysqld, remove the ib_logfile0 and ib_logfile1 files, and start mysqld. be careful not to delete the ibdata1 or ibdata2 files or you lose your data. avoid using rm -r ib* (yea, wildcards and fast fingers give sysads their most stupefying moments)</p>
+<p>innodb will recreate the log files to match your .cnf and mysqld now becomes available for plesk.</p>
+
+
+    <footer class="site-footer">
+  <span class="site-footer-credits">
+    Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cayman-hugo-theme">Cayman</a>.
+  </span>
+</footer>
+
+  </section>
+  
+  
+
+</body>
+</html>
