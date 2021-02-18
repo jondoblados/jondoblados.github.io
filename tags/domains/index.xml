@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Domains on Aggregated Thinking</title>
-    <link>https://jondoblados.github.io/tags/domains/</link>
+    <link>https://jon.doblados.net/tags/domains/</link>
     <description>Recent content in Domains on Aggregated Thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Sun, 25 Feb 2007 19:51:00 +0800</lastBuildDate><atom:link href="https://jondoblados.github.io/tags/domains/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Feb 2007 19:51:00 +0800</lastBuildDate><atom:link href="https://jon.doblados.net/tags/domains/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IP-hijacking and then some</title>
-      <link>https://jondoblados.github.io/posts/ip-hijacking-and-then-some/</link>
+      <link>https://jon.doblados.net/blog/ip-hijacking-and-then-some/</link>
       <pubDate>Sun, 25 Feb 2007 19:51:00 +0800</pubDate>
       
-      <guid>https://jondoblados.github.io/posts/ip-hijacking-and-then-some/</guid>
+      <guid>https://jon.doblados.net/blog/ip-hijacking-and-then-some/</guid>
       <description>Almost a month of downtime. The servers were fine, but our IP addresses were not. Somehow, a system bug from one of the hosting companies caused our plan to include 14 other IP addresses, and we only maintained 6 as far as I am concerned.</description>
     </item>
     

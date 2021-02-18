@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Certification on Aggregated Thinking</title>
-    <link>https://jondoblados.github.io/tags/certification/</link>
+    <link>https://jon.doblados.net/tags/certification/</link>
     <description>Recent content in Certification on Aggregated Thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Mon, 04 Jan 2016 11:03:00 +0800</lastBuildDate><atom:link href="https://jondoblados.github.io/tags/certification/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jan 2016 11:03:00 +0800</lastBuildDate><atom:link href="https://jon.doblados.net/tags/certification/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Google Apps Certified Deployment Specialist</title>
-      <link>https://jondoblados.github.io/posts/google-apps-certified-deployment/</link>
+      <link>https://jon.doblados.net/blog/google-apps-certified-deployment/</link>
       <pubDate>Mon, 04 Jan 2016 11:03:00 +0800</pubDate>
       
-      <guid>https://jondoblados.github.io/posts/google-apps-certified-deployment/</guid>
+      <guid>https://jon.doblados.net/blog/google-apps-certified-deployment/</guid>
       <description>Back in November last year, the Apps Services Partner that I help with Google Apps Support told me that I was required to take the Google Apps for Work Deployment Specialist certification exam.</description>
     </item>
     

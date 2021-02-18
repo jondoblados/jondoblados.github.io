@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Crystal Reports on Aggregated Thinking</title>
-    <link>https://jondoblados.github.io/tags/crystal-reports/</link>
+    <link>https://jon.doblados.net/tags/crystal-reports/</link>
     <description>Recent content in Crystal Reports on Aggregated Thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Sun, 22 Jun 2014 20:13:00 +0800</lastBuildDate><atom:link href="https://jondoblados.github.io/tags/crystal-reports/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Jun 2014 20:13:00 +0800</lastBuildDate><atom:link href="https://jon.doblados.net/tags/crystal-reports/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Crystal Reports Redux</title>
-      <link>https://jondoblados.github.io/posts/crystal-reports-redux/</link>
+      <link>https://jon.doblados.net/blog/crystal-reports-redux/</link>
       <pubDate>Sun, 22 Jun 2014 20:13:00 +0800</pubDate>
       
-      <guid>https://jondoblados.github.io/posts/crystal-reports-redux/</guid>
+      <guid>https://jon.doblados.net/blog/crystal-reports-redux/</guid>
       <description>I didn&amp;rsquo;t think I&amp;rsquo;d be saying this many years down the road, but here goes anyway. Crystal Reports is my friend.</description>
     </item>
     

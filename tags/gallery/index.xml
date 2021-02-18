@@ -2,55 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gallery on Aggregated Thinking</title>
-    <link>https://jondoblados.github.io/tags/gallery/</link>
+    <link>https://jon.doblados.net/tags/gallery/</link>
     <description>Recent content in Gallery on Aggregated Thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Mon, 02 Jul 2012 00:16:00 +0800</lastBuildDate><atom:link href="https://jondoblados.github.io/tags/gallery/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Jul 2012 00:16:00 +0800</lastBuildDate><atom:link href="https://jon.doblados.net/tags/gallery/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kids on Photobooth</title>
-      <link>https://jondoblados.github.io/posts/kids-on-photobooth/</link>
+      <link>https://jon.doblados.net/blog/kids-on-photobooth/</link>
       <pubDate>Mon, 02 Jul 2012 00:16:00 +0800</pubDate>
       
-      <guid>https://jondoblados.github.io/posts/kids-on-photobooth/</guid>
+      <guid>https://jon.doblados.net/blog/kids-on-photobooth/</guid>
       <description>Miguel and Isabel goofing off in front of the laptop. They discovered the 4-shot option and started taking pictures by themselves.</description>
     </item>
     
     <item>
       <title>Miguel, lately.</title>
-      <link>https://jondoblados.github.io/posts/miguel-lately-comments/</link>
+      <link>https://jon.doblados.net/blog/miguel-lately/</link>
       <pubDate>Fri, 30 Dec 2011 23:00:00 +0800</pubDate>
       
-      <guid>https://jondoblados.github.io/posts/miguel-lately-comments/</guid>
-      <description>i like the last 2 pics. kulit! haha. Connie - Dec 6, 2011i like the last 2 pics. kulit! haha.</description>
-    </item>
-    
-    <item>
-      <title>Miguel, lately.</title>
-      <link>https://jondoblados.github.io/posts/miguel-lately/</link>
-      <pubDate>Fri, 30 Dec 2011 23:00:00 +0800</pubDate>
-      
-      <guid>https://jondoblados.github.io/posts/miguel-lately/</guid>
+      <guid>https://jon.doblados.net/blog/miguel-lately/</guid>
       <description>Since we moved apartments, the little man started doing facial expressions that always gets us wondering how he got them. I&amp;rsquo;ve tried capturing these expressions with a camera but it&amp;rsquo;s a lot harder than simply having the phone or the point-and-shoot handy at all times.</description>
     </item>
     
     <item>
       <title>Disneyland, HK - April 2011</title>
-      <link>https://jondoblados.github.io/posts/disneyland-hk-april-2011-comments/</link>
+      <link>https://jon.doblados.net/blog/disneyland-hk-april-2011/</link>
       <pubDate>Thu, 14 Apr 2011 13:07:00 +0800</pubDate>
       
-      <guid>https://jondoblados.github.io/posts/disneyland-hk-april-2011-comments/</guid>
-      <description>Was testing a plugin for Wordpress, but feel free &amp;hellip; Jon Janairo Doblados - Nov 0, 2012Was testing a plugin for Wordpress, but feel free to view the pics anyway.</description>
-    </item>
-    
-    <item>
-      <title>Disneyland, HK - April 2011</title>
-      <link>https://jondoblados.github.io/posts/disneyland-hk-april-2011/</link>
-      <pubDate>Thu, 14 Apr 2011 13:07:00 +0800</pubDate>
-      
-      <guid>https://jondoblados.github.io/posts/disneyland-hk-april-2011/</guid>
-      <description>[gallery columns=&amp;ldquo;5&amp;rdquo; orderby=&amp;ldquo;post_date&amp;rdquo;]</description>
+      <guid>https://jon.doblados.net/blog/disneyland-hk-april-2011/</guid>
+      <description>[gallery columns=&amp;ldquo;5&amp;rdquo; orderby=&amp;ldquo;post_date&amp;rdquo;] Comments: Was testing a plugin for Wordpress, but feel free &amp;hellip; Jon Janairo Doblados - Nov 0, 2012Was testing a plugin for Wordpress, but feel free to view the pics anyway.</description>
     </item>
     
   </channel>

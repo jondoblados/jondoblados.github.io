@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud Computing on Aggregated Thinking</title>
-    <link>https://jondoblados.github.io/tags/cloud-computing/</link>
+    <link>https://jon.doblados.net/tags/cloud-computing/</link>
     <description>Recent content in Cloud Computing on Aggregated Thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Wed, 12 Feb 2014 14:03:00 +0800</lastBuildDate><atom:link href="https://jondoblados.github.io/tags/cloud-computing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Feb 2014 14:03:00 +0800</lastBuildDate><atom:link href="https://jon.doblados.net/tags/cloud-computing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MySQL on Google Cloud Infrastructure Now Available</title>
-      <link>https://jondoblados.github.io/posts/mysql-on-google-cloud-infrastructure/</link>
+      <link>https://jon.doblados.net/blog/mysql-on-google-cloud-infrastructure/</link>
       <pubDate>Wed, 12 Feb 2014 14:03:00 +0800</pubDate>
       
-      <guid>https://jondoblados.github.io/posts/mysql-on-google-cloud-infrastructure/</guid>
+      <guid>https://jon.doblados.net/blog/mysql-on-google-cloud-infrastructure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>End-of-the-month TODOs</title>
-      <link>https://jondoblados.github.io/posts/end-of-month-todos/</link>
+      <link>https://jon.doblados.net/blog/end-of-month-todos/</link>
       <pubDate>Mon, 21 Feb 2011 19:30:00 +0800</pubDate>
       
-      <guid>https://jondoblados.github.io/posts/end-of-month-todos/</guid>
+      <guid>https://jon.doblados.net/blog/end-of-month-todos/</guid>
       <description>I have again changed the look of my tech blog. I&amp;rsquo;ve actually mulled over this for quite some time since I was also thinking of just moving everything to my own hosted Wordpress install.</description>
     </item>
     

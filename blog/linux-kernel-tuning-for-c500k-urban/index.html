@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Linux Kernel Tuning for C500k | Urban Airship Blog - Aggregated Thinking</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Linux Kernel Tuning for C500k | Urban Airship Blog" />
+<meta property="og:description" content="By Jared &ldquo;Lucky&rdquo; Kuolt on September 29, 2010 Like the idea of working on large scale problems? We’re hiring talented engineers, and would love to chat with you – check it out!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jon.doblados.net/blog/linux-kernel-tuning-for-c500k-urban/" />
+<meta property="article:published_time" content="2010-09-30T10:24:00+08:00" />
+<meta property="article:modified_time" content="2010-09-30T10:24:00+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux Kernel Tuning for C500k | Urban Airship Blog"/>
+<meta name="twitter:description" content="By Jared &ldquo;Lucky&rdquo; Kuolt on September 29, 2010 Like the idea of working on large scale problems? We’re hiring talented engineers, and would love to chat with you – check it out!"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://jon.doblados.net/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://jon.doblados.net/css/main.css" /><link rel="stylesheet" type="text/css" href="https://jon.doblados.net/css/dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://jon.doblados.net/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="https://jon.doblados.net/">
+	<h1 class="site-title"><a href="https://jon.doblados.net/">Aggregated Thinking</a></h1>
+	<div class="site-description"><h2>Thoughts and musings of a corporate IT guy</h2><nav class="nav social">
+			<ul class="flat"><a href="https://linkedin.com/in/jondoblados" title="LinkedIn"><i data-feather="linkedin"></i></a><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/blog">Old Posts</a>
+			</li>
+			
+			<li>
+				<a href="/pages/about.html">About</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Linux Kernel Tuning for C500k | Urban Airship Blog</h1>
+			<div class="meta">Posted at &mdash; Sep 30, 2010</div>
+		</div>
+
+		<div class="markdown">
+			<blockquote>
+<h4 id="by-jared-lucky-kuolt-on-september-29-2010">By Jared &ldquo;Lucky&rdquo; Kuolt on September 29, 2010</h4>
+<p>Like the idea of working on large scale problems? We’re hiring talented engineers, and would love to chat with you – <a href="http://urbanairship.com/jobs/">check it out</a>!</p>
+<blockquote>
+<p>Note: Concurrency, as defined in this article, is the same as it is for <a href="http://www.kegel.com/c10k.html">The C10k problem</a>: concurrent clients (or sockets).</p>
+</blockquote>
+<p>At Urban Airship we recently published a <a href="http://blog.urbanairship.com/blog/2010/08/24/c500k-in-action-at-urban-airship/">blog post</a> about scaling beyond 500,000 concurrent socket connections. Hitting these numbers was not a trivial exercise so we’re going to share what we’ve come across during our testing. This guide is specific to Linux and has some information related to Amazon EC2, but it is not EC2-centric. These principles should apply to just about any Linux platform.</p>
+<p>For our usage, squeezing out as many possible socket connections per server is valuable. Instead of running 100 servers with 10,000 connections each, we’d rather run 2 servers with 500,000 connections apiece. To do this we made the socket servers pretty much <em>just</em> socket servers. Any communication between the client and server is passed through <a href="http://kr.github.com/beanstalkd/">a queue</a> and processed by a worker. Having less for the socket server to do means less code, cpu-usage, and ram-usage.</p>
+<p>To get to these numbers we must consider the Linux kernel itself. A number of configurations needed tweaking. But first, an anecdote.</p>
+<h3 id="the-kernel-oom-lowmem-and-you">The Kernel, OOM, LOWMEM, and You</h3>
+<p>We first tested our code on a local Linux box that had Ubuntu 64-bit with 6GB of RAM, connecting with several Ubuntu VMs per client using bridged network adapters so we could ramp up our connections. We’d fire up the server and run our clients locally to see just how many connections we could hit. We noticed that we could hit 512,000 with our Java server not even breaking a sweat.</p>
+<p>The next step was to test on EC2. We first wanted to see what sort of numbers we could get on “Small” instances, which are 1.7GB 32-bit VMs. We also had to fire up a number of other EC2 instances to act as clients.</p>
+<p>We watched the numbers go up and up without a hitch until, seemingly randomly, the Java server fell over. It didn’t print any exceptions or die gracefully—it was killed.</p>
+<p>We tried the same process again to see if we could replicate the behavior. Killed again.</p>
+<p>Grepping through syslog, we found this line:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Out of Memory: Killed process 2178 java
+</code></pre></div><p>The OOM-killer killed the Java process. Having watched the free RAM closely, this was odd because we had at least 500MB free at the time of the kill.</p>
+<p>The next time we ran it we watched the contents of <code>/proc/meminfo</code>. What we noticed was a steady decline of the field “LowFree”, the amount of LOWMEM that is available. LOWMEM is the kernel-addressable RAM space used for kernel data. Data like socket buffers.</p>
+<p>As we increased the number of sockets each socket’s buffers increased the amount of LOWMEM used. Once LOWMEM was full the kernel (instead of simply panicking) found the user process responsible for the usage and promptly killed it so it could continue to function.</p>
+<p>On a standard EC2 Small, the configuration is such that the LOWMEM is around 717MB and the rest is “given” to the user. The kernel is smart about reallocating LOWMEM for the user, but not the other way around. The assumption is that the kernel will use very little ram, or at least a predictable finite amount, and the user should be allowed to go crazy. What we needed with our socket server was just the opposite. We needed the kernel to use all the ram it needed—our Java server rarely uses above a few hundred MB.</p>
+<p>(For an in-depth rundown, take a look at <a href="http://kerneltrap.org/node/2450">High Memory In The Linux Kernel</a>)</p>
+<p>On a 32-bit system the kernel-addressable RAM space is 4GB. Making sure the proper space reserved for the kernel is important. But on 64-bit (x86-64) Linux the <a href="http://en.wikipedia.org/wiki/X86-64#Linux">kernel-addressable space is 64TB (terabytes)</a>. At the current state of computing this is effectively limitless, and as such you will not even see LowMem in <code>/proc/meminfo</code> because it is <em>all</em> LOWMEM.</p>
+<p>So we created some EC2 Large instances (each of which is 64-bit with 7.5GB of RAM) and ran our tests again, this time without any surprises. The sockets were added happily and the kernel took all the RAM it needed.</p>
+<p>Long story short, you can only scale to so many sockets on a 32-bit platform.</p>
+<h3 id="kernel-options">Kernel Options</h3>
+<p>Several parameters exist to allow for tuning and tweaking of socket-related parameters. In <code>/etc/sysctl.conf</code> there are a few options we’ve modified.</p>
+<p>First is <code>fs.file-max</code>, the maximum file descriptor limit. The default is quite low so this should be adjusted. Be careful if you’re not ready to go super high.</p>
+<p>Second, we have the socket buffer parameters <code>net.ipv4.tcp_rmem</code> and <code>net.ipv4.tcp_wmem</code>. These are the buffers for reads and writes respectively. Each requires three integer inputs: min, default, and max. These each correspond to the number of bytes that may be buffered for a socket. Set these low with a tolerant max to reduce the amount of ram used for each socket.</p>
+<p>The relevant portions of our config look like this:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">fs.file-max = 999999  
+net.ipv4.tcp\_rmem = 4096 4096 16777216  
+net.ipv4.tcp\_wmem = 4096 4096 16777216
+</code></pre></div><p>Meaning that the kernel allows for 999,999 open file descriptors and each socket buffer has a minimum and default 4096-byte buffer, with a sensible max of 16MB.</p>
+<p>We also modified <code>/etc/security/linux.conf</code> to allow for 999,999 open file descriptors for all users.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">\#                   
+\*               -       nofile         999999
+</code></pre></div><p>You may want to look at the <a href="http://ss64.com/bash/limits.conf.html">manpage</a> for more information.</p>
+<h3 id="testing">Testing</h3>
+<p>When testing, we were able to get about 64,000 connections per client by increasing the number of ephemeral ports allowed on both the client and the server.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">echo &#34;1024 65535&#34; &gt; /proc/sys/net/ipv4/ip\_local\_port\_range
+</code></pre></div><p>This effectively allows every ephemeral port above 1024 be used instead of the default, which is a much lower (and typically more sane) default.</p>
+<h3 id="the-64k-connection-myth">The 64k Connection Myth</h3>
+<p>It’s a common misconception that you can only accept 64,000 connections per IP address and the only way around it is to add more IPs. This is <em>absolutely false</em>.</p>
+<p>The misconception begins with the premise that there are only so many ephemeral ports per IP. The truth is that the limit is based on the IP <em>pair</em>, or said another way, the client and server IPs together. A single client IP can connect to a server IP 64,000 times and so can another client IP.</p>
+<p>Were this myth true it would be a significant and easy-to-exploit DDoS vector.</p>
+<h3 id="scaling-for-everyone">Scaling for Everyone</h3>
+<p>When we set out to establish half a million connections on a single server we were diving deep into water that wasn’t well documented. Sure, we know that C10k is relatively trivial, but how about an order of magnitude (and then some) above that?</p>
+<p>Fortunately we’ve been able to achieve success without too many serious problems. Hopefully our solutions can help save time for those out there looking to solve the same problems.</p>
+<p>Posted in <a href="http://blog.urbanairship.com/android/" title="View all posts in android">android</a> • Tagged with <a href="http://blog.urbanairship.com/blog/tag/64bit/">64bit</a>, <a href="http://blog.urbanairship.com/blog/tag/c500k/">c500k</a>, <a href="http://blog.urbanairship.com/blog/tag/ec2/">ec2</a>, <a href="http://blog.urbanairship.com/blog/tag/kernel/">kernel</a>, <a href="http://blog.urbanairship.com/blog/tag/kittensftw/">kittensftw</a>, <a href="http://blog.urbanairship.com/blog/tag/linux/">linux</a></p>
+<h3 id="5-responses">5 Responses</h3>
+<ol start="2">
+<li>
+<p><img src="http://0.gravatar.com/avatar/c4f07c10c49799c211793cca5b3d3ee9?s=64&amp;d=%3Cpath_to_url%3E&amp;r=G" alt=""></p>
+<p><a href="http://magarshak.com">Magarshak</a> at 3:48 pm on September 29, 2010</p>
+<p>Wow, amazing! Now if only I could load 500k concurrent PHP scripts at the same time, without having 2MB eaten up by each in memory.</p>
+<p><a href="http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k/?replytocom=827#respond">Reply</a></p>
+<ul>
+<li>
+<p><img src="http://0.gravatar.com/avatar/e904ebfe4e19721369c3ee4788cf1ef0?s=64&amp;d=%3Cpath_to_url%3E&amp;r=G" alt=""></p>
+<p>seaesliek at 4:52 pm on September 29, 2010</p>
+<p>You can: Write in C.</p>
+<p><a href="http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k/?replytocom=828#respond">Reply</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><img src="http://1.gravatar.com/avatar/57eb5bcc18e3f4c08ed6111fb48b96fc?s=64&amp;d=%3Cpath_to_url%3E&amp;r=G" alt=""></p>
+<p>Cristian at 7:15 pm on September 29, 2010</p>
+<p>Why is this “posted in android”?</p>
+<p><a href="http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k/?replytocom=829#respond">Reply</a></p>
+<ul>
+<li>
+<p><img src="http://0.gravatar.com/avatar/e4804b99a5e5e0224bd974d6bac0a578?s=64&amp;d=%3Cpath_to_url%3E&amp;r=G" alt=""></p>
+<p>lucky at 7:37 pm on September 29, 2010</p>
+<p>Cristian,</p>
+<p>We created the C500k for our Android Push infrastructure.</p>
+<p><a href="http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k/?replytocom=830#respond">Reply</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><img src="http://0.gravatar.com/avatar/276da40e2b12446e2e5f994f36c794c3?s=64&amp;d=%3Cpath_to_url%3E&amp;r=G" alt=""></p>
+<p>Wil at 8:20 pm on September 29, 2010</p>
+<p>Great article! As someone who once struggled to understand these settings in the past, this is the best description I’ve seen.</p>
+<p>One minor correction: it’s /etc/security/limits.conf, not /etc/security/linux.conf.</p>
+<p><a href="http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k/?replytocom=831#respond">Reply</a></p>
+</li>
+</ol>
+<h3 id="leave-a-reply">Leave a Reply</h3>
+<p><a href="http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k#">Click here to cancel reply.</a></p>
+</blockquote>
+<p>via <a href="http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k/">blog.urbanairship.com</a></p>
+<p>This is so helpful. Everything described here reminded me and a fellow-sysad what we went through troubleshooting an OOM issue. So uncanny, it&rsquo;s de ja vu!</p>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/gnu/linux">GNU/Linux</a></li>
+								
+								<li><a href="/tags/systems-administration">Systems Administration</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+		<div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'jjdoblados';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+		Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+
+<script>feather.replace()</script>
+</body>
+</html>

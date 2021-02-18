@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MySQL on Aggregated Thinking</title>
-    <link>https://jondoblados.github.io/tags/mysql/</link>
+    <link>https://jon.doblados.net/tags/mysql/</link>
     <description>Recent content in MySQL on Aggregated Thinking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Wed, 12 Feb 2014 14:03:00 +0800</lastBuildDate><atom:link href="https://jondoblados.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Feb 2014 14:03:00 +0800</lastBuildDate><atom:link href="https://jon.doblados.net/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MySQL on Google Cloud Infrastructure Now Available</title>
-      <link>https://jondoblados.github.io/posts/mysql-on-google-cloud-infrastructure/</link>
+      <link>https://jon.doblados.net/blog/mysql-on-google-cloud-infrastructure/</link>
       <pubDate>Wed, 12 Feb 2014 14:03:00 +0800</pubDate>
       
-      <guid>https://jondoblados.github.io/posts/mysql-on-google-cloud-infrastructure/</guid>
+      <guid>https://jon.doblados.net/blog/mysql-on-google-cloud-infrastructure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>plesk won&#39;t start after tweaking mysql</title>
-      <link>https://jondoblados.github.io/posts/plesk-won-start-after-tweaking-mysql/</link>
+      <link>https://jon.doblados.net/blog/plesk-won-start-after-tweaking-mysql/</link>
       <pubDate>Tue, 14 Aug 2007 12:09:00 +0800</pubDate>
       
-      <guid>https://jondoblados.github.io/posts/plesk-won-start-after-tweaking-mysql/</guid>
+      <guid>https://jon.doblados.net/blog/plesk-won-start-after-tweaking-mysql/</guid>
       <description>i&amp;rsquo;ve had this happen to me again the other week and as always, felt like kicking myself for not remembering.</description>
     </item>
     
     <item>
       <title>Using symbolic links for MySQL data files</title>
-      <link>https://jondoblados.github.io/posts/using-symbolic-links-for-mysql-data/</link>
+      <link>https://jon.doblados.net/blog/using-symbolic-links-for-mysql-data/</link>
       <pubDate>Tue, 16 Jan 2007 16:47:00 +0800</pubDate>
       
-      <guid>https://jondoblados.github.io/posts/using-symbolic-links-for-mysql-data/</guid>
+      <guid>https://jon.doblados.net/blog/using-symbolic-links-for-mysql-data/</guid>
       <description>Over a year ago, we had several servers configured for high traffic websites. A mispartioning resulted in /var becoming obscenely small, and it was only after MySQL crashed that we remembered this.</description>
     </item>
     
