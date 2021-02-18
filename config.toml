@@ -1,4 +1,4 @@
-baseURL = "http://jon.doblados.net/"
+baseURL = "http://jondoblados.github.io/"
 languageCode = "en-us"
 title = "Aggregated Thinking"
 theme = "cayman-hugo-theme"
