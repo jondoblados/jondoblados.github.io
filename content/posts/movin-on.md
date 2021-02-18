@@ -1,0 +1,14 @@
+---
+title: 'Movin'' on'
+date: 2006-05-25T08:37:00.000+08:00
+draft: false
+aliases: [ "/2006/05/movin-on.html" ]
+tags : [Christianity amp; Parenthood, Personal]
+---
+
+_Originally [posted](http://trigger.cdo.linux.org.ph/?p=137) in my "other" blog._  
+By the end of the month, I will be moving to the Queen City of the South, with my family in tow. I’m just glad that those guys at the new company were willing to wait for me. I was sure they understood the situation; I have established base in CDO and am currently employed. I was the one who was getting uprooted, so it was just proper that they agreed to waiting. Yes, I’ve tendered my resignation, and although a couple of times last week when I felt like I kicking myself in the ass, (I was starting to feel like some sort of sacrificial lamb), I remember the reasons \_why\_ my wife and I decided to take the plunge.  
+  
+As a direct result of my sudden resignation, manpower and work load concerns that we’ve been raising for years are finally being addressed. I just feel like the fall guy here, because I \_know\_ that if this pushes through, remuneration for my colleagues is ensured, on the basis of supervisory work load, and I can’t have any of it.  
+  
+However, I’m happy that all these are happening, for three reasons. First, I will be able to \_focus\_ on web programming, a passion if I may call it. My wife sees this in me. She knows it’s the one thing that keeps me up till the wee hours of the morning, and I’d still be able to do what needs to get done in the house, or spend time with her and our daughter without spacing out. Second, I wouldn’t want anything less than give my colleagues their happiness. They deserve greater things in life. Incoming!!! Lastly, and most importantly, we get to live on our own; just myself, my wife, and our daughter. To God be the glory!

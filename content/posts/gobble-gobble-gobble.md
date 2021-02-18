@@ -1,0 +1,10 @@
+---
+title: 'gobble-gobble-gobble...'
+date: 2005-05-11T02:35:00.000+08:00
+draft: false
+aliases: [ "/2005/05/gobble-gobble-gobble.html" ]
+---
+
+Going cold turkey for good. We had deliverance last weekend and I was pretty sure then that it was time to quit. I’m a few months short of making it to 15 years of puffing away, but hell I’m not going to wait for that anymore. I’m on my 4th no-smoke day, and I think I’m going to make it. Withdrawal symptoms were raging hard yesterday and I had to take the rest of the afternoon off. Felt like hurling most of the time and I was getting those “vertigo” dots flashing/drifting wherever I look.  
+  
+On top of it all, I’m still on drugs, getting prepped for tooth extraction. Tsk.

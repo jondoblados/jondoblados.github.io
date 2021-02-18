@@ -1,0 +1,28 @@
+---
+title: 'My Shift to Dapper Beta'
+date: 2006-04-20T22:03:00.000+08:00
+draft: false
+aliases: [ "/2006/04/my-shift-to-dapper-beta.html" ]
+---
+
+Over the Holy Week, two of our home computer's drives crashed, probably due to extensive user download, software installs, and malware. I had to do work on the laptop for a while, and since everyone in the house was itching for Internet access, I brought in a small IDE drive (roughly around 9Gb) that was mounted as slave on my office computer and popped that in the home computer. I had more than enough reasons to put Ubuntu back in there, and nobody would be complaining!
+
+Initially, I did a Breezy install and got all the needed packages up to-date. I wanted more so I changed all "breezy" references to "dapper" in `/etc/apt/sources.list`, and did `sudo apt-get update`, and `sudo apt-get dist-upgrade`. IIRC, a total of 940+ packages had to be updated over an estimated 4 and a half hours. I left the computer running overnight, woke up at around 2 am and finished the installs and configurations.
+
+By morning, my wife, daughter, and sister-in-law, were able to use the computer for Internet surfing. I was able to recover their personal documents and multimedia files in the office; and just last night uploaded their files via an external USB-mounted hard drive that we use for mobile backups at work.
+
+I just love Dapper! The default Human theme's colors and icons just totally rawk, and for a while, I didn't feel the need to install another theme. Well my kid really likes Gartoon, and since her gcompris theme is already in Gartoon, I installed that theme as well.
+
+Mark Shuttleworth posted an announcement last night on planning Dapper+1. He divulged that the codename for the next release would be the "Edgy Eft", saying that:  
+
+>   
+>   
+> Edgy is all about cutting edge, perhaps bleeding edge,  
+> brand new code and infrastructure. It will be the right time to bring in  
+> some seriously interesting but definitely edgy new technologies which  
+> lay the groundwork for the next wave of Ubuntu development.  
+
+  
+The "bleeding edge" phrase is so Fedora Core, but IMO, Ubuntu won't be like that in any way. Mark did say they were going to explore slightly unfamiliar territory that is out of the mainstream. This controlled exploration of technology will definitely bring Ubuntu as a GNU/Linux distribution to very, very high levels. The good stuff is just around the corner: Xen for virtualization (awesome GPLed technology that [rimuhosting.com](rimuhosting.com) has been using for years!), multi-architecture support, and the XGL that blows away just about everyone.
+
+To infinity, and beyond!

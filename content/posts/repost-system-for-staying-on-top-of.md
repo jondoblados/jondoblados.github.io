@@ -1,0 +1,17 @@
+---
+title: '[repost] System for staying on top of priorities'
+date: 2010-01-28T11:28:00.000+08:00
+draft: false
+aliases: [ "/2010/01/repost-system-for-staying-on-top-of.html" ]
+tags : [Technology]
+---
+
+I’ve tried a lot of productivity tools to get better control over my ever-bloating task lists, and none have been as effective for me, as using Gmail with the GTDInbox add-on, and Google Tasks. How I make these work for me is a result of several months of trials, using Google Tasks initially, then with custom labeling and automatic label switching with GTDInbox.
+
+  
+
+The goal was simple, and that was to attain inbox zero at least once a day. GTDInbox allows me to mark or tag emails containing tasks with action, wait-for, delegated, and finished. After the emails are tagged, they get added to Google Tasks, so that I’ll have an easy way to pull up a related email for a particular task. Lastly, these emails get archived, keeping the goal of inbox zero in mind, always.
+
+  
+
+What tools do you use, and have you already gotten into a rhythm of using these efficiently while working?

@@ -1,0 +1,386 @@
+---
+title: 'Linux Kernel Tuning for C500k | Urban Airship Blog'
+date: 2010-09-30T10:24:00.000+08:00
+draft: false
+aliases: [ "/2010/09/linux-kernel-tuning-for-c500k-urban.html" ]
+tags : [GNU/Linux, Systems Administration]
+---
+
+  
+
+>   
+> 
+>   
+> 
+> #### By Jared "Lucky" Kuolt on September 29, 2010
+> 
+>   
+> 
+> Like the idea of working on large scale problems? We’re hiring talented engineers, and would love to chat with you – [check it out](http://urbanairship.com/jobs/)!
+> 
+>   
+> 
+>   
+> 
+> >   
+> > 
+> > Note: Concurrency, as defined in this article, is the same as it is for [The C10k problem](http://www.kegel.com/c10k.html): concurrent clients (or sockets).
+> > 
+> >   
+> 
+>   
+> 
+> At Urban Airship we recently published a [blog post](http://blog.urbanairship.com/blog/2010/08/24/c500k-in-action-at-urban-airship/) about scaling beyond 500,000 concurrent socket connections. Hitting these numbers was not a trivial exercise so we’re going to share what we’ve come across during our testing. This guide is specific to Linux and has some information related to Amazon EC2, but it is not EC2-centric. These principles should apply to just about any Linux platform.
+> 
+>   
+> 
+> For our usage, squeezing out as many possible socket connections per server is valuable. Instead of running 100 servers with 10,000 connections each, we’d rather run 2 servers with 500,000 connections apiece. To do this we made the socket servers pretty much _just_ socket servers. Any communication between the client and server is passed through [a queue](http://kr.github.com/beanstalkd/) and processed by a worker. Having less for the socket server to do means less code, cpu-usage, and ram-usage.
+> 
+>   
+> 
+> To get to these numbers we must consider the Linux kernel itself. A number of configurations needed tweaking. But first, an anecdote.
+> 
+>   
+> 
+> ### The Kernel, OOM, LOWMEM, and You
+> 
+>   
+> 
+> We first tested our code on a local Linux box that had Ubuntu 64-bit with 6GB of RAM, connecting with several Ubuntu VMs per client using bridged network adapters so we could ramp up our connections. We’d fire up the server and run our clients locally to see just how many connections we could hit. We noticed that we could hit 512,000 with our Java server not even breaking a sweat.
+> 
+>   
+> 
+> The next step was to test on EC2. We first wanted to see what sort of numbers we could get on “Small” instances, which are 1.7GB 32-bit VMs. We also had to fire up a number of other EC2 instances to act as clients.
+> 
+>   
+> 
+> We watched the numbers go up and up without a hitch until, seemingly randomly, the Java server fell over. It didn’t print any exceptions or die gracefully—it was killed.
+> 
+>   
+> 
+> We tried the same process again to see if we could replicate the behavior. Killed again.
+> 
+>   
+> 
+> Grepping through syslog, we found this line:
+> 
+>   
+> 
+>   
+> 
+>   
+> 
+>   
+> 
+> ```
+> Out of Memory: Killed process 2178 java
+> ```
+> 
+>   
+> 
+>   
+>   
+> 
+>   
+> 
+>   
+> 
+> The OOM-killer killed the Java process. Having watched the free RAM closely, this was odd because we had at least 500MB free at the time of the kill.
+> 
+>   
+> 
+> The next time we ran it we watched the contents of `/proc/meminfo`. What we noticed was a steady decline of the field “LowFree”, the amount of LOWMEM that is available. LOWMEM is the kernel-addressable RAM space used for kernel data. Data like socket buffers.
+> 
+>   
+> 
+> As we increased the number of sockets each socket’s buffers increased the amount of LOWMEM used. Once LOWMEM was full the kernel (instead of simply panicking) found the user process responsible for the usage and promptly killed it so it could continue to function.
+> 
+>   
+> 
+> On a standard EC2 Small, the configuration is such that the LOWMEM is around 717MB and the rest is “given” to the user. The kernel is smart about reallocating LOWMEM for the user, but not the other way around. The assumption is that the kernel will use very little ram, or at least a predictable finite amount, and the user should be allowed to go crazy. What we needed with our socket server was just the opposite. We needed the kernel to use all the ram it needed—our Java server rarely uses above a few hundred MB.
+> 
+>   
+> 
+> (For an in-depth rundown, take a look at [High Memory In The Linux Kernel](http://kerneltrap.org/node/2450))
+> 
+>   
+> 
+> On a 32-bit system the kernel-addressable RAM space is 4GB. Making sure the proper space reserved for the kernel is important. But on 64-bit (x86-64) Linux the [kernel-addressable space is 64TB (terabytes)](http://en.wikipedia.org/wiki/X86-64#Linux). At the current state of computing this is effectively limitless, and as such you will not even see LowMem in `/proc/meminfo` because it is _all_ LOWMEM.
+> 
+>   
+> 
+> So we created some EC2 Large instances (each of which is 64-bit with 7.5GB of RAM) and ran our tests again, this time without any surprises. The sockets were added happily and the kernel took all the RAM it needed.
+> 
+>   
+> 
+> Long story short, you can only scale to so many sockets on a 32-bit platform.
+> 
+>   
+> 
+> ### Kernel Options
+> 
+>   
+> 
+> Several parameters exist to allow for tuning and tweaking of socket-related parameters. In `/etc/sysctl.conf` there are a few options we’ve modified.
+> 
+>   
+> 
+> First is `fs.file-max`, the maximum file descriptor limit. The default is quite low so this should be adjusted. Be careful if you’re not ready to go super high.
+> 
+>   
+> 
+> Second, we have the socket buffer parameters `net.ipv4.tcp_rmem` and `net.ipv4.tcp_wmem`. These are the buffers for reads and writes respectively. Each requires three integer inputs: min, default, and max. These each correspond to the number of bytes that may be buffered for a socket. Set these low with a tolerant max to reduce the amount of ram used for each socket.
+> 
+>   
+> 
+> The relevant portions of our config look like this:
+> 
+>   
+> 
+>   
+> 
+>   
+> 
+>   
+> 
+> ```
+> fs.file-max = 999999  
+> net.ipv4.tcp\_rmem = 4096 4096 16777216  
+> net.ipv4.tcp\_wmem = 4096 4096 16777216
+> ```
+> 
+>   
+> 
+>   
+>   
+> 
+>   
+> 
+>   
+> 
+> Meaning that the kernel allows for 999,999 open file descriptors and each socket buffer has a minimum and default 4096-byte buffer, with a sensible max of 16MB.
+> 
+>   
+> 
+> We also modified `/etc/security/linux.conf` to allow for 999,999 open file descriptors for all users.
+> 
+>   
+> 
+>   
+> 
+>   
+> 
+>   
+> 
+> ```
+> \#                   
+> \*               -       nofile         999999
+> ```
+> 
+>   
+> 
+>   
+>   
+> 
+>   
+> 
+>   
+> 
+> You may want to look at the [manpage](http://ss64.com/bash/limits.conf.html) for more information.
+> 
+>   
+> 
+> ### Testing
+> 
+>   
+> 
+> When testing, we were able to get about 64,000 connections per client by increasing the number of ephemeral ports allowed on both the client and the server.
+> 
+>   
+> 
+>   
+> 
+>   
+> 
+>   
+> 
+> ```
+> echo "1024 65535" > /proc/sys/net/ipv4/ip\_local\_port\_range
+> ```
+> 
+>   
+> 
+>   
+>   
+> 
+>   
+> 
+>   
+> 
+> This effectively allows every ephemeral port above 1024 be used instead of the default, which is a much lower (and typically more sane) default.
+> 
+>   
+> 
+> ### The 64k Connection Myth
+> 
+>   
+> 
+> It’s a common misconception that you can only accept 64,000 connections per IP address and the only way around it is to add more IPs. This is _absolutely false_.
+> 
+>   
+> 
+> The misconception begins with the premise that there are only so many ephemeral ports per IP. The truth is that the limit is based on the IP _pair_, or said another way, the client and server IPs together. A single client IP can connect to a server IP 64,000 times and so can another client IP.
+> 
+>   
+> 
+> Were this myth true it would be a significant and easy-to-exploit DDoS vector.
+> 
+>   
+> 
+> ### Scaling for Everyone
+> 
+>   
+> 
+> When we set out to establish half a million connections on a single server we were diving deep into water that wasn’t well documented. Sure, we know that C10k is relatively trivial, but how about an order of magnitude (and then some) above that?
+> 
+>   
+> 
+> Fortunately we’ve been able to achieve success without too many serious problems. Hopefully our solutions can help save time for those out there looking to solve the same problems.
+> 
+>   
+> 
+> Posted in [android](http://blog.urbanairship.com/android/ "View all posts in android") • Tagged with [64bit](http://blog.urbanairship.com/blog/tag/64bit/), [c500k](http://blog.urbanairship.com/blog/tag/c500k/), [ec2](http://blog.urbanairship.com/blog/tag/ec2/), [kernel](http://blog.urbanairship.com/blog/tag/kernel/), [kittensftw](http://blog.urbanairship.com/blog/tag/kittensftw/), [linux](http://blog.urbanairship.com/blog/tag/linux/)
+> 
+>   
+> 
+> ### 5 Responses
+> 
+>   
+> 
+>   
+> 2.  ![](http://0.gravatar.com/avatar/c4f07c10c49799c211793cca5b3d3ee9?s=64&d=<path_to_url>&r=G)  
+>     
+>       
+>     
+>       
+>     
+>     [Magarshak](http://magarshak.com) at 3:48 pm on September 29, 2010
+>     
+>       
+>     
+>     Wow, amazing! Now if only I could load 500k concurrent PHP scripts at the same time, without having 2MB eaten up by each in memory.
+>     
+>       
+>     [Reply](http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k/?replytocom=827#respond)
+>     
+>       
+>     
+>       
+>     *   ![](http://0.gravatar.com/avatar/e904ebfe4e19721369c3ee4788cf1ef0?s=64&d=<path_to_url>&r=G)  
+>         
+>           
+>         
+>           
+>         
+>         seaesliek at 4:52 pm on September 29, 2010
+>         
+>           
+>         
+>         You can: Write in C.
+>         
+>           
+>         [Reply](http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k/?replytocom=828#respond)
+>         
+>           
+>         
+>       
+>     
+>       
+>     
+>   
+> 4.  ![](http://1.gravatar.com/avatar/57eb5bcc18e3f4c08ed6111fb48b96fc?s=64&d=<path_to_url>&r=G)  
+>     
+>       
+>     
+>       
+>     
+>     Cristian at 7:15 pm on September 29, 2010
+>     
+>       
+>     
+>     Why is this “posted in android”?
+>     
+>       
+>     [Reply](http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k/?replytocom=829#respond)
+>     
+>       
+>     
+>       
+>     *   ![](http://0.gravatar.com/avatar/e4804b99a5e5e0224bd974d6bac0a578?s=64&d=<path_to_url>&r=G)  
+>         
+>           
+>         
+>           
+>         
+>         lucky at 7:37 pm on September 29, 2010
+>         
+>           
+>         
+>         Cristian,
+>         
+>           
+>         
+>         We created the C500k for our Android Push infrastructure.
+>         
+>           
+>         [Reply](http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k/?replytocom=830#respond)
+>         
+>           
+>         
+>       
+>     
+>       
+>     
+>   
+> 6.  ![](http://0.gravatar.com/avatar/276da40e2b12446e2e5f994f36c794c3?s=64&d=<path_to_url>&r=G)  
+>     
+>       
+>     
+>       
+>     
+>     Wil at 8:20 pm on September 29, 2010
+>     
+>       
+>     
+>     Great article! As someone who once struggled to understand these settings in the past, this is the best description I’ve seen.
+>     
+>       
+>     
+>     One minor correction: it’s /etc/security/limits.conf, not /etc/security/linux.conf.
+>     
+>       
+>     [Reply](http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k/?replytocom=831#respond)
+>     
+>       
+>     
+>   
+> 
+>   
+> 
+> ### Leave a Reply
+> 
+>   
+> 
+> [Click here to cancel reply.](http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k#)
+> 
+>   
+> 
+>   
+
+  
+
+via [blog.urbanairship.com](http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k/)
+
+  
+
+This is so helpful. Everything described here reminded me and a fellow-sysad what we went through troubleshooting an OOM issue. So uncanny, it's de ja vu!

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="stylesheet" href="http://jon.doblados.net/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  
+  
+  
+  <link rel="stylesheet" href="http://jon.doblados.net/css/cayman.ea0e967413f3851071cc8ace3621bc4205fe8fa79b2abe3d7bf94ff2841f0d47.css">
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+  <title>PIIX3 cannot attach drive to the Secondary Master | Aggregated Thinking</title>
+</head>
+
+<body>
+  <section class="page-header">
+  <h1 class="project-name">
+    Aggregated Thinking
+  </h1>
+  <h2 class="project-tagline">
+    Thoughts and musings of a corporate IT guy
+  </h2>
+  <nav>
+    
+    
+      
+      
+      
+      
+      <a href="/" class="btn">Blog</a>
+    
+      
+      
+      
+      
+      <a href="/tags/" class="btn">Tags</a>
+    
+      
+      
+      
+      
+      <a href="/about/" class="btn">About</a>
+    
+      
+      
+      
+      
+      <a href="/index.xml" class="btn">RSS</a>
+    
+  </nav>
+</section>
+
+  <section class="main-content">
+    
+  <h1>PIIX3 cannot attach drive to the Secondary Master</h1>
+  <p>I use <a href="http://www.virtualbox.org" title="VirtualBox">VirtualBox</a> for my server experimenting requirements, and it&rsquo;s just great!  Just this morning, I got an error message when I started an FC8 virtual machine.</p>
+<p><code>PIIX3 cannot attach drive to the Secondary Master.   VBox status code: -102 (VERR_FILE_NOT_FOUND).</code></p>
+<p>This <a href="http://forums.virtualbox.org/viewtopic.php?p=805" title="PIIX3 cannot attach drive to the Secondary Master">thread</a> in the forums explains that the virtual machine was looking for a disk that was supposed to be mounted and could not find it.  I was using an external DVD drive and had removed it before I shut down the VM.</p>
+<p>You&rsquo;d get the same problem if you set up a VM to use a mounted disk or some other mass storage device.  To fix this, simply uncheck the non-existent devices in the VM settings while the VM is powered down.  Alternately, you can plug the devices back in before you power up the VM.</p>
+<p>If after doing these steps you still get the error, check if the devices do get mounted and are accessible from the host as you may be dealing with broken or non-functional devices.</p>
+
+
+    <footer class="site-footer">
+  <span class="site-footer-credits">
+    Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cayman-hugo-theme">Cayman</a>.
+  </span>
+</footer>
+
+  </section>
+  
+  
+
+</body>
+</html>

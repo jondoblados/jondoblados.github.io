@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cebu on Aggregated Thinking</title>
+    <link>http://jon.doblados.net/tags/cebu/</link>
+    <description>Recent content in Cebu on Aggregated Thinking</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Dec 2013 06:52:00 +0800</lastBuildDate><atom:link href="http://jon.doblados.net/tags/cebu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Christmas 2013</title>
+      <link>http://jon.doblados.net/posts/christmas-2013/</link>
+      <pubDate>Fri, 27 Dec 2013 06:52:00 +0800</pubDate>
+      
+      <guid>http://jon.doblados.net/posts/christmas-2013/</guid>
+      <description>We decided to go to Cebu and spend Christmas this year with my parents and brother. I suppose it has been more than 15 years since we last celebrated Christmas together. The trip was really stressful because it was passenger season. But it was really worth lugging heavy bags since the cousins got to goof off and have a lot of fun, and the grandparents got to see all of their grandchildren in one place.</description>
+    </item>
+    
+    <item>
+      <title>Cebu, April 2011</title>
+      <link>http://jon.doblados.net/posts/cebu-april-2011/</link>
+      <pubDate>Thu, 14 Apr 2011 10:24:00 +0800</pubDate>
+      
+      <guid>http://jon.doblados.net/posts/cebu-april-2011/</guid>
+      <description>[gallery columns=&amp;ldquo;5&amp;rdquo; orderby=&amp;ldquo;post_date&amp;rdquo;]</description>
+    </item>
+    
+  </channel>
+</rss>

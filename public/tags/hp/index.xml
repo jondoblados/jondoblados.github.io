@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HP on Aggregated Thinking</title>
+    <link>http://jon.doblados.net/tags/hp/</link>
+    <description>Recent content in HP on Aggregated Thinking</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Jan 2015 10:33:00 +0800</lastBuildDate><atom:link href="http://jon.doblados.net/tags/hp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Racking Legacy Servers - Part 1</title>
+      <link>http://jon.doblados.net/posts/racking-legacy-servers-part-1/</link>
+      <pubDate>Fri, 23 Jan 2015 10:33:00 +0800</pubDate>
+      
+      <guid>http://jon.doblados.net/posts/racking-legacy-servers-part-1/</guid>
+      <description>Earlier today we scheduled the racking of our old C-Class HP BladeSystem. It used to be wrapped in its own enclosure with wheels to boot, but it didn&amp;rsquo;t make sense to have it stand outside the cabinets. So we gave heads up and asked some guys to stay behind after office hours. Thanks to Mona, Eric, Jing, Tim, and Mark(?) for the assist!
+Next up, the classic IBM BladeCenter!</description>
+    </item>
+    
+  </channel>
+</rss>

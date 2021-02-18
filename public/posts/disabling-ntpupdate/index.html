@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="stylesheet" href="http://jon.doblados.net/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  
+  
+  
+  <link rel="stylesheet" href="http://jon.doblados.net/css/cayman.ea0e967413f3851071cc8ace3621bc4205fe8fa79b2abe3d7bf94ff2841f0d47.css">
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+  <title>Disabling ntpupdate | Aggregated Thinking</title>
+</head>
+
+<body>
+  <section class="page-header">
+  <h1 class="project-name">
+    Aggregated Thinking
+  </h1>
+  <h2 class="project-tagline">
+    Thoughts and musings of a corporate IT guy
+  </h2>
+  <nav>
+    
+    
+      
+      
+      
+      
+      <a href="/" class="btn">Blog</a>
+    
+      
+      
+      
+      
+      <a href="/tags/" class="btn">Tags</a>
+    
+      
+      
+      
+      
+      <a href="/about/" class="btn">About</a>
+    
+      
+      
+      
+      
+      <a href="/index.xml" class="btn">RSS</a>
+    
+  </nav>
+</section>
+
+  <section class="main-content">
+    
+  <h1>Disabling ntpupdate</h1>
+  <p>This has been quite overdue, as I have been wanting to disable <code>ntpupdate</code> since the Hoary release. What is <code>ntpupdate</code> anyway? It&rsquo;s the program that synchronizes your system time to an ntp server. NTP is a protocol for synchronising the clocks of computer systems over packet-switched, variable-latency data networks. Since Ubuntu defaults to an ntp server somewhere in the www, and that it will attempt to sync on boot, it causes your machine to go through a much much longer startup process if an internet connection is not available at boot time.</p>
+<p>As I am lugging my lappy around a lot and I have not much of a need for the program, I knew I had to take it out and save me minutes of boot time. <a href="http://blog.ealden.net">Ealden</a> taught me how to remove <code>ntpupdate</code>, and I suppose we can change the arguments to remove other programs as well.</p>
+<p><code>$ sudo update-rc.d -f ntpdate remove</code></p>
+<p><code>update-rc.d</code> will remove any system startup links for <code>/etc/init.d/ntpdate</code>, or any instances of such in the different run levels. Usage is as follows:</p>
+<pre><code>usage: update-rc.d \[-n\] \[-f\] &lt;basename&gt; remove  
+       update-rc.d \[-n\] &lt;basename&gt; defaults \[NN | sNN kNN\]  
+       update-rc.d \[-n\] &lt;basename&gt; start|stop NN runlvl \[runlvl\] \[...\] .  
+                -n: not really  
+                -f: force
+</code></pre>
+
+    <footer class="site-footer">
+  <span class="site-footer-credits">
+    Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cayman-hugo-theme">Cayman</a>.
+  </span>
+</footer>
+
+  </section>
+  
+  
+
+</body>
+</html>
