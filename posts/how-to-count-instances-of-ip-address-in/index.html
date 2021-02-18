@@ -1,71 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Hugo 0.80.0" />
-  <link rel="stylesheet" href="https://jondoblados.github.io/css/normalize.css">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  
-  
-  
-  <link rel="stylesheet" href="https://jondoblados.github.io/css/cayman.ea0e967413f3851071cc8ace3621bc4205fe8fa79b2abe3d7bf94ff2841f0d47.css">
-  
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>How to count instances of an IP address in a log file - Aggregated Thinking</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="How to count instances of an IP address in a log file" />
+<meta property="og:description" content="I was looking for a quick and painless way to determine what IP addresses used our web app the most and stumbled across this excellent post." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jondoblados.github.io/posts/how-to-count-instances-of-ip-address-in/" />
+<meta property="article:published_time" content="2010-07-24T20:00:00+08:00" />
+<meta property="article:modified_time" content="2010-07-24T20:00:00+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to count instances of an IP address in a log file"/>
+<meta name="twitter:description" content="I was looking for a quick and painless way to determine what IP addresses used our web app the most and stumbled across this excellent post."/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
 
-  <title>How to count instances of an IP address in a log file | Aggregated Thinking</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://jondoblados.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://jondoblados.github.io/css/main.css" /><link rel="stylesheet" type="text/css" href="https://jondoblados.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://jondoblados.github.io/js/main.js"></script>
 </head>
 
 <body>
-  <section class="page-header">
-  <h1 class="project-name">
-    Aggregated Thinking
-  </h1>
-  <h2 class="project-tagline">
-    Thoughts and musings of a corporate IT guy
-  </h2>
-  <nav>
-    
-    
-      
-      
-      
-      
-      <a href="/" class="btn">Blog</a>
-    
-      
-      
-      
-      
-      <a href="/tags/" class="btn">Tags</a>
-    
-      
-      
-      
-      
-      <a href="/about/" class="btn">About</a>
-    
-      
-      
-      
-      
-      <a href="/index.xml" class="btn">RSS</a>
-    
-  </nav>
-</section>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="https://jondoblados.github.io/">
+	<h1 class="site-title"><a href="https://jondoblados.github.io/">Aggregated Thinking</a></h1>
+	<div class="site-description"><h2>Thoughts and musings of a corporate IT guy</h2><nav class="nav social">
+			<ul class="flat"><a href="https://linkedin.com/in/jondoblados" title="LinkedIn"><i data-feather="linkedin"></i></a><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></ul>
+		</nav>
+	</div>
 
-  <section class="main-content">
-    
-  <h1>How to count instances of an IP address in a log file</h1>
-  <p>I was looking for a quick and painless way to determine what IP addresses used our web app the most and stumbled across this excellent <a href="http://encodable.com/tech/blog/2008/12/17/Count_IP_Addresses_in_Access_Log_File_BASH_OneLiner">post</a>. I got reminded of the power of the command-line interface and that often, I underestimate the way these commands are supposed to make a sysad&rsquo;s life easier.</p>
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">How to count instances of an IP address in a log file</h1>
+			<div class="meta">Posted at &mdash; Jul 24, 2010</div>
+		</div>
+
+		<div class="markdown">
+			<p>I was looking for a quick and painless way to determine what IP addresses used our web app the most and stumbled across this excellent <a href="http://encodable.com/tech/blog/2008/12/17/Count_IP_Addresses_in_Access_Log_File_BASH_OneLiner">post</a>. I got reminded of the power of the command-line interface and that often, I underestimate the way these commands are supposed to make a sysad&rsquo;s life easier.</p>
 <p>So here&rsquo;s a quick tip for counting unique visitors to your web app. Locate your web app&rsquo;s log file and do a quick scan of the last few lines. In my case, this is what I saw:</p>
 <p><code>112.198.79.223 - - [10/Jul/2010:00:57:29 -0400] &quot;POST /v2/api/execute.php?method=upload_time&amp;ver=win1.1.15 HTTP/1.1&quot; 200 116 &quot;-&quot; &quot;Mozilla/5.0&quot;   117.241.112.254 - - [10/Jul/2010:00:57:30 -0400] &quot;POST /v2/api/execute.php?method=timestat&amp;ver=win1.1.15 HTTP/1.1&quot; 200 288 &quot;-&quot; &quot;Mozilla/5.0&quot;   80.249.84.105 - - [10/Jul/2010:00:57:29 -0400] &quot;POST /v2/api/execute.php?method=offtime&amp;ver=win1.1.15 HTTP/1.1&quot; 200 19 &quot;-&quot; &quot;Mozilla/5.0&quot;   117.241.112.254 - - [10/Jul/2010:00:57:32 -0400] &quot;POST /v2/api/execute.php?method=get_defaults&amp;ver=win1.1.15 HTTP/1.1&quot; 200 77 &quot;-&quot; &quot;Mozilla/5.0&quot;</code></p>
 <p>In this log format, the IP address appears first, so we will only need to get the first set of characters, separated by a space. In order to count instances of an IP address, we sort the IP addresses so similar IP addresses are grouped together, then count them. Then we sort them again so that the sums are arranged. The number of unique IPs may give you pages of standard output, so optionally, if you only want to see which IP addresses accessed the web app the most, we look at the top results only.</p>
@@ -74,16 +70,51 @@
 <p><code>71612 216.157.78.237   34094 120.28.205.244   30091 119.93.97.54   25078 120.28.214.104   18949 120.28.195.151   17929 58.107.64.40   14877 212.98.174.235   14752 117.241.112.143   14429 120.28.247.74   12864 117.241.113.183   [root@server2 ~]#</code></p>
 <p>Happy counting, err reporting!</p>
 
+		</div>
 
-    <footer class="site-footer">
-  <span class="site-footer-credits">
-    Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cayman-hugo-theme">Cayman</a>.
-  </span>
-</footer>
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/hosting">Hosting</a></li>
+								
+								<li><a href="/tags/gnu/linux">GNU/Linux</a></li>
+								
+								<li><a href="/tags/systems-administration">Systems Administration</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+		<div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
 
-  </section>
-  
-  
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'jjdoblados';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+		Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
 
+
+
+<script>feather.replace()</script>
 </body>
 </html>
