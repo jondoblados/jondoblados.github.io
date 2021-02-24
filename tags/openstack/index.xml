@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OpenStack on Aggregated Thinking</title>
+    <title>OpenStack on Triggered</title>
     <link>https://jon.doblados.net/tags/openstack/</link>
-    <description>Recent content in OpenStack on Aggregated Thinking</description>
+    <description>Recent content in OpenStack on Triggered</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Copyright 2021. All content by the author.</copyright>
     <lastBuildDate>Mon, 21 Feb 2011 19:30:00 +0800</lastBuildDate><atom:link href="https://jon.doblados.net/tags/openstack/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>End-of-the-month TODOs</title>
@@ -14,7 +13,8 @@
       <pubDate>Mon, 21 Feb 2011 19:30:00 +0800</pubDate>
       
       <guid>https://jon.doblados.net/blog/end-of-month-todos/</guid>
-      <description>I have again changed the look of my tech blog. I&amp;rsquo;ve actually mulled over this for quite some time since I was also thinking of just moving everything to my own hosted Wordpress install.</description>
+      <description>I have again changed the look of my tech blog. I&amp;rsquo;ve actually mulled over this for quite some time since I was also thinking of just moving everything to my own hosted Wordpress install. But, lazy as I am, I was content to tweak as little as I can. Posterous has a few really nice themes built-in so moving my stuff out was really a bad idea.
+In case you&amp;rsquo;re curious, here are some of the things that I intend to complete this month:</description>
     </item>
     
   </channel>

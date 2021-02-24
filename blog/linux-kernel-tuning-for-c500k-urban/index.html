@@ -1,67 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Linux Kernel Tuning for C500k | Urban Airship Blog - Aggregated Thinking</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="Linux Kernel Tuning for C500k | Urban Airship Blog" />
-<meta property="og:description" content="By Jared &ldquo;Lucky&rdquo; Kuolt on September 29, 2010 Like the idea of working on large scale problems? We’re hiring talented engineers, and would love to chat with you – check it out!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jon.doblados.net/blog/linux-kernel-tuning-for-c500k-urban/" />
-<meta property="article:published_time" content="2010-09-30T10:24:00+08:00" />
-<meta property="article:modified_time" content="2010-09-30T10:24:00+08:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Linux Kernel Tuning for C500k | Urban Airship Blog"/>
-<meta name="twitter:description" content="By Jared &ldquo;Lucky&rdquo; Kuolt on September 29, 2010 Like the idea of working on large scale problems? We’re hiring talented engineers, and would love to chat with you – check it out!"/>
-<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.80.0" />
 
-	<link rel="stylesheet" type="text/css" media="screen" href="https://jon.doblados.net/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://jon.doblados.net/css/main.css" /><link rel="stylesheet" type="text/css" href="https://jon.doblados.net/css/dark.css" media="(prefers-color-scheme: dark)" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-	<script src="https://jon.doblados.net/js/main.js"></script>
+  <title>Linux Kernel Tuning for C500k | Urban Airship Blog &middot; Triggered</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://jon.doblados.net/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://jon.doblados.net/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://jon.doblados.net/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://jon.doblados.net/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
 </head>
 
-<body>
-	<div class="container wrapper post">
-		<div class="header">
-	<base href="https://jon.doblados.net/">
-	<h1 class="site-title"><a href="https://jon.doblados.net/">Aggregated Thinking</a></h1>
-	<div class="site-description"><h2>Thoughts and musings of a corporate IT guy</h2><nav class="nav social">
-			<ul class="flat"><a href="https://linkedin.com/in/jondoblados" title="LinkedIn"><i data-feather="linkedin"></i></a><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></ul>
-		</nav>
-	</div>
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://jon.doblados.net/"><h1>Triggered</h1></a>
+      <p class="lead">
+       Thoughts and musings of a corporate IT guy in a foreign land 
+      </p>
+    </div>
 
-	<nav class="nav">
-		<ul class="flat">
-			
-			<li>
-				<a href="/">Home</a>
-			</li>
-			
-			<li>
-				<a href="/blog">Old Posts</a>
-			</li>
-			
-			<li>
-				<a href="/pages/about.html">About</a>
-			</li>
-			
-			<li>
-				<a href="/tags">Tags</a>
-			</li>
-			
-		</ul>
-	</nav>
-</div>
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://jon.doblados.net/">Home</a> </li>
+        <li><a href="http://localhost:1313/pages/about.html"> About </a></li><li><a href="https://linkedin.com/in/jondoblados"> LinkedIn </a></li><li><a href="https://twitter.com/jondoblados/"> Twitter </a></li>
+      </ul>
+    </nav>
 
+    <p>© Copyright 2021. All content by the author.</p>
+  </div>
+</aside>
 
-		<div class="post-header">
-			<h1 class="title">Linux Kernel Tuning for C500k | Urban Airship Blog</h1>
-			<div class="meta">Posted at &mdash; Sep 30, 2010</div>
-		</div>
-
-		<div class="markdown">
-			<blockquote>
+    <main class="content container">
+    <div class="post">
+  <h1>Linux Kernel Tuning for C500k | Urban Airship Blog</h1>
+  <time datetime=2010-09-30T10:24:00&#43;0800 class="post-date">Thu, Sep 30, 2010</time>
+  <blockquote>
 <h4 id="by-jared-lucky-kuolt-on-september-29-2010">By Jared &ldquo;Lucky&rdquo; Kuolt on September 29, 2010</h4>
 <p>Like the idea of working on large scale problems? We’re hiring talented engineers, and would love to chat with you – <a href="http://urbanairship.com/jobs/">check it out</a>!</p>
 <blockquote>
@@ -76,8 +67,8 @@
 <p>We watched the numbers go up and up without a hitch until, seemingly randomly, the Java server fell over. It didn’t print any exceptions or die gracefully—it was killed.</p>
 <p>We tried the same process again to see if we could replicate the behavior. Killed again.</p>
 <p>Grepping through syslog, we found this line:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Out of Memory: Killed process 2178 java
-</code></pre></div><p>The OOM-killer killed the Java process. Having watched the free RAM closely, this was odd because we had at least 500MB free at the time of the kill.</p>
+<pre><code>Out of Memory: Killed process 2178 java
+</code></pre><p>The OOM-killer killed the Java process. Having watched the free RAM closely, this was odd because we had at least 500MB free at the time of the kill.</p>
 <p>The next time we ran it we watched the contents of <code>/proc/meminfo</code>. What we noticed was a steady decline of the field “LowFree”, the amount of LOWMEM that is available. LOWMEM is the kernel-addressable RAM space used for kernel data. Data like socket buffers.</p>
 <p>As we increased the number of sockets each socket’s buffers increased the amount of LOWMEM used. Once LOWMEM was full the kernel (instead of simply panicking) found the user process responsible for the usage and promptly killed it so it could continue to function.</p>
 <p>On a standard EC2 Small, the configuration is such that the LOWMEM is around 717MB and the rest is “given” to the user. The kernel is smart about reallocating LOWMEM for the user, but not the other way around. The assumption is that the kernel will use very little ram, or at least a predictable finite amount, and the user should be allowed to go crazy. What we needed with our socket server was just the opposite. We needed the kernel to use all the ram it needed—our Java server rarely uses above a few hundred MB.</p>
@@ -90,18 +81,18 @@
 <p>First is <code>fs.file-max</code>, the maximum file descriptor limit. The default is quite low so this should be adjusted. Be careful if you’re not ready to go super high.</p>
 <p>Second, we have the socket buffer parameters <code>net.ipv4.tcp_rmem</code> and <code>net.ipv4.tcp_wmem</code>. These are the buffers for reads and writes respectively. Each requires three integer inputs: min, default, and max. These each correspond to the number of bytes that may be buffered for a socket. Set these low with a tolerant max to reduce the amount of ram used for each socket.</p>
 <p>The relevant portions of our config look like this:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">fs.file-max = 999999  
+<pre><code>fs.file-max = 999999  
 net.ipv4.tcp\_rmem = 4096 4096 16777216  
 net.ipv4.tcp\_wmem = 4096 4096 16777216
-</code></pre></div><p>Meaning that the kernel allows for 999,999 open file descriptors and each socket buffer has a minimum and default 4096-byte buffer, with a sensible max of 16MB.</p>
+</code></pre><p>Meaning that the kernel allows for 999,999 open file descriptors and each socket buffer has a minimum and default 4096-byte buffer, with a sensible max of 16MB.</p>
 <p>We also modified <code>/etc/security/linux.conf</code> to allow for 999,999 open file descriptors for all users.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">\#                   
+<pre><code>\#                   
 \*               -       nofile         999999
-</code></pre></div><p>You may want to look at the <a href="http://ss64.com/bash/limits.conf.html">manpage</a> for more information.</p>
+</code></pre><p>You may want to look at the <a href="http://ss64.com/bash/limits.conf.html">manpage</a> for more information.</p>
 <h3 id="testing">Testing</h3>
 <p>When testing, we were able to get about 64,000 connections per client by increasing the number of ephemeral ports allowed on both the client and the server.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">echo &#34;1024 65535&#34; &gt; /proc/sys/net/ipv4/ip\_local\_port\_range
-</code></pre></div><p>This effectively allows every ephemeral port above 1024 be used instead of the default, which is a much lower (and typically more sane) default.</p>
+<pre><code>echo &quot;1024 65535&quot; &gt; /proc/sys/net/ipv4/ip\_local\_port\_range
+</code></pre><p>This effectively allows every ephemeral port above 1024 be used instead of the default, which is a much lower (and typically more sane) default.</p>
 <h3 id="the-64k-connection-myth">The 64k Connection Myth</h3>
 <p>It’s a common misconception that you can only accept 64,000 connections per IP address and the only way around it is to add more IPs. This is <em>absolutely false</em>.</p>
 <p>The misconception begins with the premise that there are only so many ephemeral ports per IP. The truth is that the limit is based on the IP <em>pair</em>, or said another way, the client and server IPs together. A single client IP can connect to a server IP 64,000 times and so can another client IP.</p>
@@ -155,49 +146,13 @@ net.ipv4.tcp\_wmem = 4096 4096 16777216
 <p>via <a href="http://blog.urbanairship.com/blog/2010/09/29/linux-kernel-tuning-for-c500k/">blog.urbanairship.com</a></p>
 <p>This is so helpful. Everything described here reminded me and a fellow-sysad what we went through troubleshooting an OOM issue. So uncanny, it&rsquo;s de ja vu!</p>
 
-		</div>
-
-		<div class="post-tags">
-			
-				
-					<nav class="nav tags">
-							<ul class="flat">
-								
-								<li><a href="/tags/gnu/linux">GNU/Linux</a></li>
-								
-								<li><a href="/tags/systems-administration">Systems Administration</a></li>
-								
-							</ul>
-					</nav>
-				
-			
-		</div>
-		<div id="disqus_thread"></div>
-<script type="text/javascript">
-	(function () {
-		
-		
-		if (window.location.hostname == "localhost")
-			return;
-
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		var disqus_shortname = 'aggregatedthinking';
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-		Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div> © Copyright 2021. All content by the author. |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
 </div>
 
 
+    </main>
 
-<script>feather.replace()</script>
-</body>
+    
+      
+    
+  </body>
 </html>

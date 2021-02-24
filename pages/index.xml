@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Aggregated Thinking</title>
+    <title>Triggered</title>
     <link>https://jon.doblados.net/pages/</link>
-    <description>Recent content on Aggregated Thinking</description>
+    <description>Recent content on Triggered</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Copyright 2021. All content by the author.</copyright><atom:link href="https://jon.doblados.net/pages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jon.doblados.net/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://jon.doblados.net/pages/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://jon.doblados.net/pages/about/</guid>
-      <description>Since 1995, Jon has had broad and commanding experience in enterprise systems, as well as infrastructure management in banking and finance tech, utilities, software development, and the academe.</description>
+      <description>Since 1995, Jon has had broad and commanding experience in enterprise systems, as well as infrastructure management in banking and finance tech, utilities, software development, and the academe.
+Through the years, he has evolved from simple systems operations and administration to advanced infrastructure and systems design and architecture. He has taken learnings and have used these to contribute greatly to the enhancement of the unit that he worked in, especially the organisation that he belonged.</description>
     </item>
     
   </channel>

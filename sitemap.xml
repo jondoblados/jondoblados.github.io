@@ -3,14 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jon.doblados.net/blog/</loc>
-    <lastmod>2018-10-06T00:05:00+08:00</lastmod>
+    <loc>https://jon.doblados.net/pages/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://jon.doblados.net/pages/about/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jon.doblados.net/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jon.doblados.net/blog/</loc>
     <lastmod>2018-10-06T00:05:00+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -1509,12 +1520,12 @@
   </url>
   
   <url>
-    <loc>https://jon.doblados.net/pages/</loc>
+    <loc>https://jon.doblados.net/posts/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jon.doblados.net/pages/about/</loc>
+    <loc>https://jon.doblados.net/categories/</loc>
   </url>
   
   <url>

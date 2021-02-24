@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MySQL on Aggregated Thinking</title>
+    <title>MySQL on Triggered</title>
     <link>https://jon.doblados.net/tags/mysql/</link>
-    <description>Recent content in MySQL on Aggregated Thinking</description>
+    <description>Recent content in MySQL on Triggered</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Copyright 2021. All content by the author.</copyright>
     <lastBuildDate>Wed, 12 Feb 2014 14:03:00 +0800</lastBuildDate><atom:link href="https://jon.doblados.net/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MySQL on Google Cloud Infrastructure Now Available</title>
@@ -23,7 +22,9 @@
       <pubDate>Tue, 14 Aug 2007 12:09:00 +0800</pubDate>
       
       <guid>https://jon.doblados.net/blog/plesk-won-start-after-tweaking-mysql/</guid>
-      <description>i&amp;rsquo;ve had this happen to me again the other week and as always, felt like kicking myself for not remembering.</description>
+      <description>i&amp;rsquo;ve had this happen to me again the other week and as always, felt like kicking myself for not remembering.
+we do a lot of performance tuning on mysql, and as a result, we almost always manage to get plesk mangled. not its fault, it just can&amp;rsquo;t run without mysql, doh.
+not of preference, but plesk happens to be there to make handling domains easier, as a single editing point when you want to change something and not worry about missing something out.</description>
     </item>
     
     <item>
@@ -32,7 +33,8 @@
       <pubDate>Tue, 16 Jan 2007 16:47:00 +0800</pubDate>
       
       <guid>https://jon.doblados.net/blog/using-symbolic-links-for-mysql-data/</guid>
-      <description>Over a year ago, we had several servers configured for high traffic websites. A mispartioning resulted in /var becoming obscenely small, and it was only after MySQL crashed that we remembered this.</description>
+      <description>Over a year ago, we had several servers configured for high traffic websites. A mispartioning resulted in /var becoming obscenely small, and it was only after MySQL crashed that we remembered this. We couldn’t afford more downtime if we dealt with the partition size problem, so I thought of quickly moving the data files into /home/mysql/{dbname} from /var/lib/mysql/{dbname} and create the symlink /var/lib/mysql/{dbname} -&amp;gt; /home/mysql/{dbname}.
+I was not certain of the performance implications to this.</description>
     </item>
     
   </channel>

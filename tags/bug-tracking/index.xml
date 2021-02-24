@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bug Tracking on Aggregated Thinking</title>
+    <title>Bug Tracking on Triggered</title>
     <link>https://jon.doblados.net/tags/bug-tracking/</link>
-    <description>Recent content in Bug Tracking on Aggregated Thinking</description>
+    <description>Recent content in Bug Tracking on Triggered</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Copyright 2021. All content by the author.</copyright>
     <lastBuildDate>Tue, 09 Nov 2010 02:14:00 +0800</lastBuildDate><atom:link href="https://jon.doblados.net/tags/bug-tracking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SVN-MantisBT Integration</title>
@@ -14,7 +13,8 @@
       <pubDate>Tue, 09 Nov 2010 02:14:00 +0800</pubDate>
       
       <guid>https://jon.doblados.net/blog/svn-mantisbt-integration/</guid>
-      <description>I&amp;rsquo;ve downloaded and installed MantisBT 1.2.3stable on linode2, and after fixing permissions issues, proceeded with the installation. I stopped when I realized I didn&amp;rsquo;t have the same MantisBT version on the old server.</description>
+      <description>I&amp;rsquo;ve downloaded and installed MantisBT 1.2.3stable on linode2, and after fixing permissions issues, proceeded with the installation. I stopped when I realized I didn&amp;rsquo;t have the same MantisBT version on the old server. It&amp;rsquo;s always better to set up MantisBT on the target server &amp;ldquo;as is&amp;rdquo;, and let the install scripts handle the upgrade.
+I&amp;rsquo;m roughly 28% in with a server-to-server SCP of a 79Mb MySQL dump of our bugtracker. I haven&amp;rsquo;t had time to check with the backups since I felt that a fresh dump is always best; but no, I remembered that several developers preferred working odd hours and they would definitely need the bug tracker up.</description>
     </item>
     
   </channel>

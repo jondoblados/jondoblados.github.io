@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GNU/Linux on Aggregated Thinking</title>
+    <title>GNU/Linux on Triggered</title>
     <link>https://jon.doblados.net/tags/gnu/linux/</link>
-    <description>Recent content in GNU/Linux on Aggregated Thinking</description>
+    <description>Recent content in GNU/Linux on Triggered</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>© Copyright 2021. All content by the author.</copyright><atom:link href="https://jon.doblados.net/tags/gnu/linux/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://jon.doblados.net/tags/gnu/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Have you updated?</title>
       <link>https://jon.doblados.net/blog/have-you-updated/</link>
@@ -22,7 +21,8 @@
       <pubDate>Tue, 09 Nov 2010 02:14:00 +0800</pubDate>
       
       <guid>https://jon.doblados.net/blog/svn-mantisbt-integration/</guid>
-      <description>I&amp;rsquo;ve downloaded and installed MantisBT 1.2.3stable on linode2, and after fixing permissions issues, proceeded with the installation. I stopped when I realized I didn&amp;rsquo;t have the same MantisBT version on the old server.</description>
+      <description>I&amp;rsquo;ve downloaded and installed MantisBT 1.2.3stable on linode2, and after fixing permissions issues, proceeded with the installation. I stopped when I realized I didn&amp;rsquo;t have the same MantisBT version on the old server. It&amp;rsquo;s always better to set up MantisBT on the target server &amp;ldquo;as is&amp;rdquo;, and let the install scripts handle the upgrade.
+I&amp;rsquo;m roughly 28% in with a server-to-server SCP of a 79Mb MySQL dump of our bugtracker. I haven&amp;rsquo;t had time to check with the backups since I felt that a fresh dump is always best; but no, I remembered that several developers preferred working odd hours and they would definitely need the bug tracker up.</description>
     </item>
     
     <item>
@@ -31,7 +31,9 @@
       <pubDate>Thu, 30 Sep 2010 10:24:00 +0800</pubDate>
       
       <guid>https://jon.doblados.net/blog/linux-kernel-tuning-for-c500k-urban/</guid>
-      <description>By Jared &amp;ldquo;Lucky&amp;rdquo; Kuolt on September 29, 2010 Like the idea of working on large scale problems? We’re hiring talented engineers, and would love to chat with you – check it out!</description>
+      <description>By Jared &amp;ldquo;Lucky&amp;rdquo; Kuolt on September 29, 2010 Like the idea of working on large scale problems? We’re hiring talented engineers, and would love to chat with you – check it out!
+ Note: Concurrency, as defined in this article, is the same as it is for The C10k problem: concurrent clients (or sockets).
+ At Urban Airship we recently published a blog post about scaling beyond 500,000 concurrent socket connections.</description>
     </item>
     
     <item>
@@ -40,7 +42,8 @@
       <pubDate>Sat, 24 Jul 2010 20:00:00 +0800</pubDate>
       
       <guid>https://jon.doblados.net/blog/how-to-count-instances-of-ip-address-in/</guid>
-      <description>I was looking for a quick and painless way to determine what IP addresses used our web app the most and stumbled across this excellent post.</description>
+      <description>I was looking for a quick and painless way to determine what IP addresses used our web app the most and stumbled across this excellent post. I got reminded of the power of the command-line interface and that often, I underestimate the way these commands are supposed to make a sysad&amp;rsquo;s life easier.
+So here&amp;rsquo;s a quick tip for counting unique visitors to your web app. Locate your web app&amp;rsquo;s log file and do a quick scan of the last few lines.</description>
     </item>
     
     <item>
@@ -49,7 +52,8 @@
       <pubDate>Fri, 12 Feb 2010 05:09:00 +0800</pubDate>
       
       <guid>https://jon.doblados.net/blog/using-non-standard-ssh-port-with/</guid>
-      <description>Some of my students reported that they were having problems connecting to their repositories using TortoiseSVN. At first, quick checks from my end didn&amp;rsquo;t reveal what caused these, but I realized soon that it wasn&amp;rsquo;t a server issue.</description>
+      <description>Some of my students reported that they were having problems connecting to their repositories using TortoiseSVN. At first, quick checks from my end didn&amp;rsquo;t reveal what caused these, but I realized soon that it wasn&amp;rsquo;t a server issue. It seems like the client software that they were using (TortoiseSVN) didn&amp;rsquo;t know what to make of the svn+ssh://[user]@[ip]:[port]/[repo] URL.
+I use RabbitVCS on my Linux boxen and get the same &amp;ldquo;Network connection closed unexpectedly&amp;rdquo; message.</description>
     </item>
     
     <item>
@@ -58,7 +62,8 @@
       <pubDate>Thu, 28 May 2009 05:20:00 +0800</pubDate>
       
       <guid>https://jon.doblados.net/blog/export-tweetdeck-groups-in-ubuntu/</guid>
-      <description>If you have multiple installs of TweetDeck on different computers, I bet you wished there were ways to save the groups you set up.</description>
+      <description>If you have multiple installs of TweetDeck on different computers, I bet you wished there were ways to save the groups you set up. These groupings are not saved in your Twitter profile, but are kept in a local database in your computer. This means that for each install of TweetDeck, you will have to re-set up your groups, and any changes won&amp;rsquo;t replicate to your other installs.
+This post about copying TweetDeck settings in Windows explains this in detail, and I have been able to do the same for Ubuntu, replicating TweetDeck settings across 3 machines.</description>
     </item>
     
     <item>
@@ -67,7 +72,9 @@
       <pubDate>Fri, 30 Jan 2009 13:12:00 +0800</pubDate>
       
       <guid>https://jon.doblados.net/blog/piix3-cannot-attach-drive-to-secondary/</guid>
-      <description>I use VirtualBox for my server experimenting requirements, and it&amp;rsquo;s just great! Just this morning, I got an error message when I started an FC8 virtual machine.</description>
+      <description>I use VirtualBox for my server experimenting requirements, and it&amp;rsquo;s just great! Just this morning, I got an error message when I started an FC8 virtual machine.
+PIIX3 cannot attach drive to the Secondary Master. VBox status code: -102 (VERR_FILE_NOT_FOUND).
+This thread in the forums explains that the virtual machine was looking for a disk that was supposed to be mounted and could not find it. I was using an external DVD drive and had removed it before I shut down the VM.</description>
     </item>
     
     <item>
@@ -76,7 +83,8 @@
       <pubDate>Tue, 27 Nov 2007 00:18:00 +0800</pubDate>
       
       <guid>https://jon.doblados.net/blog/you-looking-good-opensource/</guid>
-      <description>opensource gets another breakthrough today, as canonical launches launchpad personal package archive (PPA), an ubuntu linux developers service intended to extend collaboration in software development and give the community equal opportunity to build and package code for ubuntu on the desktop, server, and for mobile applications.</description>
+      <description>opensource gets another breakthrough today, as canonical launches launchpad personal package archive (PPA), an ubuntu linux developers service intended to extend collaboration in software development and give the community equal opportunity to build and package code for ubuntu on the desktop, server, and for mobile applications.
+great news for those itching to modify packages and contribute to the furtherance of opensource! users can make changes on packages of their choice, and these will be published in the PPA system, somewhat like a special repository.</description>
     </item>
     
     <item>
@@ -85,7 +93,8 @@
       <pubDate>Tue, 14 Aug 2007 11:26:00 +0800</pubDate>
       
       <guid>https://jon.doblados.net/blog/apt-get-install-kicker-kblogger/</guid>
-      <description>i don&amp;rsquo;t know with you, but i sometimes get the big push to update, if and when there&amp;rsquo;s something new (relatively, for me) to try.</description>
+      <description>i don&amp;rsquo;t know with you, but i sometimes get the big push to update, if and when there&amp;rsquo;s something new (relatively, for me) to try.
+up for this week is my dabbling with stuff around kicker, and using kblogger to do some much needed updates.</description>
     </item>
     
     <item>
@@ -94,7 +103,8 @@
       <pubDate>Sun, 13 May 2007 09:49:00 +0800</pubDate>
       
       <guid>https://jon.doblados.net/blog/pushing-on/</guid>
-      <description>I recently got Ubuntu Feisty Fawn Beta running on my HP Pavilion dv2001tu notebook, and I&amp;rsquo;m very happy with the way it&amp;rsquo;s running.</description>
+      <description>I recently got Ubuntu Feisty Fawn Beta running on my HP Pavilion dv2001tu notebook, and I&amp;rsquo;m very happy with the way it&amp;rsquo;s running. Here&amp;rsquo;s what I&amp;rsquo;ve done and have been doing the past month. Nothing out of the ordinary for me, but some of the activities mentioned here could have been keeping you up late at nights, coveting much of the understated successes of
+running Ubuntu on HP laptops. If this is indeed so, do let me know your woes and I&amp;rsquo;ll see what I can do to help.</description>
     </item>
     
   </channel>
