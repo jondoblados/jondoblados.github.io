@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Triggered</title>
-    <link>https://jon.doblados.net/posts/</link>
-    <description>Recent content on Triggered</description>
+    <title>Posts on Blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://jon.doblados.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Nov 2021 21:36:51 +0800</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing</title>
+      <link>http://localhost:1313/posts/testing/</link>
+      <pubDate>Tue, 16 Nov 2021 21:36:51 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/testing/</guid>
+      <description>Testing 1, 2, 3.</description>
+    </item>
+    
+    <item>
+      <title>Whats Going On</title>
+      <link>http://localhost:1313/posts/whats-going-on/</link>
+      <pubDate>Tue, 16 Nov 2021 21:30:12 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/whats-going-on/</guid>
+      <description>Test post.</description>
+    </item>
+    
   </channel>
 </rss>
