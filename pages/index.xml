@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages on Blog</title>
+    <title>Pages on Triggered</title>
     <link>https://triggered.doblados.net/pages/</link>
-    <description>Recent content in Pages on Blog</description>
+    <description>Recent content in Pages on Triggered</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://triggered.doblados.net/pages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Nov 2021 22:08:06 +0800</lastBuildDate><atom:link href="https://triggered.doblados.net/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Home</title>
+      <link>https://triggered.doblados.net/pages/home/</link>
+      <pubDate>Wed, 24 Nov 2021 22:08:06 +0800</pubDate>
+      
+      <guid>https://triggered.doblados.net/pages/home/</guid>
+      <description>Some text goes here.</description>
+    </item>
+    
     <item>
       <title>About</title>
       <link>https://triggered.doblados.net/pages/about/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://triggered.doblados.net/pages/about/</guid>
-      <description>Christian, husband, father, watered-down g33k, 80s kid, cloud platforms, k8s, devops, and all-around janitor
-Heart survivor, now with new plumbing and taking each day as it comes, all glory to God!</description>
+      <description>A Christian, husband, father, watered-down g33k, 80s kid, cloud platforms, k8s, devops, and all-around janitor. Heart survivor, now with new plumbing and taking each day as it comes, all glory to God! 
+Attribution Notes Copyright 2021 - All content, i.e. photos, videos, and other media, are mine, unless otherwise specified. Content in this site are protected by a Creative Commons Attribution-Non-Commercial 3.0 License. Feel free to view from this blog, and to link to the different posts as long as you retain the original link of the resources you use and do not make commercial use of any of the contents here.</description>
     </item>
     
   </channel>
