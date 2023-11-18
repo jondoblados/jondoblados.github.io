@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Hugo 0.120.4">
+  
+  <meta name="description" content="I was trying to remove AgileAgenda after fiddling with it for a week and deciding it wasn’t going to cut it. There’s no Adobe Air Application “uninstaller” in the menu, and search engine results usually point to Mac lurv, or not. Seems like uninstalling Air apps on OSX is bloody.I did find this nice article on removing Adobe Air on Linux and gave it (well parts of it) a shot.jon@jedi-ntbk:/opt$ sudo dpkg -S /opt/*adobeair-enu: /opt/Adobe AIRcom.">
+  <link rel="stylesheet" href="http://localhost:1313/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/cayman.ea0e967413f3851071cc8ace3621bc4205fe8fa79b2abe3d7bf94ff2841f0d47.css">
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+  <title>Removing Adobe Air apps on Ubuntu | </title>
+</head>
+
+<body>
+  <section class="page-header">
+  <h1 class="project-name">
+    Triggered
+  </h1>
+  <h2 class="project-tagline">
+    Thoughts and musings of a corporate IT guy away from home.
+  </h2>
+  <nav>
+    
+    
+      
+      
+      
+      
+      <a href="/" class="btn">Blog</a>
+    
+      
+      
+      
+      
+      <a href="/tags/" class="btn">Tags</a>
+    
+      
+      
+      
+      
+      <a href="/pages/about/" class="btn">About</a>
+    
+      
+      
+      
+      
+      <a href="/index.xml" class="btn">RSS</a>
+    
+  </nav>
+</section>
+
+  <section class="main-content">
+    
+  <h1>Removing Adobe Air apps on Ubuntu</h1>
+  <p>I was trying to remove AgileAgenda after fiddling with it for a week and deciding it wasn&rsquo;t going to cut it.  There&rsquo;s no Adobe Air Application &ldquo;uninstaller&rdquo; in the menu, and search engine results usually point to Mac lurv, or not.  Seems like uninstalling Air apps on OSX is bloody.<!-- raw HTML omitted -->I did find this nice <!-- raw HTML omitted -->article on removing Adobe Air on Linux<!-- raw HTML omitted --> and gave it (well parts of it) a shot.<!-- raw HTML omitted --><!-- raw HTML omitted -->jon@jedi-ntbk:/opt$ sudo dpkg -S /opt/*<!-- raw HTML omitted -->adobeair-enu: /opt/Adobe AIR<!-- raw HTML omitted -->com.agileagenda.agileagenda.f49a4d8df78a1fee7a3be440dc11bab18d922274.1: /opt/AgileAgenda<!-- raw HTML omitted -->de.makesoft.twhirl.0ea062bc275e7ed1e6ec3762effd73c7158adf33.1: /opt/twhirl<!-- raw HTML omitted --><!-- raw HTML omitted -->I merely copied the package name of AgileAgenda, ran <!-- raw HTML omitted -->dpkg<!-- raw HTML omitted --> with the right switches, and pfft app&rsquo;s gone!  Menu entry seems to be gone too.<!-- raw HTML omitted --><!-- raw HTML omitted -->jon@jedi-ntbk:/opt$ sudo dpkg -P com.agileagenda.agileagenda.f49a4d8df78a1fee7a3be440dc11bab18d922274.1<!-- raw HTML omitted -->(Reading database &hellip; 128350 files and directories currently installed.)<!-- raw HTML omitted -->Removing com.agileagenda.agileagenda.f49a4d8df78a1fee7a3be440dc11bab18d922274.1 &hellip;<!-- raw HTML omitted -->jon@jedi-ntbk:/opt$<!-- raw HTML omitted --></p>
+
+
+    <footer class="site-footer">
+  <span class="site-footer-credits">
+    Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cayman-hugo-theme">Cayman</a>. © Copyright 2021. All content by the author (See About).
+  </span>
+</footer>
+
+  </section>
+  
+  
+
+</body>
+</html>

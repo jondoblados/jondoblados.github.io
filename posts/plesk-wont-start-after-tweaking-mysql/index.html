@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Hugo 0.120.4">
+  
+  <meta name="description" content="i’ve had this happen to me again the other week and as always, felt like kicking myself for not remembering.
+we do a lot of performance tuning on mysql, and as a result, we almost always manage to get plesk mangled. not its fault, it just can’t run without mysql, doh.
+not of preference, but plesk happens to be there to make handling domains easier, as a single editing point when you want to change something and not worry about missing something out.">
+  <link rel="stylesheet" href="http://localhost:1313/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/cayman.ea0e967413f3851071cc8ace3621bc4205fe8fa79b2abe3d7bf94ff2841f0d47.css">
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+  <title>plesk won&#39;t start after tweaking mysql | </title>
+</head>
+
+<body>
+  <section class="page-header">
+  <h1 class="project-name">
+    Triggered
+  </h1>
+  <h2 class="project-tagline">
+    Thoughts and musings of a corporate IT guy away from home.
+  </h2>
+  <nav>
+    
+    
+      
+      
+      
+      
+      <a href="/" class="btn">Blog</a>
+    
+      
+      
+      
+      
+      <a href="/tags/" class="btn">Tags</a>
+    
+      
+      
+      
+      
+      <a href="/pages/about/" class="btn">About</a>
+    
+      
+      
+      
+      
+      <a href="/index.xml" class="btn">RSS</a>
+    
+  </nav>
+</section>
+
+  <section class="main-content">
+    
+  <h1>plesk won&#39;t start after tweaking mysql</h1>
+  <p>i&rsquo;ve had this happen to me again the other week and as always, felt like kicking myself for not remembering.</p>
+<p>we do a lot of performance tuning on mysql, and as a result, we almost always manage to get plesk mangled. not its fault, it just can&rsquo;t run without mysql, doh.</p>
+<p>not of preference, but plesk happens to be there to make handling domains easier, as a single editing point when you want to change something and not worry about missing something out.</p>
+<p>so there&rsquo;s a custom <code>/etc/my.cnf</code> that we use, and with changes to limits done (both on mysql and via ulimit), you&rsquo;d think that a reload of mysqld would do. (we use InnoDB btw)</p>
+<p>normally, that&rsquo;s all you need to have mysqld read off the new settings. if you&rsquo;ve grown so dependent on plesk (like i have), you would not notice that mysqld didn&rsquo;t actually start, and you will get an error when you load plesk, thinking that it&rsquo;s a plesk error:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ERROR: PleskMainDBException
+</span></span><span style="display:flex;"><span>MySQL query failed: Incorrect information in file: <span style="color:#ba2121">&#39;./psa/misc.frm&#39;</span>
+</span></span><span style="display:flex;"><span>0: /usr/local/psa/admin/plib/common_func.php3:218
+</span></span><span style="display:flex;"><span>db_query<span style="color:#666">(</span>string <span style="color:#ba2121">&#39;select param, val from misc&#39;</span><span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>1: /usr/local/psa/admin/plib/common_func.php3:497
+</span></span><span style="display:flex;"><span>get_param<span style="color:#666">(</span>string <span style="color:#ba2121">&#39;mysql41_compatible&#39;</span><span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>2: /usr/local/psa/admin/plib/common_func.php3:394
+</span></span><span style="display:flex;"><span>db_set_names<span style="color:#666">()</span>
+</span></span><span style="display:flex;"><span>3: /usr/local/psa/admin/plib/common_func.php3:373
+</span></span><span style="display:flex;"><span>db_connect_real<span style="color:#666">(</span>string <span style="color:#ba2121">&#39;localhost&#39;</span>, string <span style="color:#ba2121">&#39;admin&#39;</span>, string <span style="color:#ba2121">&#39;********&#39;</span>, string <span style="color:#ba2121">&#39;psa&#39;</span><span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span>4: /usr/local/psa/admin/plib/common_func.php3:353
+</span></span><span style="display:flex;"><span>db_connect<span style="color:#666">()</span>
+</span></span><span style="display:flex;"><span>5: /usr/local/psa/admin/auto_prepend/auth.php3:82
+</span></span></code></pre></div><p>even a restart of the plesk service will not work:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#666">[</span>root@jedi<span style="color:#666">]</span><span style="color:#408080;font-style:italic"># /etc/init.d/psa restart</span>
+</span></span><span style="display:flex;"><span>Unable to query parameter by query <span style="color:#008000;font-weight:bold">select</span> val from misc where <span style="color:#19177c">param</span><span style="color:#666">=</span><span style="color:#ba2121">&#39;mysql41_compatible&#39;</span>: Incorrect information in file: <span style="color:#ba2121">&#39;./psa/misc.frm&#39;</span>
+</span></span><span style="display:flex;"><span>Unable to query parameter by query <span style="color:#008000;font-weight:bold">select</span> val from misc where <span style="color:#19177c">param</span><span style="color:#666">=</span><span style="color:#ba2121">&#39;mysql41_compatible&#39;</span>: Incorrect information in file: <span style="color:#ba2121">&#39;./psa/misc.frm&#39;</span>
+</span></span><span style="display:flex;"><span>Mysql error: Incorrect information in file: <span style="color:#ba2121">&#39;./psa/key_history.frm&#39;</span>
+</span></span><span style="display:flex;"><span>Processing config directory: /usr/local/psa/admin/conf/httpsd.*.include
+</span></span><span style="display:flex;"><span>Syntax OK
+</span></span><span style="display:flex;"><span>/usr/local/psa/admin/bin/httpsdctl restart: httpd restarted
+</span></span><span style="display:flex;"><span>ERROR <span style="color:#666">1033</span> <span style="color:#666">(</span>HY000<span style="color:#666">)</span> at line 1: Incorrect information in file: <span style="color:#ba2121">&#39;./psa/sessions.frm&#39;</span>
+</span></span></code></pre></div><p>so this is a mysqld failing to start properly problem. to fix this, go to your mysql datadir and see if the sizes of your innodb log files match those in your .cnf. we usually set <code>innodb_log_file_size = 256M</code> and <code>innodb_log_buffer_size = 256M</code> in <code>/etc/my.cnf</code>.</p>
+<p>if they don&rsquo;t match, stop mysqld, remove the <code>ib_logfile0</code> and <code>ib_logfile1</code> files, and start mysqld. be careful not to delete the <code>ibdata1</code> or <code>ibdata2</code> files or you lose your data. avoid using <code>rm -r ib*</code> (yea, wildcards and fast fingers give sysads their most stupefying moments)</p>
+<p>innodb will recreate the log files to match your .cnf and mysqld now becomes available for plesk.</p>
+
+
+    <footer class="site-footer">
+  <span class="site-footer-credits">
+    Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cayman-hugo-theme">Cayman</a>. © Copyright 2021. All content by the author (See About).
+  </span>
+</footer>
+
+  </section>
+  
+  
+
+</body>
+</html>

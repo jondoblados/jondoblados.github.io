@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Training on </title>
+    <link>http://localhost:1313/tags/training/</link>
+    <description>Recent content in Training on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Mar 2021 22:07:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/training/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Friday night is catch-up-on-learning-targets night</title>
+      <link>http://localhost:1313/posts/friday-night-is-catch-up-on-learning-targets-night/</link>
+      <pubDate>Fri, 26 Mar 2021 22:07:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/friday-night-is-catch-up-on-learning-targets-night/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

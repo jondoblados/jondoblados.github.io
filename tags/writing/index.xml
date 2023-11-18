@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writing on </title>
+    <link>http://localhost:1313/tags/writing/</link>
+    <description>Recent content in Writing on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Feb 2011 21:13:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/writing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Plans for a 500-Word Project</title>
+      <link>http://localhost:1313/posts/plans-for-a-500-word-project/</link>
+      <pubDate>Sun, 06 Feb 2011 21:13:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/plans-for-a-500-word-project/</guid>
+      <description>I haven&amp;rsquo;t written a proper blog entry since 2006. I feel that my recent entries are worthy of post tags that I would consider &amp;ldquo;forgettable&amp;rdquo;, or &amp;ldquo;archive-able&amp;rdquo; (if there is such a thing).
+I so need motivation. Anything to get the old drive for writing flowing in my veins again. I&amp;rsquo;d appreciate any inputs from you. Just leave a comment.
+At this stage, I can&amp;rsquo;t say I still want this blog focused on work and tech stuff.</description>
+    </item>
+  </channel>
+</rss>

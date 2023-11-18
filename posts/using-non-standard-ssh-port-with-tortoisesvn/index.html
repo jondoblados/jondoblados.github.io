@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Hugo 0.120.4">
+  
+  <meta name="description" content="Some of my students reported that they were having problems connecting to their repositories using TortoiseSVN. At first, quick checks from my end didn’t reveal what caused these, but I realized soon that it wasn’t a server issue. It seems like the client software that they were using (TortoiseSVN) didn’t know what to make of the svn&#43;ssh://[user]@[ip]:[port]/[repo] URL.
+I use RabbitVCS on my Linux boxen and get the same “Network connection closed unexpectedly” message.">
+  <link rel="stylesheet" href="http://localhost:1313/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/cayman.ea0e967413f3851071cc8ace3621bc4205fe8fa79b2abe3d7bf94ff2841f0d47.css">
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+  <title>Using non-standard SSH port with TortoiseSVN | </title>
+</head>
+
+<body>
+  <section class="page-header">
+  <h1 class="project-name">
+    Triggered
+  </h1>
+  <h2 class="project-tagline">
+    Thoughts and musings of a corporate IT guy away from home.
+  </h2>
+  <nav>
+    
+    
+      
+      
+      
+      
+      <a href="/" class="btn">Blog</a>
+    
+      
+      
+      
+      
+      <a href="/tags/" class="btn">Tags</a>
+    
+      
+      
+      
+      
+      <a href="/pages/about/" class="btn">About</a>
+    
+      
+      
+      
+      
+      <a href="/index.xml" class="btn">RSS</a>
+    
+  </nav>
+</section>
+
+  <section class="main-content">
+    
+  <h1>Using non-standard SSH port with TortoiseSVN</h1>
+  <p>Some of my students reported that they were having problems connecting to their repositories using <!-- raw HTML omitted -->TortoiseSVN<!-- raw HTML omitted -->. At first, quick checks from my end didn&rsquo;t reveal what caused these, but I realized soon that it wasn&rsquo;t a server issue. It seems like the client software that they were using (TortoiseSVN) didn&rsquo;t know what to make of the <code>svn+ssh://[user]@[ip]:[port]/[repo]</code> URL.</p>
+<p>I use <!-- raw HTML omitted -->RabbitVCS<!-- raw HTML omitted --> on my Linux boxen and get the same &ldquo;Network connection closed unexpectedly&rdquo; message. A colleague at work suggested that since a non-standard port for SSH is used, I should modify my <!-- raw HTML omitted -->/home/&lt;username&gt;/.subversion/config<!-- raw HTML omitted --> , look for the <!-- raw HTML omitted -->[tunnels] <!-- raw HTML omitted -->section, and append <!-- raw HTML omitted -->-p [port number]<!-- raw HTML omitted --> for the svn tunnel named ssh. Since this particular repository is just one among the dozens I access, I can&rsquo;t modify the default svn tunnel. Instead, I added a custom tunnel for each of the servers that use non-standard SSH ports.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->For the repo that my students were trying to access, I used <!-- raw HTML omitted -->ssh2212 = $SVN_SSH ssh -q -o ControlMaster=no -p 2212<!-- raw HTML omitted -->. So the URL now looks like <!-- raw HTML omitted -->svn+ssh2212://[user]@[ip]:2212/[repo]<!-- raw HTML omitted --> and I was able to connect successfully.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->In Windows, there are several ways to do this. Since the OS doesn&rsquo;t have a native SSH client executable, users will rely on Cygwin, Putty, or on TortoisePlink.exe (in newer versions of TortoiseSVN).<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->You can try any of the following solutions (they&rsquo;re all searchable in the Internets) and see if you can get around the problem. I&rsquo;ve tried them all on a Windows guest OS on VirtualBox and only the last three solutions worked.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Using Putty: Use saved session name from Putty in the URL: <!-- raw HTML omitted -->svn+ssh://[user]@[saved putty session name]/[repo]<!-- raw HTML omitted -->. Make sure that you configure the session to already use the correct port. <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Using Putty: Alternately, use <!-- raw HTML omitted -->IP:port<!-- raw HTML omitted --> format for the Putty saved session name so that you still use the <!-- raw HTML omitted -->svn+ssh://[user]@[ip]:[port]/[repo]<!-- raw HTML omitted --> URL format, but you&rsquo;re actually calling the saved session name. <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->c. Using client packaged with Tortoise. In TortoiseSVN settings -&gt; Network, change SSH client to <!-- raw HTML omitted -->&ldquo;C:Program FilesTortoiseSVNbinTortoisePlink.exe&rdquo;<!-- raw HTML omitted --> and use standard <!-- raw HTML omitted -->svn+ssh://[user]@[ip]:[port]/[repo]<!-- raw HTML omitted --> URL. <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->d. Same as d., but for the SSH client, append <!-- raw HTML omitted -->-P [port number]<!-- raw HTML omitted --> <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->e. Using a wrapper script, such as the one provided <!-- raw HTML omitted -->here<!-- raw HTML omitted --> (excellent solution btw), and use it as the SSH client executable in TortoiseSVN settings -&gt; Network.<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->Hope any one of these work for you. As an inside joke from one of my sysad friends, it was also suggested that I save myself the troubles and just log in to the server and revert to the default SSH port. LOL.<!-- raw HTML omitted --></p>
+
+
+    <footer class="site-footer">
+  <span class="site-footer-credits">
+    Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cayman-hugo-theme">Cayman</a>. © Copyright 2021. All content by the author (See About).
+  </span>
+</footer>
+
+  </section>
+  
+  
+
+</body>
+</html>

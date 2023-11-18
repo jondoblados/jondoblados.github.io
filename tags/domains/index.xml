@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Domains on </title>
+    <link>http://localhost:1313/tags/domains/</link>
+    <description>Recent content in Domains on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 Feb 2007 19:51:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/domains/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IP-hijacking and then some</title>
+      <link>http://localhost:1313/posts/ip-hijacking-and-then-some/</link>
+      <pubDate>Sun, 25 Feb 2007 19:51:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ip-hijacking-and-then-some/</guid>
+      <description>Almost a month of downtime. The servers were fine, but our IP addresses were not. Somehow, a system bug from one of the hosting companies caused our plan to include 14 other IP addresses, and we only maintained 6 as far as I am concerned.
+So the hosting company eventually understood what was happening and started asking the right questions. The bug is that the system allowed network administrators to assign to new clients, the IP addresses that have already been assigned to a current client.</description>
+    </item>
+  </channel>
+</rss>

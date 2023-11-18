@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Honda on </title>
+    <link>http://localhost:1313/tags/honda/</link>
+    <description>Recent content in Honda on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Dec 2012 16:28:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/honda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Civic Stories - December 2012</title>
+      <link>http://localhost:1313/posts/civic-stories---december-2012/</link>
+      <pubDate>Tue, 18 Dec 2012 16:28:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/civic-stories---december-2012/</guid>
+      <description>I sort of miss being in the backseat. A lot of my goofing off years have been conducted within the confines of the passenger doors, backside of the front seats, and the backseat.</description>
+    </item>
+  </channel>
+</rss>

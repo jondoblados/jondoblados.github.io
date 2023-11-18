@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Hugo 0.120.4">
+  
+  <meta name="description" content="If you have multiple installs of TweetDeck on different computers, I bet you wished there were ways to save the groups you set up. These groupings are not saved in your Twitter profile, but are kept in a local database in your computer. This means that for each install of TweetDeck, you will have to re-set up your groups, and any changes won’t replicate to your other installs.
+This post about copying TweetDeck settings in Windows explains this in detail, and I have been able to do the same for Ubuntu, replicating TweetDeck settings across 3 machines.">
+  <link rel="stylesheet" href="http://localhost:1313/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/cayman.ea0e967413f3851071cc8ace3621bc4205fe8fa79b2abe3d7bf94ff2841f0d47.css">
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+  <title>Export TweetDeck groups in Ubuntu | </title>
+</head>
+
+<body>
+  <section class="page-header">
+  <h1 class="project-name">
+    Triggered
+  </h1>
+  <h2 class="project-tagline">
+    Thoughts and musings of a corporate IT guy away from home.
+  </h2>
+  <nav>
+    
+    
+      
+      
+      
+      
+      <a href="/" class="btn">Blog</a>
+    
+      
+      
+      
+      
+      <a href="/tags/" class="btn">Tags</a>
+    
+      
+      
+      
+      
+      <a href="/pages/about/" class="btn">About</a>
+    
+      
+      
+      
+      
+      <a href="/index.xml" class="btn">RSS</a>
+    
+  </nav>
+</section>
+
+  <section class="main-content">
+    
+  <h1>Export TweetDeck groups in Ubuntu</h1>
+  <p>If you have multiple installs of TweetDeck on different computers, I bet you wished there were ways to save the groups you set up.  These groupings are not saved in your Twitter profile, but are kept in a local database in your computer.  This means that for each install of TweetDeck, you will have to re-set up your groups, and any changes won&rsquo;t replicate to your other installs.</p>
+<p>This <a href="http://bit.ly/ljKUO">post</a> about copying TweetDeck settings in Windows explains this in detail, and I have been able to do the same for Ubuntu, replicating TweetDeck settings across 3 machines.  Just take note of some of the differences that I&rsquo;m going to point out here.</p>
+<p>Adobe Air for Linux uses the <code>.appdata</code> directory in your home directory, for profile settings, configurations, etc. In the computer that has your groups and is the source for the export, change working directory into <code>.appdata</code>, and look for the <code>TweetDeckFast.{some hash here}</code>.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>jon@jedi-ntbk:~$ <span style="color:#008000">cd</span> .appdata
+</span></span><span style="display:flex;"><span>jon@jedi-ntbk:~/.appdata$ ls
+</span></span><span style="display:flex;"><span>Adobe
+</span></span><span style="display:flex;"><span>cookie_file.txt
+</span></span><span style="display:flex;"><span>de.makesoft.twhirl.0EA062BC275E7ED1E6EC3762EFFD73C7158ADF33.1
+</span></span><span style="display:flex;"><span>jrcf_H7t6Ap
+</span></span><span style="display:flex;"><span>jrcf_RA5I7w
+</span></span><span style="display:flex;"><span>jrcf_wdLW48
+</span></span><span style="display:flex;"><span>Snippage.B28FB424FD6880E47B18D7D649F6CC93BDE9B29B.1
+</span></span><span style="display:flex;"><span>TweetDeckFast.F9107117265DB7542C1A806C8DB837742CE14C21.1
+</span></span><span style="display:flex;"><span>jon@jedi-ntbk:~/.appdata$
+</span></span></code></pre></div><p>Change directory to the one that says <code>TweeDeckFast</code> and list the contents. Change directory into <code>Local Store</code> and you should find two files that has your username.  In my case, they are:
+<code>preferences_jjdoblados.xml</code> and <code>td_26_jjdoblados.db</code></p>
+<p>Simply copy these two files to any target machine in the same directory where you got them.  Make sure that TweetDeck is closed before copying.  When done copying, start TweetDeck and you will have all of your groups intact!</p>
+
+
+    <footer class="site-footer">
+  <span class="site-footer-credits">
+    Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cayman-hugo-theme">Cayman</a>. © Copyright 2021. All content by the author (See About).
+  </span>
+</footer>
+
+  </section>
+  
+  
+
+</body>
+</html>
