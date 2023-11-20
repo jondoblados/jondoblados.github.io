@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Hugo 0.120.4">
+  
+  <meta name="description" content="I was looking for a quick and painless way to determine what IP addresses used our web app the most and stumbled across this excellent post. I got reminded of the power of the command-line interface and that often, I underestimate the way these commands are supposed to make a sysad’s life easier.
+So here’s a quick tip for counting unique visitors to your web app. Locate your web app’s log file and do a quick scan of the last few lines.">
+  <link rel="stylesheet" href="https://triggered.doblados.net/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  
+  
+  
+  <link rel="stylesheet" href="https://triggered.doblados.net/css/cayman.ea0e967413f3851071cc8ace3621bc4205fe8fa79b2abe3d7bf94ff2841f0d47.css">
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+  <title>How to count instances of an IP address in a log file | Triggered</title>
+</head>
+
+<body>
+  <section class="page-header">
+  <h1 class="project-name">
+    Triggered
+  </h1>
+  <h2 class="project-tagline">
+    Thoughts, musings, and asides of a corporate IT guy away from home.
+  </h2>
+  <nav>
+    
+    
+      
+      
+      
+      
+      <a href="/" class="btn">Blog</a>
+    
+      
+      
+      
+      
+      <a href="/tags/" class="btn">Tags</a>
+    
+      
+      
+      
+      
+      <a href="/pages/about/" class="btn">About</a>
+    
+      
+      
+      
+      
+      <a href="/index.xml" class="btn">RSS</a>
+    
+  </nav>
+</section>
+
+  <section class="main-content">
+    
+  <h1>How to count instances of an IP address in a log file</h1>
+  <p>I was looking for a quick and painless way to determine what IP addresses used our web app the most and stumbled across this excellent <a href="http://encodable.com/tech/blog/2008/12/17/Count_IP_Addresses_in_Access_Log_File_BASH_OneLiner">post</a>. I got reminded of the power of the command-line interface and that often, I underestimate the way these commands are supposed to make a sysad&rsquo;s life easier.</p>
+<p>So here&rsquo;s a quick tip for counting unique visitors to your web app. Locate your web app&rsquo;s log file and do a quick scan of the last few lines. In my case, this is what I saw:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>112.198.79.223 - - <span style="color:#666">[</span>10/Jul/2010:00:57:29 -0400<span style="color:#666">]</span> <span style="color:#ba2121">&#34;POST /v2/api/execute.php?method=upload_time&amp;amp;ver=win1.1.15 HTTP/1.1&#34;</span> <span style="color:#666">200</span> <span style="color:#666">116</span> <span style="color:#ba2121">&#34;-&#34;</span> <span style="color:#ba2121">&#34;Mozilla/5.0&#34;</span>
+</span></span><span style="display:flex;"><span>117.241.112.254 - - <span style="color:#666">[</span>10/Jul/2010:00:57:30 -0400<span style="color:#666">]</span> <span style="color:#ba2121">&#34;POST /v2/api/execute.php?method=timestat&amp;amp;ver=win1.1.15 HTTP/1.1&#34;</span> <span style="color:#666">200</span> <span style="color:#666">288</span> <span style="color:#ba2121">&#34;-&#34;</span> <span style="color:#ba2121">&#34;Mozilla/5.0&#34;</span>
+</span></span><span style="display:flex;"><span>80.249.84.105 - - <span style="color:#666">[</span>10/Jul/2010:00:57:29 -0400<span style="color:#666">]</span> <span style="color:#ba2121">&#34;POST /v2/api/execute.php?method=offtime&amp;amp;ver=win1.1.15 HTTP/1.1&#34;</span> <span style="color:#666">200</span> <span style="color:#666">19</span> <span style="color:#ba2121">&#34;-&#34;</span> <span style="color:#ba2121">&#34;Mozilla/5.0&#34;</span>
+</span></span><span style="display:flex;"><span>117.241.112.254 - - <span style="color:#666">[</span>10/Jul/2010:00:57:32 -0400<span style="color:#666">]</span> <span style="color:#ba2121">&#34;POST /v2/api/execute.php?method=get_defaults&amp;amp;ver=win1.1.15 HTTP/1.1&#34;</span> <span style="color:#666">200</span> <span style="color:#666">77</span> <span style="color:#ba2121">&#34;-&#34;</span> <span style="color:#ba2121">&#34;Mozilla/5.0&#34;</span><span style="color:#ba2121">`</span>
+</span></span></code></pre></div><p>In this log format, the IP address appears first, so we will only need to get the first set of characters, separated by a space. In order to count instances of an IP address, we sort the IP addresses so similar IP addresses are grouped together, then count them. Then we sort them again so that the sums are arranged. The number of unique IPs may give you pages of standard output, so optionally, if you only want to see which IP addresses accessed the web app the most, we look at the top results only.&lt;</p>
+<p>So these are the commands used, piped one after the other, with the output:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#666">[</span>root@server2 ~<span style="color:#666">]</span><span style="color:#408080;font-style:italic"># cat /var/log/httpd/access_ssl.log | awk &#39;{print $1}&#39; | sort | uniq -c | sort -nr | head</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">71612</span> 216.157.78.237
+</span></span><span style="display:flex;"><span><span style="color:#666">34094</span> 120.28.205.244
+</span></span><span style="display:flex;"><span><span style="color:#666">30091</span> 119.93.97.54
+</span></span><span style="display:flex;"><span><span style="color:#666">25078</span> 120.28.214.104
+</span></span><span style="display:flex;"><span><span style="color:#666">18949</span> 120.28.195.151
+</span></span><span style="display:flex;"><span><span style="color:#666">17929</span> 58.107.64.40
+</span></span><span style="display:flex;"><span><span style="color:#666">14877</span> 212.98.174.235
+</span></span><span style="display:flex;"><span><span style="color:#666">14752</span> 117.241.112.143
+</span></span><span style="display:flex;"><span><span style="color:#666">14429</span> 120.28.247.74
+</span></span><span style="display:flex;"><span><span style="color:#666">12864</span> 117.241.113.183
+</span></span><span style="display:flex;"><span><span style="color:#666">[</span>root@server2 ~<span style="color:#666">]</span><span style="color:#408080;font-style:italic">#</span>
+</span></span></code></pre></div><p>Happy counting, err reporting!</p>
+
+
+    <footer class="site-footer">
+  <span class="site-footer-credits">
+    Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cayman-hugo-theme">Cayman</a>. © Copyright 2023. All content by the author (See About).
+  </span>
+</footer>
+
+  </section>
+  
+  
+
+</body>
+</html>
