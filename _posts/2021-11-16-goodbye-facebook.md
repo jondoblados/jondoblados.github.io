@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Goodbye, Facebook"
 date: 2021-11-16T19:05:00Z
 updated: 2023-11-18T14:12:34Z
