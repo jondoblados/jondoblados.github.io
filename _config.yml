@@ -2,10 +2,5 @@ remote_theme: pages-themes/cayman@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 
-<<<<<<< HEAD
 title: Triggered
 description: Thoughts, musings, and asides of a corporate IT guy away from home
-=======
-title: [Triggered]
-description: [Thoughts, musings, and asides of a corporate IT guy away from home]
->>>>>>> 79325a96b7900df38fa3ef79ee880c83dad23141
