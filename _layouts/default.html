@@ -29,9 +29,10 @@
 
     <main id="content" class="main-content" role="main">
       <h2><a href="{{ site.url }}">Posts</a>{% if page.title %} | {% endif %}{{ page.title }}</h2>
-      <span>{{ page.date }}</span>
-      {{ content }}
-      <br />
+      <span>{{ page.date | date: "%-d %B %Y" }}</span>
+      
+      <br />{{ content }}
+      
       <footer class="site-footer">
         {% if site.github.is_project_page %}
           <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
