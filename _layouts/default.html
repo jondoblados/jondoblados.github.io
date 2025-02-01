@@ -31,7 +31,7 @@
       <h2><a href="{{ site.url }}">Posts</a>{% if page.title %} | {% endif %}{{ page.title }}</h2>
       <span>{{ page.date | date: "%-d %B %Y" }}</span>
       
-      <br /><br />{{ content }}
+      {{ content }}
       
       <footer class="site-footer">
         {% if site.github.is_project_page %}
