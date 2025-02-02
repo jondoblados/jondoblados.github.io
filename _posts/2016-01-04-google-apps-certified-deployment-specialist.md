@@ -1,7 +1,7 @@
 ---
 title: "Google Apps Certified Deployment Specialist"
 date: 2016-01-04
-categories: Tech "Life Events"
+categories: Tech Milestones
 tags: GoogleApps Google Certifications
 published: true
 ---
