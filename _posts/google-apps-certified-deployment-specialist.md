@@ -1,13 +1,10 @@
-+++
-title = "Google Apps Certified Deployment Specialist"
-date = 2016-01-04T11:03:00Z
-updated = 2017-04-16T13:33:01Z
-tags = ["Google Apps", "Google", "Certification"]
-blogimport = true 
-[author]
-	name = "Jon Doblados"
-	uri = "https://plus.google.com/114642277785568765419"
-+++
+---
+title: "Google Apps Certified Deployment Specialist"
+date: 2016-01-04
+category: Tech LifeEvents
+tags: GoogleApps Google Certifications
+published: true
+---
 
 Back in November last year, the Apps Services Partner that I help with Google Apps Support told me that I was required to take the Google Apps for Work Deployment Specialist certification exam. I learned that Google was going to end the certification program and that I had to take the exam January 5, 2016. It turns out that they were simplifying the Partner Credential Program. All good!
 

@@ -2,7 +2,7 @@
 layout: default
 title: "It's Catch-Up-On-Learning-Targets Night"
 date: 2021-03-26
-category: tech
+category: Tech
 published: true
 ---
 
