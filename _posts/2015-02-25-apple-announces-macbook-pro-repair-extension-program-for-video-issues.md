@@ -1,13 +1,10 @@
-+++
-title = "Apple Announces MacBook Pro Repair Extension Program for Video Issues"
-date = 2015-02-25T10:43:00Z
-updated = 2017-01-03T10:57:36Z
-tags = ["Apple", "MacBook Pro", "Technology"]
-blogimport = true 
-[author]
-	name = "Jon Doblados"
-	uri = "https://plus.google.com/114642277785568765419"
-+++
+---
+title: "Apple Announces MacBook Pro Repair Extension Program for Video Issues"
+date: 2015-02-25
+category: tech
+tags: Apple 'MacBook Pro' Technology
+published: true
+---
 
 ![alt text](http://o.aolcdn.com/hss/storage/midas/1832ae613253d9905a62cc78a047028/201580477/macbook-pro-2011-630.jpg "Macbook Pro")
 
