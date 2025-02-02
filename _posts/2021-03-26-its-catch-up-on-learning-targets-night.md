@@ -1,8 +1,8 @@
 ---
 layout: default
-title: It's Catch-Up-On-Learning-Targets Night 
+title: "It's Catch-Up-On-Learning-Targets Night"
 date: 2021-03-26
-category: musings
+category: tech
 published: true
 ---
 

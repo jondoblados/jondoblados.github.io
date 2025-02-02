@@ -1,9 +1,10 @@
-+++
-title: "Writing From My Ipad"
+---
+layout: default
+title: "Posting From My Ipad"
 date: 2023-11-20
-category: 
+category: tech
 published: true
-+++
+---
 
 So I'm trying something out today from the iPad.
 
