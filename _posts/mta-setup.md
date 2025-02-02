@@ -1,0 +1,19 @@
++++
+title = "MTA setup"
+date = 2005-04-19T23:41:00Z
+updated = 2014-02-12T04:48:07Z
+blogimport = true 
+[author]
+	name = "Jon Doblados"
+	uri = "https://plus.google.com/114642277785568765419"
++++
+
+Pending Tjay's visit, the reconfiguration of the Firebox will have to wait. It is important to have the CDO MTA running along with the HTTPD service in the P5-520 to be able to test the configuration  in more or less "correct" conditions.
+
+`Public IP: 203.177.75.33
+Public Alias: 203.177.75.37
+`
+TODO:
+1. set up of CDO MTA (HTTP and Postfix in one machine)
+2. DNS entries for cdo.cepalco.com.ph and mla.cepalco.com.ph
+3. Verify if HTTP NAT and SMTP NAT will not have problems with multiple domains e.g. cepalco.com.ph (for HTTP) and cdo.cepalco.com.ph or mla.cepalco.com.ph (for SMTP) even if email addresses won't change, like that of info@cepalco.com.ph (with CDO MTA) and mgcamila@cepalco.com.ph (with MLA MTA)
