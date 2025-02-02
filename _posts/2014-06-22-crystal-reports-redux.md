@@ -2,7 +2,6 @@
 title: "Crystal Reports Redux"
 date: 2014-06-22
 category: tech
-tags: 'Crystal Reports' Oracle 'Oracle BI'
 published: true
 ---
 
