@@ -1,13 +1,10 @@
-+++
-title = "Crystal Reports Redux"
-date = 2014-06-22T20:13:00Z
-updated = 2014-06-22T20:13:04Z
-tags = ["Crystal Reports", "Oracle", "Oracle BI"]
-blogimport = true 
-[author]
-	name = "Jon Doblados"
-	uri = "https://plus.google.com/114642277785568765419"
-+++
+---
+title: "Crystal Reports Redux"
+date: 2014-06-22
+category: tech
+tags: 'Crystal Reports' Oracle 'Oracle BI'
+published: true
+---
 
 ![alt text](http://4.bp.blogspot.com/-LQL1lrPVviw/U6F8AIb7a-I/AAAAAAAAMDM/u0ISYYktQN4/s200/crystal8.gif "Crystal Reports")
 
