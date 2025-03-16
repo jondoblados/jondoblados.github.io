@@ -1,3 +1,7 @@
+---
+layout: categories
+---
+
 <h2>Posts in Tech</h2>
 <ul>
   {% for post in site.categories.tech %}
