@@ -4,12 +4,12 @@
   {{ post.content | markdownify | strip_html | truncatewords: 50 }} [ <a href="{{ post.url }}">read more ...</a> ]
 {% endfor %}
 
-<h2>Posts Listing</h2>
+<h2>Recent Posts Per Category</h2>
 <ul>
 {% for category in site.categories %}
   <li><a name="{{ category | first }}">{{ category | first }}</a>
     <ul>
-    {% for post in category.last %}
+    {% for post in category.last limit:3 %}
       <li>
         <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%-d %B %Y" }})
       </li>
