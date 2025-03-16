@@ -1,7 +1,7 @@
 {% for post in site.posts limit:1 %}
   <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
   <span><strong>{{ post.date | date: "%-d %B %Y" }}</strong></span>
-  {{ post.excerpt }}
+  {{ post.content | markdownify | strip_html | truncatewords: 30 }}
 {% endfor %}
 
 <br />
