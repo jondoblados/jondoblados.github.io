@@ -4,7 +4,7 @@ title: "Posting From My Ipad"
 date: 2023-11-20
 category: Tech
 published: true
-comments: true
+comments: false
 ---
 
 So I'm trying something out today from the iPad.
