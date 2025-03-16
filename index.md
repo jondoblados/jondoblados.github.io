@@ -7,7 +7,7 @@
 <h2>Recent Posts Per Category</h2>
 <ul>
 {% for category in site.categories %}
-  <li><a href="{{ site.url }}/{{ category | first }}.html" name="{{ category | first }}">{{ category | first }}</a>
+  <li><a href="{{ site.url }}/categories/{{ category | first }}.html" name="{{ category | first }}">{{ category | first }}</a>
     <ul>
     {% for post in category.last limit:3 %}
       <li>
