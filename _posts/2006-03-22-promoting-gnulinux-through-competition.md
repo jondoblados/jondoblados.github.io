@@ -1,12 +1,10 @@
-+++
-title = "Promoting GNU/Linux through Competition"
-date = 2006-03-22T01:33:00Z
-updated = 2014-02-12T04:47:21Z
-blogimport = true 
-[author]
-	name = "Jon Doblados"
-	uri = "https://plus.google.com/114642277785568765419"
-+++
+---
+title: "Promoting GNU/Linux through Competition"
+date: 2006-03-22
+category: tech musings
+published: true
+comments: true
+---
 
 Met up with [hardwyard](http://baudizm.blogsome.com) last night for preliminary competition planning. Also present were some of the pillars of GNU/Linux and FOSS in Northern Mindanao: Mr. Rem Taga of MPSC, Mr. Botp Peña of DMPC, and Mr. Vidor Balbon of Philcom.
 

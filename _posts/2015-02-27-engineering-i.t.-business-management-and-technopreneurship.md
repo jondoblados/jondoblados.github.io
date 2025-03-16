@@ -1,13 +1,10 @@
-+++
-title = "Engineering, I.T., Business Management, and Technopreneurship"
-date = 2015-02-27T10:51:00Z
-updated = 2017-01-03T10:57:12Z
-tags = ["Information Technology", "Technopreneurship"]
-blogimport = true 
-[author]
-	name = "Jon Doblados"
-	uri = "https://plus.google.com/114642277785568765419"
-+++
+---
+title: "Engineering, I.T., Business Management, and Technopreneurship"
+date: 2015-02-27
+tags: IT Technopreneurship
+category: musings
+published: true
+---
 
 ![technopreneurship](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT0x5POqU25iVphCtjb-GmPJct6XwGw3YDDZVtohhA1ydSaY6Df)
 
