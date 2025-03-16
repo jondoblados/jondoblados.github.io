@@ -12,7 +12,7 @@
     <ul>
     {% for post in category.last %}
       <li>
-        <a href="{{ post.url }}#disqus_thread">{{ post.title }}</a> ({{ post.date | date: "%-d %B %Y" }})
+        <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%-d %B %Y" }})
       </li>
     {% endfor %}
     </ul>
