@@ -1,6 +1,6 @@
 {% for post in site.posts limit:1 %}
   <h2>{{ post.title }}</h2>
-  <span><strong>{{ post.date | date: "%-d %B %Y" }}</strong> | <a href="{{ post.url }}#disqus_thread">Leave a Comment</a></span>
+  <span><strong>{{ post.date | date: "%-d %B %Y" }}</strong>{% if page.comments %} | <a href="{{ post.url }}#disqus_thread">Leave a Comment</a>{% endif %}</span>
   {{ post.content }}
 {% endfor %}
 

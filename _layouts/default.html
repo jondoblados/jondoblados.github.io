@@ -28,7 +28,7 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-      <h2><a href="{{ site.url }}">Posts</a>{% if page.title %} | {% endif %}{{ page.title }}</h2>
+      <h2><a href="{{ site.url }}">Home</a>{% if page.title %} | {% endif %}{{ page.title }}</h2>
       <span><strong>{{ page.date | date: "%-d %B %Y" }}</strong>{% if page.comments %} | <a href="{{ page.url }}#disqus_thread">Leave a Comment</a>{% endif %}</span>
       
       {{ content }}
