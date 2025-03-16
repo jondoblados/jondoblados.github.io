@@ -1,7 +1,7 @@
 ---
 title: "apt-get install kicker-kblogger"
 date: 2007-08-14
-category: Tech
+category: tech
 tags: GNU/Linux Ubuntu Technology
 published: true
 ---

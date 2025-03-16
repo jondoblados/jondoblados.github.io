@@ -2,7 +2,7 @@
 layout: default
 title: "Aspire, Inspire, Execute."
 date: 2025-03-16
-category: Milestones
+category: milestones
 published: true
 comments: true
 ---

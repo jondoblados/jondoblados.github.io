@@ -1,7 +1,7 @@
 ---
 title: "Apple Announces MacBook Pro Repair Extension Program for Video Issues"
 date: 2015-02-25
-category: Tech
+category: tech
 tags: Apple 'MacBook Pro' Technology
 published: true
 ---

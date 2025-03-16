@@ -2,7 +2,7 @@
 layout: default
 title:
 date: 2021-04-04
-category: Musings
+category: musings
 published: true
 comments: true
 ---

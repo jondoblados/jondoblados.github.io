@@ -1,7 +1,7 @@
 ---
 title: "Crystal Reports Redux"
 date: 2014-06-22
-category: Tech
+category: tech
 published: true
 ---
 

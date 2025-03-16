@@ -2,7 +2,7 @@
 layout: default
 title: "Goodbye, Facebook"
 date: 2021-11-16
-category: Musings
+category: musings
 published: true
 comments: true
 ---

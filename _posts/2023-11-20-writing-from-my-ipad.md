@@ -2,7 +2,7 @@
 layout: default
 title: "Posting From My Ipad"
 date: 2023-11-20
-category: Tech
+category: tech
 published: true
 comments: false
 ---
