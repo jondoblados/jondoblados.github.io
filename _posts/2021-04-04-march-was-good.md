@@ -4,6 +4,7 @@ title:
 date: 2021-04-04
 category: Musings
 published: true
+comments: true
 ---
 
 March was a good month. Not just because it's my birthday month, but I've been able to do more physical exercises as far as I'm allowed, and I've also been able to get through my first month back in the job.
