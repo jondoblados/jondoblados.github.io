@@ -9,9 +9,9 @@
 {% for category in site.categories %}
   <li><a href="{{ site.url }}/categories/{{ category | first }}.html" name="{{ category | first }}">{{ category | first }}</a>
     <ul>
-    {% for post in category.last limit:3 %}
+    {% for post in category.last limit:5 %}
       <li>
-        <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%-d %B %Y" }})
+        <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})
       </li>
     {% endfor %}
     </ul>

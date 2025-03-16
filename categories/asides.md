@@ -1,8 +1,12 @@
-<h2>Posts in Asides</h2>
+---
+layout: categories
+title: "Posts in Asides"
+---
+
 <ul>
   {% for post in site.categories.asides %}
     {% if post.url %}
-      <li>{{ post.date | date: "%Y %B" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li>{{ post.date | date: "%Y %b" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}
 </ul>
