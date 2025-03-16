@@ -1,7 +1,8 @@
-{% if page.title %}
-<h2><a href="{{ site.url }}">Home</a> / {{ page.title }}</h2>
-{% endif %}
-<h2>Posts in Tech</h2>
+---
+layout: categories
+title: "Posts in Tech"
+---
+
 <ul>
   {% for post in site.categories.tech %}
     {% if post.url %}
