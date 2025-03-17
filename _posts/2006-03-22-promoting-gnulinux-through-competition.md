@@ -1,7 +1,7 @@
 ---
 title: "Promoting GNU/Linux through Competition"
 date: 2006-03-22
-category: tech musings
+categories: tech musings
 published: true
 comments: true
 ---
