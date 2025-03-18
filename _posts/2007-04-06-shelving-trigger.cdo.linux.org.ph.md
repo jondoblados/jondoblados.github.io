@@ -1,13 +1,10 @@
-+++
-title = "Shelving trigger.cdo.linux.org.ph"
-date = 2007-04-06T15:31:00Z
-updated = 2014-02-12T04:46:21Z
-tags = ["Google"]
-blogimport = true 
-[author]
-	name = "Jon Doblados"
-	uri = "https://plus.google.com/114642277785568765419"
-+++
+---
+title: "Shelving trigger.cdo.linux.org.ph"
+date: 2007-04-06
+category: musings
+published: true
+comments: true
+---
 
 I am officially bringing down my old tech blog after Holy Week. It has virtually become a sinkhole for all kinds of spam links and I have barely done anything to keep it up-to-date.
 

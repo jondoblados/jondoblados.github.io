@@ -1,13 +1,10 @@
-+++
-title = "plesk won't start after tweaking mysql"
-date = 2007-08-14T12:09:00Z
-updated = 2014-02-12T04:46:21Z
-tags = ["Hosting", "MySQL"]
-blogimport = true 
-[author]
-	name = "Jon Doblados"
-	uri = "https://plus.google.com/114642277785568765419"
-+++
+---
+title: "plesk won't start after tweaking mysql"
+date: 2007-08-14
+category: tech
+published: true
+comments: true
+---
 
 i've had this happen to me again the other week and as always, felt like kicking myself for not remembering.
 

@@ -1,13 +1,10 @@
-+++
-title = "Moving Forward"
-date = 2015-04-30T10:58:00Z
-updated = 2017-01-03T10:59:38Z
-tags = ["Systems Administration", "SLMIS", "Personal"]
-blogimport = true 
-[author]
-	name = "Jon Doblados"
-	uri = "https://plus.google.com/114642277785568765419"
-+++
+---
+title: "Moving Forward"
+date: 2015-04-30
+category: musings
+published: true
+comments: true
+---
 
 In a month's time, I would be transferring offices again. I started from a very technical department, under the administration cluster. A year and about 3 months later, I was given the privilege to transfer to one of the most influential and authoritative departments in the academic cluster. It was still a split engagement, with me going back and forth these two offices.
 
