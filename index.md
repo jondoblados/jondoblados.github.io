@@ -4,6 +4,7 @@
   {{ post.content | markdownify | strip_html | truncatewords: 50 }}  | <a href="{{ post.url }}">read more ...</a>
 {% endfor %}
 
+<footer class="site-footer">
 <h3>Recent Posts Per Category</h3>
 <ul>
 {% for category in site.categories %}
@@ -18,3 +19,4 @@
   </li>
 {% endfor %}
 </ul>
+</footer>
