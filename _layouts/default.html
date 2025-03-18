@@ -29,8 +29,8 @@
 
     <main id="content" class="main-content" role="main">
       {% if page.title %}
-      <h3><a href="{{ site.url }}">Home</a> / {{ page.title }}</h3>
-      <span><strong>{{ page.date | date: "%-d %B %Y" }}</strong>{% if page.categories %} | Filed in {{ page.categories | join: ", " }}.{% endif %}{% if page.comments %} | <a href="{{ page.url }}#disqus_thread">Leave a Comment</a>{% endif %}</span>
+      <h2><a href="{{ site.url }}">Home</a> / {{ page.title }}</h2>
+      <span><strong>{{ page.date | date: "%-d %B %Y" }}</strong>{% if page.categories %} | Filed in {{ page.categories | join: ", " }}{% endif %}{% if page.comments %} | <a href="{{ page.url }}#disqus_thread">Leave a Comment</a>{% endif %}</span>
       {% endif %}
       <!--
       {% if page.categories %} in {% for cat in page.categories %}{{ cat | capitalize | join: ", " }}{% endfor %}{% endif %}
