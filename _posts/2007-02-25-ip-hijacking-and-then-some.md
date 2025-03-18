@@ -1,13 +1,11 @@
-+++
-title = "IP-hijacking and then some"
-date = 2007-02-25T19:51:00Z
-updated = 2014-02-12T04:46:21Z
-tags = ["Hosting", "Domains"]
-blogimport = true 
-[author]
-	name = "Jon Doblados"
-	uri = "https://plus.google.com/114642277785568765419"
-+++
+---
+title: "IP-hijacking and then some"
+date: 2007-02-25
+categories: tech musings
+published: true
+comments: true
+#tags = ["Hosting", "Domains"]
+---
 
 Almost a month of downtime. The servers were fine, but our IP addresses were not. Somehow, a system bug from one of the hosting companies caused our plan to include 14 other IP addresses, and we only maintained 6 as far as I am concerned.
 

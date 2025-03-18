@@ -1,13 +1,11 @@
-+++
-title = "How to count instances of an IP address in a log file"
-date = 2010-07-24T20:00:00Z
-updated = 2014-02-12T04:43:24Z
-tags = ["Hosting", "GNU/Linux", "Systems Administration"]
-blogimport = true 
-[author]
-	name = "Jon Doblados"
-	uri = "https://plus.google.com/114642277785568765419"
-+++
+---
+title: "How to count instances of an IP address in a log file"
+date: 2010-07-24
+#tags = ["Hosting", "GNU/Linux", "Systems Administration"]
+category: tech
+published: true
+comments: true
+---
 
 I was looking for a quick and painless way to determine what IP addresses used our web app the most and stumbled across this excellent [post](http://encodable.com/tech/blog/2008/12/17/Count_IP_Addresses_in_Access_Log_File_BASH_OneLiner). I got reminded of the power of the command-line interface and that often, I underestimate the way these commands are supposed to make a sysad's life easier.
 

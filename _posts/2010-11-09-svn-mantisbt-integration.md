@@ -1,13 +1,10 @@
-+++
-title = "SVN-MantisBT Integration"
-date = 2010-11-09T02:14:00Z
-updated = 2014-02-12T04:42:04Z
-tags = ["GNU/Linux", "Systems Administration", "Bug Tracking", "Revision Control"]
-blogimport = true 
-[author]
-	name = "Jon Doblados"
-	uri = "https://plus.google.com/114642277785568765419"
-+++
+---
+title: "SVN-MantisBT Integration"
+date: 2010-11-09
+category: tech
+published: true
+comments: true
+---
 
 I've downloaded and installed MantisBT 1.2.3stable on linode2, and after fixing permissions issues, proceeded with the installation. I stopped when I realized I didn't have the same MantisBT version on the old server. It's always better to set up MantisBT on the target server "as is", and let the install scripts handle the upgrade.
 

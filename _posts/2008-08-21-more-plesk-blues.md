@@ -1,13 +1,10 @@
-+++
-title = "More Plesk Blues"
-date = 2008-08-21T00:42:00Z
-updated = 2014-02-12T04:45:34Z
-tags = ["Systems Administration"]
-blogimport = true 
-[author]
-	name = "Jon Doblados"
-	uri = "https://plus.google.com/114642277785568765419"
-+++
+---
+title: "More Plesk Blues"
+date: 2008-08-21
+category: tech
+published: true
+comments: true
+---
 
 I've had this problem with Plesk since I started relying heavily on it in 2006. For some reason, after you've added your client, allocated IP address to client's pool, added a domain, and selecting physical hosting, you get the message:
 > Unable to update hosting preferences: hosting update is failed: object ID is invalid
