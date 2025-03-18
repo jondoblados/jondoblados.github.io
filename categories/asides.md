@@ -1,6 +1,7 @@
 ---
 layout: categories
 title: "Posts in Asides"
+catcount: {{ site.categories.asides | size }}
 ---
 
 <ul>

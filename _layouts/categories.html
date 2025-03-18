@@ -29,7 +29,7 @@
 
     <main id="content" class="main-content" role="main">
       {% if page.title %}
-      <h2><a href="{{ site.url }}">Home</a> / {{ page.title }}</h2>
+      <h2><a href="{{ site.url }}">Home</a> / {{ page.title }} {% if page.catcount %}{{ page.catcount }}{% endif %}</h2>
       {% endif %}
       
       {{ content }} 
