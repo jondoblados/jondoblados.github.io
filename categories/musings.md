@@ -2,7 +2,7 @@
 layout: categories
 title: "Posts in Musings"
 ---
-
+Found {{ site.categories.musings | size }} posts.
 <ul>
   {% for post in site.categories.musings %}
     {% if post.url %}

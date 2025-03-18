@@ -2,7 +2,7 @@
 layout: categories
 title: "Posts in Milestones"
 ---
-
+Found {{ site.categories.milestones | size }} posts.
 <ul>
   {% for post in site.categories.milestones %}
     {% if post.url %}

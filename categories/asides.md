@@ -1,9 +1,8 @@
 ---
 layout: categories
 title: "Posts in Asides"
-catcount: {{ site.categories.asides | size }}
 ---
-
+Found {{ site.categories.asides | size }} posts.
 <ul>
   {% for post in site.categories.asides %}
     {% if post.url %}

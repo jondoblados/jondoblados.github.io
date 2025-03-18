@@ -2,7 +2,7 @@
 layout: categories
 title: "Posts in Tech"
 ---
-
+Found {{ site.categories.tech | size }} posts.
 <ul>
   {% for post in site.categories.tech %}
     {% if post.url %}
