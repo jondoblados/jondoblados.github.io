@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My Gospel Journey — Bible Study</title>
+<meta name="theme-color" content="#3b2f2f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <img src="icon.svg" alt="" class="brand-icon">
+    <span class="brand-name">My Gospel Journey</span>
+  </div>
+
+  <div class="header-controls">
+    <button id="toggleSidebarBtn" class="icon-btn mobile-only" title="Reading plan">📖 Plan</button>
+    <select id="bookJump" class="book-jump" aria-label="Jump to book"></select>
+
+    <select id="orderSelectQuick" class="order-select" aria-label="Reading order">
+      <option value="chronological">Chronological</option>
+      <option value="canonical">Canonical</option>
+    </select>
+
+    <button id="searchBtn" class="icon-btn" title="Search">🔍 Search</button>
+    <button id="toggleNotesBtn" class="icon-btn mobile-only" title="Notes">📝 Notes</button>
+    <button id="settingsBtn" class="icon-btn" title="Settings">⚙️ Settings</button>
+  </div>
+</header>
+
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="progress-block">
+      <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+      <div id="progressLabel" class="progress-label">0 / 0 chapters read</div>
+    </div>
+    <div id="planList" class="plan-list"></div>
+  </aside>
+
+  <main class="reader" id="readerPane">
+    <div class="reader-toolbar">
+      <h1 id="readerTitle">Loading…</h1>
+      <span id="translationBadge" class="badge"></span>
+    </div>
+    <p id="fallbackNote" class="fallback-note"></p>
+    <div id="readerBody" class="reader-body"></div>
+    <div id="chapterNav" class="chapter-nav"></div>
+  </main>
+
+  <aside class="notes-panel" id="notesPanel">
+    <div class="panel-tabs">
+      <button id="tabNotesBtn" class="panel-tab active" data-tab="notes">Notes</button>
+      <button id="tabCommentaryBtn" class="panel-tab" data-tab="commentary">Commentary</button>
+    </div>
+
+    <div id="notesTabContent" class="panel-tab-content">
+      <div class="notes-panel-header">
+        <h2 id="notesPanelTitle">Notes</h2>
+        <button id="newNoteBtn" class="small-btn">+ New Note</button>
+      </div>
+      <div id="notesList" class="notes-list"></div>
+
+      <h3 class="backlinks-heading">Backlinks</h3>
+      <div id="backlinksList" class="backlinks-list"></div>
+    </div>
+
+    <div id="commentaryTabContent" class="panel-tab-content hidden">
+      <div class="notes-panel-header">
+        <h2>Commentary</h2>
+        <select id="commentarySourceSelect" class="small-select" aria-label="Commentary source">
+          <option value="matthew-henry">Matthew Henry</option>
+          <option value="adam-clarke">Adam Clarke</option>
+        </select>
+      </div>
+      <p class="commentary-credit">Public domain commentary via <a href="https://bible.helloao.org/" target="_blank" rel="noopener">bible.helloao.org</a>. Fetched per chapter and cached for offline reading.</p>
+      <div id="commentaryBody" class="commentary-body"></div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- Settings Modal -->
+<div id="settingsModal" class="modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>Settings</h2>
+      <button id="closeSettings" class="close-btn">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="muted">
+        The offline <strong>WEB</strong> translation is bundled with this app and always works, even offline.
+        ESV, NIV and NLT are fetched live from each publisher using your own personal-use API key, because their
+        license terms don't allow full offline storage of their text. Sign up for free keys at
+        <a href="https://api.esv.org/" target="_blank" rel="noopener">api.esv.org</a> (ESV),
+        <a href="https://api.bible/sign-up" target="_blank" rel="noopener">api.bible/sign-up</a> (NIV, via API.Bible), and
+        <a href="https://api.nlt.to/" target="_blank" rel="noopener">api.nlt.to</a> (NLT).
+      </p>
+
+      <label>Preferred translation
+        <select id="translationSelect">
+          <option value="ESV">ESV — English Standard Version (needs key)</option>
+          <option value="NIV">NIV — New International Version (needs key)</option>
+          <option value="NLT">NLT — New Living Translation (key optional)</option>
+          <option value="WEB">WEB — World English Bible (offline, always available)</option>
+        </select>
+      </label>
+
+      <label>Reading order
+        <select id="orderSelect">
+          <option value="chronological">Chronological (book-level approximation)</option>
+          <option value="canonical">Canonical (Genesis → Revelation)</option>
+        </select>
+      </label>
+
+      <label>ESV API key
+        <input id="esvApiKeyInput" type="text" placeholder="Paste your api.esv.org token">
+      </label>
+
+      <label>API.Bible key (for NIV)
+        <input id="apiBibleKeyInput" type="text" placeholder="Paste your api.bible key">
+      </label>
+
+      <label>NIV Bible ID (from API.Bible)
+        <input id="apiBibleNivIdInput" type="text" placeholder="e.g. the Bible ID for NIV shown in your API.Bible dashboard">
+      </label>
+
+      <label>NLT API key (optional — anonymous tier works at lower limits)
+        <input id="nltApiKeyInput" type="text" placeholder="Paste your api.nlt.to key (optional)">
+      </label>
+
+      <div class="sync-block">
+        <h3>Sync via OneDrive / Google Drive</h3>
+        <p class="muted">Export your notes and progress to a JSON file and save it in your Drive-synced folder. On another device, place the same file where the app can reach it, then import.</p>
+        <p class="muted"><strong>Your API keys are never included in a plain export.</strong> They stay only in this browser's local storage on this device. If you'd rather not re-type keys on every device, tick the box below to include them — encrypted with a passphrase only you know — so the file in your Drive folder still never has them in plain text.</p>
+        <label class="checkbox-label">
+          <input type="checkbox" id="includeKeysCheckbox">
+          Also include my API keys, encrypted with a passphrase
+        </label>
+        <label id="exportPassphraseWrap" class="hidden">Encryption passphrase
+          <input id="exportPassphraseInput" type="password" placeholder="Choose a passphrase you'll remember">
+        </label>
+        <button id="exportBtn" class="secondary-btn">Export notes &amp; progress</button>
+        <label class="file-label">Import from file
+          <input id="importInput" type="file" accept="application/json">
+        </label>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button id="saveSettings" class="primary-btn">Save Settings</button>
+    </div>
+  </div>
+</div>
+
+<!-- Search Modal -->
+<div id="searchModal" class="modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>Search</h2>
+      <button id="closeSearch" class="close-btn">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="search-bar">
+        <input id="searchInput" type="text" placeholder="Search the WEB text and your notes…">
+        <button id="searchGo" class="primary-btn">Go</button>
+      </div>
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Note Editor Modal -->
+<div id="noteEditorModal" class="modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>Note</h2>
+      <button id="closeNoteEditor" class="close-btn">✕</button>
+    </div>
+    <div class="modal-body">
+      <label>Title
+        <input id="noteTitleInput" type="text" placeholder="Optional note title (e.g. Faith)">
+      </label>
+      <label>Reference
+        <input id="noteRefInput" type="text" placeholder="e.g. John 3:16 or Genesis 1">
+      </label>
+      <label>Content — use [[Topic]] or [[John 3:16]] to link, and #tags
+        <textarea id="noteContentInput" rows="8" placeholder="Write your reflection… link to [[Faith]] or [[Romans 8:28]], tag with #grace"></textarea>
+      </label>
+    </div>
+    <div class="modal-footer">
+      <button id="deleteNoteBtn" class="secondary-btn">Delete</button>
+      <button id="saveNoteBtn" class="primary-btn">Save Note</button>
+    </div>
+  </div>
+</div>
+
+<script src="bible-books.js"></script>
+<script src="crypto-utils.js"></script>
+<script src="db.js"></script>
+<script src="bible-loader.js"></script>
+<script src="commentary-loader.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
