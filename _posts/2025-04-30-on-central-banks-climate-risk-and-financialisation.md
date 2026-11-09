@@ -2,7 +2,7 @@
 layout: default
 title: "On Central Banks, Climate Risk, and Financialisation"
 date: 2025-04-30
-categories: GMBA
+categories: gmba
 published: true
 comments: true
 ---
