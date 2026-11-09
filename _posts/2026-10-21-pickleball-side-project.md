@@ -4,6 +4,7 @@ date: 2026-10-21
 category: tech
 tags: AI React TypeScript Vite 'GitHub Pages' WhatsApp
 published: true
+comments: true
 ---
 
 Recently, I built a small web app for our pickleball signups. We used to coordinate through WhatsApp: an organiser posts the game details, people add their names to a list, and the waitlist moves up when someone drops out. It worked, but it was also a reminder that a spreadsheet-like process is not always easy to run in chat.
