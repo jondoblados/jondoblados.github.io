@@ -2,7 +2,7 @@
 layout: default
 title: "Talking the Walk - Putting Experience on Record"
 date: 2025-12-29
-categories: tech
+categories: tech milestones
 published: true
 comments: true
 ---

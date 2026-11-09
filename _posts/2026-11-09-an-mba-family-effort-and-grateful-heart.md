@@ -1,7 +1,7 @@
 ---
 title: "An MBA, a Family Effort, and a Grateful Heart"
 date: 2026-11-09
-categories: gmba musings
+categories: gmba milestones
 tags: GMBA AMBS Leadership 'Continuous Learning'
 published: true
 comments: true
