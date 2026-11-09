@@ -1,7 +1,7 @@
 ---
 title: "on statuses(?) and micro-blogging"
 date: 2008-07-28
-category: asides
+categories: asides
 published: true
 ---
 

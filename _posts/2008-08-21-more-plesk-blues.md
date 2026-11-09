@@ -1,7 +1,7 @@
 ---
 title: "More Plesk Blues"
 date: 2008-08-21
-category: tech
+categories: tech
 published: true
 comments: true
 ---

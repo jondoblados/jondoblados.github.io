@@ -1,7 +1,7 @@
 ---
 title: "Using Google Talk with Kopete"
 date: 2006-07-21
-category: tech
+categories: tech
 published: true
 comments: true
 ---

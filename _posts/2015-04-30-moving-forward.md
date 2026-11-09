@@ -1,7 +1,7 @@
 ---
 title: "Moving Forward"
 date: 2015-04-30
-category: musings
+categories: musings
 published: true
 comments: true
 ---

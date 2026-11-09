@@ -1,7 +1,7 @@
 ---
 title: "plesk won't start after tweaking mysql"
 date: 2007-08-14
-category: tech
+categories: tech
 published: true
 comments: true
 ---

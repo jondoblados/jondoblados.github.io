@@ -1,7 +1,7 @@
 ---
 title: "Racking Legacy Servers - Part 1"
 date: 2015-01-23
-category: musings
+categories: musings
 published: true
 comments: true
 ---

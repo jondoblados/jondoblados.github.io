@@ -2,7 +2,7 @@
 title: "How to count instances of an IP address in a log file"
 date: 2010-07-24
 #tags = ["Hosting", "GNU/Linux", "Systems Administration"]
-category: tech
+categories: tech
 published: true
 comments: true
 ---

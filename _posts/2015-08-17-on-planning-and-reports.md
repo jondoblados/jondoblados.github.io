@@ -1,7 +1,7 @@
 ---
 title: "On Planning and Reports"
 date: 2015-08-17
-category: musings
+categories: musings
 published: true
 comments: true
 ---

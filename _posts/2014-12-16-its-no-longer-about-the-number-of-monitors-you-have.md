@@ -1,7 +1,7 @@
 ---
 title: "It's no longer about the number of monitors you have"
 date: 2014-12-16
-category: musings
+categories: musings
 published: true
 comments: true
 ---

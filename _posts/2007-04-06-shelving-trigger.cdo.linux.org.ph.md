@@ -1,7 +1,7 @@
 ---
 title: "Shelving trigger.cdo.linux.org.ph"
 date: 2007-04-06
-category: musings
+categories: musings
 published: true
 comments: true
 ---

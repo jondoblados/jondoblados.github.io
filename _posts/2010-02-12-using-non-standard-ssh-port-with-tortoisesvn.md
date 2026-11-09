@@ -1,7 +1,7 @@
 ---
 title: "Using non-standard SSH port with TortoiseSVN"
 date: 2010-02-12
-category: tech
+categories: tech
 published: true
 comments: true
 ---

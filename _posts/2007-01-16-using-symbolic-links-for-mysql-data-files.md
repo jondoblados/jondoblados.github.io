@@ -1,7 +1,7 @@
 ---
 title: "Using symbolic links for MySQL data files"
 date: 2007-01-16
-category: tech
+categories: tech
 published: true
 comments: true
 ---

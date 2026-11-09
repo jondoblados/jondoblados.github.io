@@ -1,7 +1,7 @@
 ---
 title: "mysql woes"
 date: 2005-07-13
-category: tech
+categories: tech
 published: true
 comments: true
 ---

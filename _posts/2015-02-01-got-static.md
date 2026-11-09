@@ -2,7 +2,7 @@
 title: "Got Static!"
 date: 2015-02-01
 tags: Pelican Python Blogging GitHub
-category: tech
+categories: tech
 published: true
 --
 

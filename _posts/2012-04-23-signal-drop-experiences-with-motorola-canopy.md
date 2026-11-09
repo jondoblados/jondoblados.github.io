@@ -1,7 +1,7 @@
 ---
 title: "Signal drop experiences with Motorola Canopy"
 date: 2012-04-23
-category: asides
+categories: asides
 published: true
 comments: true
 ---

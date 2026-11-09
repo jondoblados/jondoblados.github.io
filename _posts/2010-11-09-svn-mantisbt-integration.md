@@ -1,7 +1,7 @@
 ---
 title: "SVN-MantisBT Integration"
 date: 2010-11-09
-category: tech
+categories: tech
 published: true
 comments: true
 ---

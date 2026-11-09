@@ -1,7 +1,7 @@
 ---
 title: "PIIX3 cannot attach drive to the Secondary Master"
 date: 2009-01-30
-category: tech
+categories: tech
 published: true
 comments: true
 ---

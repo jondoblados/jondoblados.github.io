@@ -1,7 +1,7 @@
 ---
 title: "Work over Christmas Break 2014"
 date: 2014-12-30
-category: musings
+categories: musings
 published: true
 ---
 

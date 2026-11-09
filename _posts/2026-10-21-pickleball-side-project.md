@@ -1,7 +1,7 @@
 ---
 title: "From WhatsApp Lists to Agentic Workflows: A Pickleball Side Project"
 date: 2026-10-21
-category: tech
+categories: tech
 tags: AI React TypeScript Vite 'GitHub Pages' WhatsApp
 published: true
 comments: true

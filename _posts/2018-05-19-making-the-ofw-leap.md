@@ -1,7 +1,7 @@
 ---
 title: "Making the OFW leap"
 date: 2018-05-19
-category: musings
+categories: musings
 published: true
 comments: true
 ---

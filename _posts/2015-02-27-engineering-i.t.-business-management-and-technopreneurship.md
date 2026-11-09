@@ -2,7 +2,7 @@
 title: "Engineering, I.T., Business Management, and Technopreneurship"
 date: 2015-02-27
 tags: IT Technopreneurship
-category: musings
+categories: musings
 published: true
 ---
 
